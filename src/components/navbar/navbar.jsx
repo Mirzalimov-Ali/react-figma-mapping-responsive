@@ -4,11 +4,13 @@ import logo from '../../assets/logo.png'
 import downArrow from '../../assets/down-arrow.svg'
 import cart from '../../assets/cart.png'
 import user from '../../assets/user.svg'
+import menu from '../../assets/hamburger-menu.svg'
 
 function Navbar() {
   return (
     <NavbarContainer>
-        <div>
+        <div style={{display: "flex", alignItems: "center", gap: "10px"}}>
+            <img src={menu} alt="" className='hamburger'/>
             <img src={logo} alt="" />
         </div>
         <NavbarNavigationContianer>

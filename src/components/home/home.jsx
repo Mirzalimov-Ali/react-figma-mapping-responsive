@@ -169,12 +169,13 @@ function Home() {
                     </div>
                 </div>
             </HomeRightTop>
+            
             <LongLine/>
+
             <CarContainer>
-                
                 {data.map((value, key)=> {
                     return (
-                        <div key={key} style={{display: "flex", flexDirection: "column", alignItems: "center", boxShadow: "0px 0px 5px 0px rgba(0, 0, 0, 0.10)", width: "90%", padding: "10px 0"}}>
+                        <div key={key} style={{display: "flex", flexDirection: "column", alignItems: "center", boxShadow: "0px 0px 5px 0px rgba(0, 0, 0, 0.10)", padding: "10px 0"}} className='car-box'>
                             <img src={value.car.photo} alt="Photo of car not entered" />
                             <div>
                                 <p style={{fontSize: "19px", fontWeight: "600", marginBottom: "5px"}}>{value.car.name}</p>
@@ -191,7 +192,6 @@ function Home() {
                                     <MappingButton>Compare</MappingButton>
                                 </div>
                             </div>
-                            
                         </div>
                     )
                 })}

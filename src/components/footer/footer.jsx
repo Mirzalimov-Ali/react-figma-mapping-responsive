@@ -13,25 +13,25 @@ function Footer() {
         <div>
           <p style={{fontSize: "40px", fontWeight: "600"}}>Camper</p>
         </div>
-        <div style={{display: "flex", flexDirection: "column", gap: "10px"}}>
-          <H2>Services</H2>
-          <p>Camping</p>
-          <p>Lodging</p>
-          <p>Harbor</p>
-          <p>Day Use</p>
+        <div style={{display: "flex", flexDirection: "column", gap: "10px"}} className='footer-none'>
+          <H2 className='footer-none'>Services</H2>
+          <p className='footer-none'>Camping</p>
+          <p className='footer-none'>Lodging</p>
+          <p className='footer-none'>Harbor</p>
+          <p className='footer-none'>Day Use</p>
         </div>
 
         <div style={{display: "flex", flexDirection: "column", gap: '10px'}}>
-          <H2>Menu</H2>
-          <Link to={""} style={{textDecoration: "none", color: "white"}}>About</Link>
-          <Link to={""} style={{textDecoration: "none", color: "white"}}>Services</Link>
-          <Link to={""} style={{textDecoration: "none", color: "white"}}>Booking</Link>
-          <Link to={""} style={{textDecoration: "none", color: "white"}}>Blog</Link>
+          <H2 className='footer-none'>Menu</H2>
+          <Link to={""} style={{textDecoration: "none", color: "white"}} className='footer-none'>About</Link>
+          <Link to={""} style={{textDecoration: "none", color: "white"}} className='footer-none'>Services</Link>
+          <Link to={""} style={{textDecoration: "none", color: "white"}} className='footer-none'>Booking</Link>
+          <Link to={""} style={{textDecoration: "none", color: "white"}} className='footer-none'>Blog</Link>
         </div>
         
 
         <div > 
-          <H2>Contact</H2>
+          <H2 className='footer-none'>Contact</H2>
 
           <div style={{display: "flex", alignItems: "center", gap: "10px", marginBottom: "20px"}}>
             <img src={footerImg1} alt="" />
@@ -40,9 +40,9 @@ function Footer() {
           </div>
           
 
-          <p>021 Korea Seul, LA</p>
-          <p>camper@example.com</p>
-          <p>(021) 345-6789-99</p>
+          <p className='footer-none'>021 Korea Seul, LA</p>
+          <p className='footer-none'>camper@example.com</p>
+          <p className='footer-none'>(021) 345-6789-99</p>
         </div>
       </FooterContainer>
       

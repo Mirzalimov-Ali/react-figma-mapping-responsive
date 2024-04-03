@@ -11,6 +11,14 @@ export const NavbarContainer = styled.div`
     top: 0;
     width: 100%;
     background-color: #fff;
+    .hamburger {
+        display: none;
+    }
+    @media only screen and (max-width: 1300px) {
+        .hamburger {
+            display: flex;
+        }
+    }
 `
 
 export const NavbarNavigationContianer = styled.div`
@@ -29,6 +37,9 @@ export const NavbarNavigationContianer = styled.div`
         font-weight: 600;
         line-height: normal;
         cursor: pointer;
+    }
+    @media only screen and (max-width: 1300px) {
+        display: none;
     }
 `
 
@@ -60,6 +71,9 @@ export const HomeLeftContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 50px;
+    @media only screen and (max-width: 1300px) {
+        display: none;
+    }
 `
 
 export const Line = styled.div`
@@ -97,6 +111,9 @@ export const HomeButton = styled.button`
 export const HomeRightContainer = styled.div`
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 1300px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 `
 
 export const HomeRightTop = styled.div`
@@ -104,6 +121,12 @@ export const HomeRightTop = styled.div`
     justify-content: space-between;
     width: 1000px;
     align-items: center;
+    @media only screen and (max-width: 1300px) {
+       display: flex;
+       justify-content: center;
+       gap: 50px;
+       width: 100%;
+    }
 `
 
 export const LongLine = styled.div`
@@ -111,6 +134,11 @@ export const LongLine = styled.div`
     margin-top: 10px;
     height: 1px;
     background: rgba(55, 55, 55, 0.50);
+    @media only screen and (max-width: 1300px) {
+        width: 300px;
+        display: flex;
+        margin: 10px auto;
+    }
 `
 
 export const CarContainer = styled.div`
@@ -120,6 +148,21 @@ export const CarContainer = styled.div`
     gap: 20px;
     img {
         height: 150px;
+    }
+    .car-box {
+        width: 90%;
+    }
+    @media only screen and (max-width: 1300px) {
+        grid-template-columns: repeat(2, 1fr);
+        /* width: 0; */
+        display: grid;
+        /* justify-items: center; */
+        margin: auto;
+        /* max-width: 100%; */
+        .car-box {
+            width: 100%;
+            border-radius: 20px;
+        }
     }
 `
 
@@ -146,6 +189,12 @@ export const FooterContainer = styled.div`
     color: #fff;
     height: 300px;
     margin-top: 50px;
+    @media only screen and (max-width: 1300px) {
+       .footer-none {
+            display: none;
+       }
+       gap: 100px;
+    }
 `
 
 export const H2 = styled.h2`
