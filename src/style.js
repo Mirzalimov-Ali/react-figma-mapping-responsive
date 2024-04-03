@@ -118,4 +118,41 @@ export const CarContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    img {
+        height: 150px;
+    }
+`
+
+export const MappingButton = styled.button`
+    background: none;
+    border: 1px solid var(--blue, #006DAB);
+    border-radius: 10px;
+    color: #006DAB;
+    font-size: 14px;
+    width: 90px;
+    margin-top: 20px;
+    height: 30px;
+    font-weight: 700;
+    cursor: pointer;
+
+`
+
+export const FooterContainer = styled.div`
+    background: #006DAB;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    gap: 200px;
+    color: #fff;
+    height: 300px;
+    margin-top: 50px;
+`
+
+export const H2 = styled.h2`
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 40px;
 `

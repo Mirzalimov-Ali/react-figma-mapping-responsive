@@ -1,5 +1,5 @@
 import React from 'react'
-import { Boxes, CarContainer, HomeButton, HomeButtonContainer, HomeContainer, HomeLeftContainer, HomeRightContainer, HomeRightTop, Line, LongLine } from '../../style'
+import { Boxes, CarContainer, HomeButton, HomeButtonContainer, HomeContainer, HomeLeftContainer, HomeRightContainer, HomeRightTop, Line, LongLine, MappingButton } from '../../style'
 
 import { campcar } from '../mock/mockdata'
 
@@ -10,6 +10,7 @@ import img2 from '../../assets/img2.png'
 import img3 from '../../assets/img3.png'
 import fourDots from '../../assets/four-dots.svg'
 import menu from '../../assets/menu.svg'
+import star from '../../assets/star.svg'
 
 function Home() {
   const data = campcar.maindata
@@ -171,10 +172,26 @@ function Home() {
             <LongLine/>
             <CarContainer>
                 
-                {data.map((key, value)=> {
+                {data.map((value, key)=> {
                     return (
-                        <div id={key}> {/* id={key}deb yozgan sababi: har bir elementni `id`sini  */}
-                            <p>{value.}</p>
+                        <div key={key} style={{display: "flex", flexDirection: "column", alignItems: "center", boxShadow: "0px 0px 5px 0px rgba(0, 0, 0, 0.10)", width: "90%", padding: "10px 0"}}>
+                            <img src={value.car.photo} alt="Photo of car not entered" />
+                            <div>
+                                <p style={{fontSize: "19px", fontWeight: "600", marginBottom: "5px"}}>{value.car.name}</p>
+                                <div style={{display: "flex", justifyContent: "space-between", alignItems: "start", width: "100%", marginBottom: "20px"}}>
+                                    <p style={{fontSize: "14px", fontWeight: "400"}}>{value.car.company}</p>
+                                    <div style={{display: "flex", alignItems: "center", height: "20px"}}>
+                                        <img src={star} alt="" width={"20px"}/>
+                                        <p>5.3</p>
+                                    </div>
+                                </div>
+                                <p style={{color: "#006DAB", fontSize: "20px", fontWeight: "700"}}>{value.car.cost} Won</p>
+                                <div style={{display: "flex", gap: '20px'}}>
+                                    <MappingButton>Order</MappingButton>
+                                    <MappingButton>Compare</MappingButton>
+                                </div>
+                            </div>
+                            
                         </div>
                     )
                 })}

@@ -1,4 +1,8 @@
 import img from "../../assets/car.png";
+import img2 from '../../assets/img-2.png'
+import img3 from '../../assets/img-3.png'
+import img4 from '../../assets/img-4.png'
+import img5 from '../../assets/img-5.png'
 
 export const campcar = {
   maindata: [
@@ -19,7 +23,7 @@ export const campcar = {
     {
       id: 2,
       car: {
-        photo: `${img}`,
+        photo: `${img2}`,
         name: "르벤투스680S",
         cost: "93,700,000",
         type: "르노마스터",
@@ -33,7 +37,7 @@ export const campcar = {
     {
       id: 3,
       car: {
-        photo: `${img}`,
+        photo: `${img3}`,
         name: "르벤투스680",
         cost: "93,700,000",
         type: "르노마스터",
@@ -47,7 +51,7 @@ export const campcar = {
     {
       id: 4,
       car: {
-        photo: `${img}`,
+        photo: `${img4}`,
         name: "르벤투스 차박S",
         cost: "66,100,000",
         type: "르노마스터",
@@ -61,7 +65,7 @@ export const campcar = {
     {
       id: 5,
       car: {
-        photo: `${img}`,
+        photo: `${img3}`,
         name: "포스650",
         cost: "85,300,000",
         type: "포터",
@@ -75,7 +79,7 @@ export const campcar = {
     {
       id: 6,
       car: {
-        photo: `${img}`,
+        photo: `${img5}`,
         name: "포스560",
         cost: "93,700,000",
         type: "포터",
@@ -89,7 +93,7 @@ export const campcar = {
     {
       id: 7,
       car: {
-        photo: `${img}`,
+        photo: `${img4}`,
         name: "올카",
         cost: "62,600,000",
         type: "포터",
@@ -103,7 +107,7 @@ export const campcar = {
     {
       id: 8,
       car: {
-        photo: `${img}`,
+        photo: `${img2}`,
         name: "DS9eR+a",
         cost: "77,900,000",
         type: "봉고",
@@ -257,7 +261,7 @@ export const campcar = {
     {
       id: 31,
       car: {
-        photo: " //",
+        photo: `${img}`,
         name: "HWC560DL",
         cost: "61,000,000",
         type: "포터",
@@ -341,7 +345,7 @@ export const campcar = {
     {
       id: 37,
       car: {
-        photo: " //",
+        photo: `${img}`,
         name: "헤르메스650",
         cost: "77,000,000",
         type: "봉고",
