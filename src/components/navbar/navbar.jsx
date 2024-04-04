@@ -20,10 +20,11 @@ function Navbar() {
             <p>Used Car <img src={downArrow} alt="" /></p>
             <p>Camping Place</p>
         </NavbarNavigationContianer>
-        <div style={{display: "flex", gap: "20px"}}>
+        <div style={{display: "flex", gap: "20px", alignItems: "center"}}>
             <img src={cart} alt="" style={{cursor: "pointer"}}/>
-            <img src={user} alt="" style={{cursor: "pointer"}}/>
-            <p style={{display: "flex", alignItems: "center", gap: "5px", fontFamily: "Montserrat"}}>En <img src={downArrow} alt=""/></p>
+            <img src={user} alt="" style={{cursor: "pointer"}} className='navbar-none'/>
+            <p className='navbar-none'>En <img src={downArrow} alt="" className='navbar-none'/></p>
+            <img src={menu} alt="" className='mobile-menu'/>
         </div>
     </NavbarContainer>
   )

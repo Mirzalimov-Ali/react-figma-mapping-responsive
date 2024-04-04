@@ -14,8 +14,22 @@ export const NavbarContainer = styled.div`
     .hamburger {
         display: none;
     }
+    .mobile-menu {
+        display: none;
+    }
     @media only screen and (max-width: 1300px) {
         .hamburger {
+            display: flex;
+        }
+    }
+    @media only screen and (max-width: 660px) {
+        .hamburger {
+            display: none;
+        }
+        .navbar-none {
+            display: none;
+        }
+        .mobile-menu {
             display: flex;
         }
     }
@@ -121,11 +135,30 @@ export const HomeRightTop = styled.div`
     justify-content: space-between;
     width: 1000px;
     align-items: center;
+    /* .mobile-flex {
+        display: none;
+    } */
     @media only screen and (max-width: 1300px) {
        display: flex;
        justify-content: center;
        gap: 50px;
        width: 100%;
+    }
+    @media only screen and (max-width: 660px) {
+        .mobile-flex {
+            display: flex;
+            gap: 210px;
+            justify-content: center;
+            width: 75%;
+        }
+        .item {
+            display: flex;
+        }
+        flex-direction: column;
+        gap: 20px;
+        .mobile-none {
+            display: none;
+        }
     }
 `
 
@@ -138,6 +171,9 @@ export const LongLine = styled.div`
         width: 300px;
         display: flex;
         margin: 10px auto;
+    }
+    @media only screen and (max-width: 660px) {
+        width: 100%;
     }
 `
 
@@ -157,8 +193,17 @@ export const CarContainer = styled.div`
         /* width: 0; */
         display: grid;
         /* justify-items: center; */
-        margin: auto;
+        margin: 30px auto;
         /* max-width: 100%; */
+        .car-box {
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+    @media only screen and (max-width: 660px) {
+        grid-template-columns: repeat(1, 1fr);
+        display: grid;
+        margin: 30px auto;
         .car-box {
             width: 100%;
             border-radius: 20px;
@@ -194,6 +239,12 @@ export const FooterContainer = styled.div`
             display: none;
        }
        gap: 100px;
+    }
+    @media only screen and (max-width: 660px) {
+       .footer-none {
+            display: none;
+       }
+       gap: 50px;
     }
 `
 

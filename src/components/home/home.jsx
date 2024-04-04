@@ -150,9 +150,16 @@ function Home() {
 
         <HomeRightContainer>
             <HomeRightTop>
-                <div style={{fontWeight: "600"}}>
-                    <p>Item  <span style={{marginLeft: "10px", color: "#006DAB"}}>25.156</span></p>
+                <div className='mobile-flex' style={{display: "flex", alignItems: "center"}}>
+                    <div style={{fontWeight: "600"}}>
+                        <p className='item'>Item  <span style={{marginLeft: "10px", color: "#006DAB"}}>25.156</span></p>
+                    </div>
+                    <div style={{display: "flex", alignItems: "center"}}>
+                        <button style={{height: "40px", border: "1px solid rgba(55, 55, 55, 0.30)", borderRadius: "5px 0 0 5px", background: "none", width: "40px", cursor: "pointer", marginLeft: '20px'}}><img src={fourDots} alt=""/></button>
+                        <button style={{height: "40px", border: "1px solid rgba(55, 55, 55, 0.30)", borderRadius: "0 5px 5px 0", background: "none", width: "40px", cursor: "pointer"}}><img src={menu} alt=""/></button>
+                    </div>
                 </div>
+                
                 <div style={{display: "flex", alignItems: "center"}}>
                     <p style={{fontWeight: "500"}}>Sort by</p>
                     <div style={{display: "flex", alignItems: "center"}}>
@@ -164,8 +171,8 @@ function Home() {
                         <button style={{height: "40px", border: "1px solid rgba(55, 55, 55, 0.30)", borderRadius: "0 5px 5px 0", background: "none", width: "40px", cursor: "pointer"}}><img src={downArrow} alt=""/></button>
                     </div>
                     <div style={{display: "flex", alignItems: "center"}}>
-                        <button style={{height: "40px", border: "1px solid rgba(55, 55, 55, 0.30)", borderRadius: "5px 0 0 5px", background: "none", width: "40px", cursor: "pointer", marginLeft: '20px'}}><img src={fourDots} alt=""/></button>
-                        <button style={{height: "40px", border: "1px solid rgba(55, 55, 55, 0.30)", borderRadius: "0 5px 5px 0", background: "none", width: "40px", cursor: "pointer"}}><img src={menu} alt=""/></button>
+                        <button style={{height: "40px", border: "1px solid rgba(55, 55, 55, 0.30)", borderRadius: "5px 0 0 5px", background: "none", width: "40px", cursor: "pointer", marginLeft: '20px'}} className='mobile-none'><img src={fourDots} alt=""/></button>
+                        <button style={{height: "40px", border: "1px solid rgba(55, 55, 55, 0.30)", borderRadius: "0 5px 5px 0", background: "none", width: "40px", cursor: "pointer"}} className='mobile-none'><img src={menu} alt=""/></button>
                     </div>
                 </div>
             </HomeRightTop>
