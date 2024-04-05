@@ -133,11 +133,9 @@ export const HomeRightContainer = styled.div`
 export const HomeRightTop = styled.div`
     display: flex;
     justify-content: space-between;
-    width: 1000px;
+    /* width: 1000px; */
+    width: 100%;
     align-items: center;
-    /* .mobile-flex {
-        display: none;
-    } */
     @media only screen and (max-width: 1300px) {
        display: flex;
        justify-content: center;
@@ -163,7 +161,8 @@ export const HomeRightTop = styled.div`
 `
 
 export const LongLine = styled.div`
-    width: 1000px;
+    /* width: 1000px; */
+    width: 100%;
     margin-top: 10px;
     height: 1px;
     background: rgba(55, 55, 55, 0.50);

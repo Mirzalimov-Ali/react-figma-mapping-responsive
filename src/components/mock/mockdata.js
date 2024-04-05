@@ -3,6 +3,41 @@ import img2 from '../../assets/img-2.png'
 import img3 from '../../assets/img-3.png'
 import img4 from '../../assets/img-4.png'
 import img5 from '../../assets/img-5.png'
+import img6 from '../../assets/img-6.webp'
+import img7 from '../../assets/img-7.webp'
+import img8 from '../../assets/img-8.png'
+import img9 from '../../assets/img-9.png'
+import img10 from '../../assets/img-10.png'
+import img11 from '../../assets/img-11.png'
+import img12 from '../../assets/img-12.webp'
+import img13 from '../../assets/img-13.png'
+import img14 from '../../assets/img-14.png'
+import img15 from '../../assets/img-15.png'
+import img16 from '../../assets/img-16.png'
+import img17 from '../../assets/img-17.png'
+import img18 from '../../assets/img-18.png'
+import img19 from '../../assets/img-19.png'
+import img20 from '../../assets/img-20.png'
+import img21 from '../../assets/img-21.png'
+import img22 from '../../assets/img-22.webp'
+import img23 from '../../assets/img-23.png'
+import img24 from '../../assets/img-24.png'
+import img25 from '../../assets/img-25.png'
+import img26 from '../../assets/img-26.png'
+import img27 from '../../assets/img-27.png'
+import img28 from '../../assets/img-28.png'
+import img29 from '../../assets/img-29.png'
+import img30 from '../../assets/img-30.png'
+import img31 from '../../assets/img-31.png'
+import img32 from '../../assets/img-32.webp'
+import img33 from '../../assets/img-33.png'
+import img34 from '../../assets/img-34.png'
+import img35 from '../../assets/img-35.png'
+import img36 from '../../assets/img-36.png'
+import img37 from '../../assets/img-37.png'
+import img38 from '../../assets/img-38.png'
+import img39 from '../../assets/img-39.png'
+import img40 from '../../assets/img-40.png'
 
 export const campcar = {
   maindata: [
@@ -121,7 +156,7 @@ export const campcar = {
     {
       id: 9,
       car: {
-        photo: `${img}`,
+        photo: `${img6}`,
         name: "DS9eU+a",
         cost: "75,200,000",
         type: "봉고",
@@ -135,7 +170,7 @@ export const campcar = {
     {
       id: 10,
       car: {
-        photo: `${img}`,
+        photo: `${img7}`,
         name: "ACIER 790R",
         cost: "122,800,000",
         type: "이베코 뉴데일리",
@@ -149,7 +184,7 @@ export const campcar = {
     {
       id: 12,
       car: {
-        photo: `${img}`,
+        photo: `${img8}`,
         name: "ACIER 900 Deluxe",
         cost: "142,800,000",
         type: "이베코 뉴데일리",
@@ -163,7 +198,7 @@ export const campcar = {
     {
       id: 16,
       car: {
-        photo: `${img}`,
+        photo: `${img9}`,
         name: "ST-7",
         cost: "89,000,000",
         type: "봉고",
@@ -177,7 +212,7 @@ export const campcar = {
     {
       id: 20,
       car: {
-        photo: `${img}`,
+        photo: `${img10}`,
         name: "트레블라인 660",
         cost: "76,000,000",
         type: "르노마스터",
@@ -191,7 +226,7 @@ export const campcar = {
     {
       id: 21,
       car: {
-        photo: `${img}`,
+        photo: `${img11}`,
         name: "트레블라인 550",
         cost: "60,000,000",
         type: "르노마스터",
@@ -205,7 +240,7 @@ export const campcar = {
     {
       id: 22,
       car: {
-        photo: `${img}`,
+        photo: `${img12}`,
         name: "트레블라인 650,",
         cost: "68,900,000",
         type: "봉고",
@@ -219,7 +254,7 @@ export const campcar = {
     {
       id: 23,
       car: {
-        photo: `${img}`,
+        photo: `${img13}`,
         name: "트레블라인 350",
         cost: "59,900,000",
         type: "봉고",
@@ -233,7 +268,7 @@ export const campcar = {
     {
       id: 24,
       car: {
-        photo: `${img}`,
+        photo: `${img14}`,
         name: "트레블라인 250,",
         cost: "49,000,000",
         type: "포터",
@@ -247,7 +282,7 @@ export const campcar = {
     {
       id: 25,
       car: {
-        photo: `${img}`,
+        photo: `${img15}`,
         name: "트레블라인 220",
         cost: "39,000,000",
         type: "포터",
@@ -261,7 +296,7 @@ export const campcar = {
     {
       id: 31,
       car: {
-        photo: `${img}`,
+        photo: `${img16}`,
         name: "HWC560DL",
         cost: "61,000,000",
         type: "포터",
@@ -275,7 +310,7 @@ export const campcar = {
     {
       id: 32,
       car: {
-        photo: `${img}`,
+        photo: `${img17}`,
         name: "HWC620DL",
         cost: "76,000,000",
         type: "봉고",
@@ -289,7 +324,7 @@ export const campcar = {
     {
       id: 33,
       car: {
-        photo: `${img}`,
+        photo: `${img18}`,
         name: "HWC680L",
         cost: "75,000,000",
         type: "르노마스터",
@@ -303,7 +338,7 @@ export const campcar = {
     {
       id: 34,
       car: {
-        photo: `${img}`,
+        photo: `${img19}`,
         name: "HWC680DL",
         cost: "77,000,000",
         type: "르노마스터",
@@ -317,7 +352,7 @@ export const campcar = {
     {
       id: 35,
       car: {
-        photo: `${img}`,
+        photo: `${img20}`,
         name: "HWC560F",
         cost: "64,000,000",
         type: "포터",
@@ -331,7 +366,7 @@ export const campcar = {
     {
       id: 36,
       car: {
-        photo: `${img}`,
+        photo: `${img21}`,
         name: "헤르메스550",
         cost: "64,000,000",
         type: "봉고",
@@ -345,7 +380,7 @@ export const campcar = {
     {
       id: 37,
       car: {
-        photo: `${img}`,
+        photo: `${img22}`,
         name: "헤르메스650",
         cost: "77,000,000",
         type: "봉고",
@@ -359,7 +394,7 @@ export const campcar = {
     {
       id: 38,
       car: {
-        photo: `${img}`,
+        photo: `${img23}`,
         name: "V-70",
         cost: "64,900,000",
         type: "칸",
@@ -373,7 +408,7 @@ export const campcar = {
     {
       id: 39,
       car: {
-        photo: `${img}`,
+        photo: `${img24}`,
         name: "HASSLA",
         cost: "74,900,000",
         type: "봉고",
@@ -387,7 +422,7 @@ export const campcar = {
     {
       id: 40,
       car: {
-        photo: `${img}`,
+        photo: `${img25}`,
         name: "오버랜드",
         cost: "89,800,000",
         type: "르노마스터",
@@ -401,7 +436,7 @@ export const campcar = {
     {
       id: 45,
       car: {
-        photo: `${img}`,
+        photo: `${img26}`,
         name: "다비드 럭셔리",
         cost: "66,093,900",
         type: "르노마스터",
@@ -415,7 +450,7 @@ export const campcar = {
     {
       id: 46,
       car: {
-        photo: `${img}`,
+        photo: `${img27}`,
         name: "다비드 스페셜",
         cost: "68,223,900",
         type: "르노마스터",
@@ -429,7 +464,7 @@ export const campcar = {
     {
       id: 47,
       car: {
-        photo: `${img}`,
+        photo: `${img28}`,
         name: "다비드 패밀리",
         cost: "69,501,900",
         type: "르노마스터",
@@ -443,7 +478,7 @@ export const campcar = {
     {
       id: 48,
       car: {
-        photo: `${img}`,
+        photo: `${img29}`,
         name: "다비드 베이직",
         cost: "60,342,900",
         type: "르노마스터",
@@ -457,7 +492,7 @@ export const campcar = {
     {
       id: 49,
       car: {
-        photo: `${img}`,
+        photo: `${img30}`,
         name: "WD5-410",
         cost: "69,225,000",
         type: "포터",
@@ -485,7 +520,7 @@ export const campcar = {
     {
       id: 51,
       car: {
-        photo: `${img}`,
+        photo: `${img31}`,
         name: "WD-330",
         cost: "61,770,000",
         type: "포터",
@@ -499,7 +534,7 @@ export const campcar = {
     {
       id: 52,
       car: {
-        photo: `${img}`,
+        photo: `${img32}`,
         name: "MARLIN",
         cost: "49,860,000",
         type: "포터",
@@ -513,7 +548,7 @@ export const campcar = {
     {
       id: 53,
       car: {
-        photo: `${img}`,
+        photo: `${img28}`,
         name: "테라-G6",
         cost: "68,000,000",
         type: "봉고",
@@ -527,7 +562,7 @@ export const campcar = {
     {
       id: 54,
       car: {
-        photo: `${img}`,
+        photo: `${img34}`,
         name: "테라-X6",
         cost: "68,000,000",
         type: "봉고",
@@ -555,7 +590,7 @@ export const campcar = {
     {
       id: 90,
       car: {
-        photo: `${img}`,
+        photo: `${img35}`,
         name: "프라임640",
         cost: "79,900,000",
         type: "포터",
@@ -569,7 +604,7 @@ export const campcar = {
     {
       id: 91,
       car: {
-        photo: `${img}`,
+        photo: `${img36}`,
         name: "프라임550",
         cost: "68,000,000",
         type: "포터",
@@ -583,7 +618,7 @@ export const campcar = {
     {
       id: 92,
       car: {
-        photo: `${img}`,
+        photo: `${img37}`,
         name: "하모니B",
         cost: "62,000,000",
         type: "르노마스터",
@@ -597,7 +632,7 @@ export const campcar = {
     {
       id: 93,
       car: {
-        photo: `${img}`,
+        photo: `${img38}`,
         name: "하모니C",
         cost: "58,300,000",
         type: "르노마스터",
@@ -611,7 +646,7 @@ export const campcar = {
     {
       id: 95,
       car: {
-        photo: `${img}`,
+        photo: `${img39}`,
         name: "V630J",
         cost: "121,000,000",
         type: "피아트 듀카토",
@@ -625,7 +660,7 @@ export const campcar = {
     {
       id: 96,
       car: {
-        photo: `${img}`,
+        photo: `${img40}`,
         name: "P746GJ",
         cost: "139,000,000",
         type: "피아트 듀카토",
