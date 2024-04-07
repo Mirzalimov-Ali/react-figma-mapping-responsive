@@ -5,6 +5,7 @@ import downArrow from '../../assets/down-arrow.svg'
 import cart from '../../assets/cart.png'
 import user from '../../assets/user.svg'
 import menu from '../../assets/hamburger-menu.svg'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -14,11 +15,11 @@ function Navbar() {
             <img src={logo} alt="" />
         </div>
         <NavbarNavigationContianer>
-            <p>Motor <img src={downArrow} alt="" /></p>
-            <p>Caravan <img src={downArrow} alt="" /></p>
-            <p>Tuning  <img src={downArrow} alt="" /></p>
-            <p>Used Car <img src={downArrow} alt="" /></p>
-            <p>Camping Place</p>
+            <Link style={{textDecoration: "none"}} to={"/"}><p>Motor <img src={downArrow} alt="" /></p></Link>
+            <Link style={{textDecoration: "none"}} to={"/caravan"}><p>Caravan <img src={downArrow} alt="" /></p></Link>
+            <Link style={{textDecoration: "none"}}><p>Tuning  <img src={downArrow} alt="" /></p></Link>
+            <Link style={{textDecoration: "none"}}><p>Used Car <img src={downArrow} alt="" /></p></Link>
+            <Link style={{textDecoration: "none"}}><p>Camping Place</p></Link>
         </NavbarNavigationContianer>
         <div style={{display: "flex", gap: "20px", alignItems: "center"}}>
             <img src={cart} alt="" style={{cursor: "pointer"}}/>

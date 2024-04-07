@@ -11,6 +11,7 @@ import img3 from '../../assets/img3.png'
 import fourDots from '../../assets/four-dots.svg'
 import menu from '../../assets/menu.svg'
 import star from '../../assets/star.svg'
+import Header from '../header/header'
 
 function Home() {
   const data = campcar.maindata

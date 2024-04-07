@@ -314,7 +314,6 @@ export const LongLine = styled.div`
     height: 1px;
     background: rgba(55, 55, 55, 0.50);
     @media only screen and (max-width: 1300px) {
-        /* width: 300px; */
         width: 100%;
         display: flex;
         margin: 10px auto;
@@ -385,7 +384,6 @@ export const FooterContainer = styled.div`
        .footer-none {
             display: none;
        }
-       /* gap: 50px; */
        display: flex;
        justify-content: space-between;
        align-items: start;
