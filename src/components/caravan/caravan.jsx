@@ -7,6 +7,7 @@ import downArrow from '../../assets/big-down-arrow.svg'
 import fourDots from '../../assets/four-dots.svg'
 import menu from '../../assets/menu.svg'
 import star from '../../assets/star.svg'
+import { CaravanCard, CaravanCardRight, CaravanContainer, CaravanImgWrapper } from '../../caravanStyle'
 
 function Caravan() {
   const data = caravan.maindata
@@ -174,7 +175,20 @@ function Caravan() {
         </HomeRightTop>
         <LongLine/>
 
-        
+        <CaravanContainer>
+          {data.map((value, key) => {
+            const car = value.caravan;
+            return (
+              <CaravanCard key={key}>
+                <CaravanImgWrapper>
+                  <img src={car.image}/>
+                </CaravanImgWrapper>
+                <CaravanCardRight>
+                </CaravanCardRight>
+              </CaravanCard>
+            )
+          })}
+        </CaravanContainer>
     </HomeRightContainer>
 </HomeContainer>
   )
