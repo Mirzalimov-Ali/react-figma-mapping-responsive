@@ -10,7 +10,7 @@ function RouterComponent() {
   return (
     <div>
       <Navbar/>
-      {/* <Header/> */}
+      <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/caravan' element={<Caravan/>}/>

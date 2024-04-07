@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardButtonWrapper, Price, Boxes, BoxesData, BoxesDataInput, BoxesDataWrapper, BoxesDownArrow, BoxesTitleWrapper, CarContainer, Card, CardBottom, CardBottomCarName, CardBottomMiddle, CostBox, CostBoxInput, HomeButton, HomeButtonContainer, HomeContainer, HomeLeftCarWrapper, HomeLeftContainer, HomeLeftParagraph, HomeRightContainer, HomeRightTop, HomeRightTopButton, HomeRightTopLeft, HomeRightTopLeftRight, HomeRightTopRight, Line, LongLine, MappingButton, SortInput, Div, CardImg } from '../../style'
+import { CardButtonWrapper, Price, Boxes, BoxesData, BoxesDataInput, BoxesDataWrapper, BoxesDownArrow, BoxesTitleWrapper, CarContainer, Card, CardBottom, CardBottomCarName, CardBottomMiddle, CostBox, CostBoxInput, HomeButton, HomeButtonContainer, HomeContainer, HomeLeftCarWrapper, HomeLeftContainer, HomeLeftParagraph, HomeRightContainer, HomeRightTop, HomeRightTopButton, HomeRightTopLeft, HomeRightTopLeftRight, HomeRightTopRight, Line, LongLine, MappingButton, SortInput, Div, CardImg, HeaderContainer, BigWrapper } from '../../style'
 
 import { campcar } from '../mock/mockdata'
 
@@ -11,7 +11,6 @@ import img3 from '../../assets/img3.png'
 import fourDots from '../../assets/four-dots.svg'
 import menu from '../../assets/menu.svg'
 import star from '../../assets/star.svg'
-import Header from '../header/header'
 
 function Home() {
   const data = campcar.maindata
@@ -217,6 +216,7 @@ function Home() {
             </CarContainer>
         </HomeRightContainer>
     </HomeContainer>
+    
   )
 }
 
