@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CardButtonWrapper, Price, Boxes, BoxesData, BoxesDataInput, BoxesDataWrapper, BoxesDownArrow, BoxesTitleWrapper, CarContainer, Card, CardBottom, CardBottomCarName, CardBottomMiddle, CostBox, CostBoxInput, HomeButton, HomeButtonContainer, HomeContainer, HomeLeftCarWrapper, HomeLeftContainer, HomeLeftParagraph, HomeRightContainer, HomeRightTop, HomeRightTopButton, HomeRightTopLeft, HomeRightTopLeftRight, HomeRightTopRight, Line, LongLine, MappingButton, SortInput, Div, CardImg, HeaderContainer, BigWrapper } from '../../style'
 
 import { campcar } from '../mock/mockdata'
@@ -10,11 +10,20 @@ import img2 from '../../assets/img2.png'
 import img3 from '../../assets/img3.png'
 import fourDots from '../../assets/four-dots.svg'
 import menu from '../../assets/menu.svg'
-import star from '../../assets/star.svg'
+import GridMenu from './gridMenu'
+import Vmenu from './vmenu'
 
-function Home() {
+function Motor() {
+  const [active, setActive] = useState(true)
+  
+  function handleGridClicked() {
+    setActive(false)
+  }
+  
+  function handleVClicked() {
+    setActive(true)
+  }
   const data = campcar.maindata
-
   return (
     <HomeContainer>
         <HomeLeftContainer>
@@ -165,8 +174,8 @@ function Home() {
                         <p style={{fontWeight: "600"}}>Item<span style={{marginLeft: "10px", color: "#006DAB"}}>{data.length}</span></p>
                     </div>
                     <HomeRightTopLeftRight $displayNone>
-                        <HomeRightTopButton><img src={fourDots} alt=""/></HomeRightTopButton>
-                        <HomeRightTopButton $rightButton><img src={menu} alt=""/></HomeRightTopButton>
+                        <HomeRightTopButton onClick={handleVClicked}><img src={fourDots} alt=""/></HomeRightTopButton>
+                        <HomeRightTopButton $rightButton onClick={handleGridClicked}><img src={menu} alt=""/></HomeRightTopButton>
                     </HomeRightTopLeftRight>
                 </HomeRightTopLeft>
                 
@@ -181,43 +190,19 @@ function Home() {
                         <HomeRightTopButton $rightButton><img src={downArrow} alt=""/></HomeRightTopButton>
                     </div>
                     <div className='none'>
-                        <HomeRightTopButton><img src={fourDots} alt=""/></HomeRightTopButton>
-                        <HomeRightTopButton $rightButton><img src={menu} alt=""/></HomeRightTopButton>
+                        <HomeRightTopButton onClick={handleVClicked}><img src={fourDots} alt=""/></HomeRightTopButton>
+                        <HomeRightTopButton $rightButton onClick={handleGridClicked}><img src={menu} alt=""/></HomeRightTopButton>
                     </div>
                 </HomeRightTopRight>
             </HomeRightTop>
             <LongLine/>
 
-            <CarContainer>
-                {data.map((value, key)=> {
-                    return (
-                        <Card key={key}>
-                            <CardImg>
-                                <img src={value.car.photo} alt="Photo of car not entered" width={"100%"}/>
-                            </CardImg>
-                            <CardBottom>
-                                <CardBottomCarName>{value.car.name}</CardBottomCarName>
-                                <CardBottomMiddle>
-                                    <p>{value.car.company}</p>
-                                    <div>
-                                        <img src={star} alt="" width={"20px"}/>
-                                        <label>5.3</label>
-                                    </div>
-                                </CardBottomMiddle>
-                                <Price>{value.car.cost} Won</Price>
-                                <CardButtonWrapper>
-                                    <MappingButton>Order</MappingButton>
-                                    <MappingButton>Compare</MappingButton>
-                                </CardButtonWrapper>
-                            </CardBottom>
-                        </Card>
-                    )
-                })}
-            </CarContainer>
+            {active ? <GridMenu/> : <Vmenu/>}
+            
         </HomeRightContainer>
     </HomeContainer>
     
   )
 }
 
-export default Home
+export default Motor

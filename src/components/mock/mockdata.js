@@ -52,6 +52,7 @@ export const campcar = {
         date: "22년 03월",
         company: "다온티앤티",
         location: "수도권",
+        rating: "3.4"
       },
     },
     {
@@ -66,6 +67,7 @@ export const campcar = {
         date: "22년 03월",
         company: "다온티앤티",
         location: "수도권",
+        rating: "3.7"
       },
     },
     {
@@ -80,6 +82,7 @@ export const campcar = {
         date: "22년 03월",
         company: "다온티앤티",
         location: "수도권",
+        rating: "4.6"
       },
     },
     {
@@ -94,6 +97,7 @@ export const campcar = {
         date: "22년 03월",
         company: "다온티앤티",
         location: "수도권",
+        rating: "8.4"
       },
     },
     {
@@ -108,6 +112,7 @@ export const campcar = {
         date: "22년 03월",
         company: "다온티앤티",
         location: "수도권",
+        rating: "9.9"
       },
     },
     {
@@ -122,6 +127,7 @@ export const campcar = {
         date: "22년 03월",
         company: "다온티앤티",
         location: "수도권",
+        rating: "4.4"
       },
     },
     {
@@ -136,6 +142,7 @@ export const campcar = {
         date: "22년 03월",
         company: "다온티앤티",
         location: "수도권",
+        rating: "5.3"
       },
     },
     {
@@ -150,6 +157,7 @@ export const campcar = {
         date: "22년 03월",
         company: "제일모빌",
         location: "수도권",
+        rating: "3.5"
       },
     },
     {
@@ -164,6 +172,7 @@ export const campcar = {
         date: "22년 03월",
         company: "제일모빌",
         location: "수도권",
+        rating: "6.1"
       },
     },
     {
@@ -178,6 +187,7 @@ export const campcar = {
         date: "22년 03월",
         company: "제일모빌",
         location: "수도권",
+        rating: "0.5"
       },
     },
     {
@@ -192,6 +202,7 @@ export const campcar = {
         date: "22년 03월",
         company: "제일모빌",
         location: "수도권",
+        rating: "1.0"
       },
     },
     {
@@ -206,6 +217,7 @@ export const campcar = {
         date: "22년 03월",
         company: "스타모빌",
         location: " 경상권",
+        rating: "8.3"
       },
     },
     {
@@ -220,6 +232,7 @@ export const campcar = {
         date: "22년 03월",
         company: "영남캠핑카",
         location: "경상권",
+        rating: "7.2"
       },
     },
     {
@@ -234,6 +247,7 @@ export const campcar = {
         date: "22년 03월",
         company: "영남캠핑카",
         location: "경상권",
+        rating: "9.5"
       },
     },
     {
@@ -248,6 +262,7 @@ export const campcar = {
         date: "22년 03월",
         company: " 영남캠핑카",
         location: "경상권",
+        rating: "4.1"
       },
     },
     {
@@ -262,6 +277,7 @@ export const campcar = {
         date: "22년 03월",
         company: "영남캠핑카",
         location: "경상권",
+        rating: "5.2"
       },
     },
     {
@@ -276,6 +292,7 @@ export const campcar = {
         date: "22년 03월",
         company: "영남캠핑카",
         location: "경상권",
+        rating: "2.5"
       },
     },
     {
@@ -290,6 +307,7 @@ export const campcar = {
         date: "22년 03월",
         company: "영남캠핑카",
         location: "경상권",
+        rating: "3.7"
       },
     },
     {
@@ -304,6 +322,7 @@ export const campcar = {
         date: "22년 03월",
         company: "한울캠핑카",
         location: "경상권",
+        rating: "3.9"
       },
     },
     {
@@ -318,6 +337,7 @@ export const campcar = {
         date: "22년 03월",
         company: "한울캠핑카",
         location: "경상권",
+        rating: "3.3"
       },
     },
     {
@@ -332,6 +352,7 @@ export const campcar = {
         date: "22년 03월",
         company: "한울캠핑카",
         location: "경상권",
+        rating: "2.0"
       },
     },
     {
@@ -346,6 +367,7 @@ export const campcar = {
         date: "22년 03월",
         company: "한울캠핑카",
         location: "경상권",
+        rating: "2.9"
       },
     },
     {
@@ -360,6 +382,7 @@ export const campcar = {
         date: "22년 03월",
         company: "한울캠핑카",
         location: "경상권",
+        rating: "7.2"
       },
     },
     {
@@ -374,6 +397,7 @@ export const campcar = {
         date: "22년 03월",
         company: "훼미리캠핑카",
         location: "경상권",
+        rating: "2.1"
       },
     },
     {
@@ -388,6 +412,7 @@ export const campcar = {
         date: "22년 03월",
         company: "훼미리캠핑카",
         location: "경상권",
+        rating: "0.3"
       },
     },
     {
@@ -402,6 +427,7 @@ export const campcar = {
         date: "22년 03월",
         company: "에이스캠퍼",
         location: "충청권",
+        rating: "3.4"
       },
     },
     {
@@ -416,6 +442,7 @@ export const campcar = {
         date: "22년 03월",
         company: "에이스캠퍼",
         location: "충청권",
+        rating: "4.3"
       },
     },
     {
@@ -430,6 +457,7 @@ export const campcar = {
         date: "22년 03월",
         company: "월든모빌",
         location: "수도권",
+        rating: "8.0"
       },
     },
     {
@@ -444,6 +472,7 @@ export const campcar = {
         date: "22년 03월",
         company: " 위드원모터스",
         location: " 수도권",
+        rating: "8.4"
       },
     },
     {
@@ -458,6 +487,7 @@ export const campcar = {
         date: "22년 03월",
         company: "위드원모터스",
         location: "수도권",
+        rating: "8.3"
       },
     },
     {
@@ -472,6 +502,7 @@ export const campcar = {
         date: "22년 03월",
         company: "위드원모터스",
         location: "수도권",
+        rating: "1.5"
       },
     },
     {
@@ -486,6 +517,7 @@ export const campcar = {
         date: "22년 03월",
         company: "위드원모터스",
         location: "수도권",
+        rating: "7.4"
       },
     },
     {
@@ -500,6 +532,7 @@ export const campcar = {
         date: "22년 03월",
         company: "위드원모터스",
         location: "수도권",
+        rating: "9.5"
       },
     },
     {
@@ -514,6 +547,7 @@ export const campcar = {
         date: "22년 03월",
         company: "위드원모터스",
         location: "수도권",
+        rating: "8.2"
       },
     },
     {
@@ -528,6 +562,7 @@ export const campcar = {
         date: "22년 03월",
         company: "위드원모터스",
         location: "수도권",
+        rating: "2.3"
       },
     },
     {
@@ -542,6 +577,7 @@ export const campcar = {
         date: "22년 03월",
         company: "위드원모터스",
         location: "수도권",
+        rating: "8.5"
       },
     },
     {
@@ -556,6 +592,7 @@ export const campcar = {
         date: "22년 03월",
         company: "미스터캠퍼",
         location: "수도권",
+        rating: "8.4"
       },
     },
     {
@@ -570,6 +607,7 @@ export const campcar = {
         date: "22년 03월",
         company: "미스터캠퍼",
         location: "수도권",
+        rating: "9.3"
       },
     },
     {
@@ -584,6 +622,7 @@ export const campcar = {
         date: "22년 03월",
         company: "미스터캠퍼",
         location: "수도권",
+        rating: "6.3"
       },
     },
     {
@@ -598,6 +637,7 @@ export const campcar = {
         date: "22년 03월",
         company: "드림캠핑카",
         location: "경상권",
+        rating: "6.7"
       },
     },
     {
@@ -612,6 +652,7 @@ export const campcar = {
         date: "22년 03월",
         company: "드림캠핑카",
         location: "경상권",
+        rating: "6.9"
       },
     },
     {
@@ -626,6 +667,7 @@ export const campcar = {
         date: "22년 03월",
         company: "드림캠핑카",
         location: "경상권",
+        rating: "7.0"
       },
     },
     {
@@ -640,6 +682,7 @@ export const campcar = {
         date: "22년 03월",
         company: "드림캠핑카",
         location: "경상권",
+        rating: "2.4"
       },
     },
     {
@@ -654,6 +697,7 @@ export const campcar = {
         date: "22년 03월",
         company: "모터홈코리아",
         location: "수도권",
+        rating: "1.1"
       },
     },
     {
@@ -668,6 +712,7 @@ export const campcar = {
         date: "22년 03월",
         company: "모터홈코리아",
         location: "수도권",
+        rating: "7.4"
       },
     },
   ],

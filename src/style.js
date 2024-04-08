@@ -306,6 +306,9 @@ export const Price = styled.p`
     color: #006DAB;
     font-size: 20px;
     font-weight: 700;
+    @media only screen and (max-width: 500px) {
+        font-size: ${(props) => props.$price ? "13px" : ""};
+    }
 `
 
 export const LongLine = styled.div`
@@ -362,7 +365,10 @@ export const MappingButton = styled.button`
     height: 30px;
     font-weight: 700;
     cursor: pointer;
-
+    &:hover {
+        background-color: #006DAB;
+        color: white;
+    }
 `
 
 export const FooterContainer = styled.div`
@@ -388,6 +394,7 @@ export const FooterContainer = styled.div`
        justify-content: space-between;
        align-items: start;
        padding: 40px 30px;
+       gap: 0;
     }
 `
 
