@@ -11,6 +11,7 @@ export const NavbarContainer = styled.div`
     top: 0;
     width: 100%;
     background-color: #fff;
+    z-index: 1;
     .hamburger {
         display: none;
     }

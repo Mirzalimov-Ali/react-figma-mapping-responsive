@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { CardButtonWrapper, Price, Boxes, BoxesData, BoxesDataInput, BoxesDataWrapper, BoxesDownArrow, BoxesTitleWrapper, CarContainer, Card, CardBottom, CardBottomCarName, CardBottomMiddle, CostBox, CostBoxInput, HomeButton, HomeButtonContainer, HomeContainer, HomeLeftCarWrapper, HomeLeftContainer, HomeLeftParagraph, HomeRightContainer, HomeRightTop, HomeRightTopButton, HomeRightTopLeft, HomeRightTopLeftRight, HomeRightTopRight, Line, LongLine, MappingButton, SortInput, Div, CardImg, HeaderContainer, BigWrapper } from '../../style'
 
-import { campcar } from '../mock/mockdata'
+import {caravan} from '../mock/caravan'
 
 // img //
 import downArrow from '../../assets/big-down-arrow.svg'
@@ -13,7 +13,7 @@ import menu from '../../assets/menu.svg'
 import GridMenu from './gridMenu'
 import Vmenu from './vmenu'
 
-function Motor() {
+function Tuning() {
   const [active, setActive] = useState(true)
   
   function handleGridClicked() {
@@ -24,7 +24,7 @@ function Motor() {
     setActive(true)
   }
   
-  const data = campcar.maindata
+  const data = caravan.maindata
   return (
     <HomeContainer>
         <HomeLeftContainer>
@@ -206,4 +206,4 @@ function Motor() {
   )
 }
 
-export default Motor
+export default Tuning

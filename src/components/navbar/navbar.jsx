@@ -12,14 +12,14 @@ function Navbar() {
     <NavbarContainer>
         <div style={{display: "flex", alignItems: "center", gap: "10px"}}>
             <img src={menu} alt="" className='hamburger'/>
-            <img src={logo} alt="" />
+            <Link to={"/"}><img src={logo} alt="" /></Link>
         </div>
         <NavbarNavigationContianer>
-            <Link style={{textDecoration: "none"}} to={"/"}><p>Motor <img src={downArrow} alt="" /></p></Link>
+            <Link style={{textDecoration: "none"}} to={"/motor"}><p>Motor <img src={downArrow} alt="" /></p></Link>
             <Link style={{textDecoration: "none"}} to={"/caravan"}><p>Caravan <img src={downArrow} alt="" /></p></Link>
-            <Link style={{textDecoration: "none"}}><p>Tuning  <img src={downArrow} alt="" /></p></Link>
-            <Link style={{textDecoration: "none"}}><p>Used Car <img src={downArrow} alt="" /></p></Link>
-            <Link style={{textDecoration: "none"}}><p>Camping Place</p></Link>
+            <Link style={{textDecoration: "none"}} to={"/tuning"}><p>Tuning  <img src={downArrow} alt="" /></p></Link>
+            <Link style={{textDecoration: "none"}} to={"/used-car"}><p>Used Car <img src={downArrow} alt="" /></p></Link>
+            <Link style={{textDecoration: "none"}} to={"/"}><p>Camping Place</p></Link>
         </NavbarNavigationContianer>
         <div style={{display: "flex", gap: "20px", alignItems: "center"}}>
             <img src={cart} alt="" style={{cursor: "pointer"}}/>

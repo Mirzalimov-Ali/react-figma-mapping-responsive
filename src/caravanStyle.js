@@ -78,3 +78,9 @@ export const CarName = styled.p`
         font-size: 14px;
     }
 `
+
+export const HomeContainer = styled.div`
+    img {
+        height: 100vh;
+    }
+`
