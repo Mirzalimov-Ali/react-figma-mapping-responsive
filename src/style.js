@@ -90,7 +90,8 @@ export const HomeLeftContainer = styled.div`
     gap: 50px;
     flex: 1;
     @media only screen and (max-width: 1407px) {
-        display: none;
+        display: ${(props) => props.$mobileFlexMenu ? "flex" : "none"};
+        padding: 10px 30px;
     }
 `
 
@@ -206,6 +207,16 @@ export const HomeRightTop = styled.div`
 export const HomeRightTopLeft = styled.div`
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .mobile-none-button {
+        display: none;
+    }
+    @media only screen and (max-width: 1406px) {
+        .mobile-none-button {
+            display: flex;
+        }
+    }
 `
 
 export const HomeRightTopLeftRight = styled.div`
@@ -273,6 +284,9 @@ export const CardImg = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
+    img {
+        max-width: 600px;
+    }
 `
 
 export const CardBottomCarName = styled.p`
