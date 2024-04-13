@@ -14,6 +14,7 @@ import GridMenu from './gridMenu'
 import Vmenu from './vmenu'
 
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 // mui
 import Box from '@mui/material/Box';
@@ -51,6 +52,9 @@ function Motor() {
     <Box sx={{ width: 350 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
         <HomeLeftContainer $mobileFlexMenu>
+            <div style={{position: "fixed", left: "300px"}}>
+                <CloseIcon/>
+            </div>
             <div>
                 <HomeLeftParagraph>Cost of car</HomeLeftParagraph>
                 <Line/>
@@ -198,6 +202,7 @@ function Motor() {
   return (
     <HomeContainer>
         <HomeLeftContainer>
+
             <div>
                 <HomeLeftParagraph>Cost of car</HomeLeftParagraph>
                 <Line/>
@@ -343,6 +348,7 @@ function Motor() {
                 <HomeRightTopLeft>
                     <div style={{display: "flex", alignItems: "center"}}>
                         <p style={{fontWeight: "600"}}>Item<span style={{marginLeft: "10px", color: "#006DAB"}}>{data.length}</span></p>
+
                         <Button onClick={toggleDrawer(true)} className='mobile-none-button'><MenuIcon/></Button>
                         <Drawer open={open} onClose={toggleDrawer(false)}>
                             {DrawerList}
