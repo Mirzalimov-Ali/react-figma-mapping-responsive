@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CardButtonWrapper, Price, Boxes, BoxesData, BoxesDataInput, BoxesDataWrapper, BoxesDownArrow, BoxesTitleWrapper, CarContainer, Card, CardBottom, CardBottomCarName, CardBottomMiddle, CostBox, CostBoxInput, HomeButton, HomeButtonContainer, HomeContainer, HomeLeftCarWrapper, HomeLeftContainer, HomeLeftParagraph, HomeRightContainer, HomeRightTop, HomeRightTopButton, HomeRightTopLeft, HomeRightTopLeftRight, HomeRightTopRight, Line, LongLine, MappingButton, SortInput, Div, CardImg, HeaderContainer, BigWrapper } from '../../style'
+import { Boxes, BoxesData, BoxesDataInput, BoxesDataWrapper, BoxesDownArrow, BoxesTitleWrapper, CostBox, CostBoxInput, HomeButton, HomeButtonContainer, HomeContainer, HomeLeftCarWrapper, HomeLeftContainer, HomeLeftParagraph, HomeRightContainer, HomeRightTop, HomeRightTopButton, HomeRightTopLeft, HomeRightTopLeftRight, HomeRightTopRight, Line, LongLine, SortInput} from '../../style'
 
 import {caravan} from '../mock/caravan'
 
@@ -12,6 +12,7 @@ import fourDots from '../../assets/four-dots.svg'
 import menu from '../../assets/menu.svg'
 import GridMenu from './gridMenu'
 import Vmenu from './vmenu'
+import CaravanHeader from '../header/caravanHeader'
 
 function Caravan() {
   const [active, setActive] = useState(true)
@@ -26,7 +27,9 @@ function Caravan() {
   
   const data = caravan.maindata
   return (
-    <HomeContainer>
+    <div>
+        <CaravanHeader/>
+        <HomeContainer>
         <HomeLeftContainer>
             <div>
                 <HomeLeftParagraph>Cost of car</HomeLeftParagraph>
@@ -201,7 +204,9 @@ function Caravan() {
             {active ? <GridMenu/> : <Vmenu/>}
             
         </HomeRightContainer>
-    </HomeContainer>
+        </HomeContainer>
+    </div>
+    
     
   )
 }

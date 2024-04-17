@@ -15,7 +15,6 @@ function RouterComponent() {
   return (
     <div>
       <Navbar/>
-      {hideComponent && <Header/>}
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path='/motor' element={<Motor/>}/>

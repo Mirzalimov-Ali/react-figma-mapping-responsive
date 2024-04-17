@@ -1,14 +1,14 @@
 import React from 'react'
 import { HeaderContainer } from '../../style'
 
-function Header() {
+function CaravanHeader() {
   return (
-    <HeaderContainer $header>
-      <p>Home / Motors</p>
+    <HeaderContainer>
+      <p>Home / Caravan</p>
       <p style={{fontSize: "27px", fontWeight: "700"}}>Our ranges</p>
-      <p style={{fontSize: "80px", fontWeight: '700'}}>Motors</p>
+      <p style={{fontSize: "80px", fontWeight: '700'}}>Caravans</p>
     </HeaderContainer>
   )
 }
 
-export default Header
+export default CaravanHeader

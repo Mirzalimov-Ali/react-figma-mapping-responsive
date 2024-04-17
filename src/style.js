@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import headerImg from './assets/header-img.png'
+import caravanImg from './assets/caravan-header.webp'
+import tuningImg from './assets/tuning-header.jpg'
+import usedImg from './assets/used-header.jpg'
 
 export const NavbarContainer = styled.div`
     display: flex;
@@ -11,7 +14,7 @@ export const NavbarContainer = styled.div`
     top: 0;
     width: 100%;
     background-color: #fff;
-    z-index: 1;
+    z-index: 5;
     .hamburger {
         display: none;
     }
@@ -60,7 +63,22 @@ export const NavbarNavigationContianer = styled.div`
 `
 
 export const HeaderContainer = styled.div`
-    background-image: url(${headerImg});
+    background-image: url(${(props) => props.$header ? headerImg : caravanImg});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+`
+
+export const HeaderContainer2 = styled.div`
+    background-image: url(${(props) => props.$header? tuningImg : usedImg});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

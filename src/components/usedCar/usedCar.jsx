@@ -12,6 +12,7 @@ import fourDots from '../../assets/four-dots.svg'
 import menu from '../../assets/menu.svg'
 import GridMenu from './gridMenu'
 import Vmenu from './vmenu'
+import UsedHeader from '../header/usedHeader'
 
 function UsedCar() {
   const [active, setActive] = useState(true)
@@ -26,7 +27,9 @@ function UsedCar() {
   
   const data = caravan.maindata
   return (
-    <HomeContainer>
+    <div>
+        <UsedHeader/>
+        <HomeContainer>
         <HomeLeftContainer>
             <div>
                 <HomeLeftParagraph>Cost of car</HomeLeftParagraph>
@@ -201,7 +204,9 @@ function UsedCar() {
             {active ? <GridMenu/> : <Vmenu/>}
             
         </HomeRightContainer>
-    </HomeContainer>
+        </HomeContainer>
+    </div>
+    
     
   )
 }

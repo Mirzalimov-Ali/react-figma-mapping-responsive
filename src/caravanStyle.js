@@ -80,7 +80,15 @@ export const CarName = styled.p`
 `
 
 export const HomeContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     img {
         height: 100vh;
     }
+`
+
+export const HomeTitles = styled.img`
+    max-width: 200px;
+    max-height: 39px;
 `

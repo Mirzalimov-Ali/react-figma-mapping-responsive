@@ -12,6 +12,7 @@ import fourDots from '../../assets/four-dots.svg'
 import menu from '../../assets/menu.svg'
 import GridMenu from './gridMenu'
 import Vmenu from './vmenu'
+import TuningHeader from '../header/tuningHeader'
 
 function Tuning() {
   const [active, setActive] = useState(true)
@@ -26,7 +27,9 @@ function Tuning() {
   
   const data = caravan.maindata
   return (
-    <HomeContainer>
+    <div>
+        <TuningHeader/>
+        <HomeContainer>
         <HomeLeftContainer>
             <div>
                 <HomeLeftParagraph>Cost of car</HomeLeftParagraph>
@@ -201,7 +204,9 @@ function Tuning() {
             {active ? <GridMenu/> : <Vmenu/>}
             
         </HomeRightContainer>
-    </HomeContainer>
+        </HomeContainer>
+    </div>
+   
     
   )
 }
