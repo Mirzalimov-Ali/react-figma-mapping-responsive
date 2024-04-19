@@ -6,7 +6,7 @@ import Popup from 'reactjs-popup';
 // img
 import carousel1 from '../../assets/carousel-img.png'
 import carousel2 from '../../assets/carousel-img2.webp'
-import { HomeContainer, HomeTitles } from '../../caravanStyle'
+import { HomeContainer, HomeTitles, MultiCarouselContainer } from '../../caravanStyle'
 import MultiCarouselComponent from './multiCarousel';
 
 import homeBox1 from '../../assets/home-box-1.png'
@@ -33,7 +33,10 @@ function Home() {
         </Carousel>
 
         <HomeTitles src={recommendImg}/>
-        <MultiCarouselComponent/>
+        <MultiCarouselContainer>
+          <MultiCarouselComponent/>
+        </MultiCarouselContainer>
+        
         
         <HomeTitles src={videosImg} style={{margin: '30px 0'}}/>
         <div style={{display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px"}}>

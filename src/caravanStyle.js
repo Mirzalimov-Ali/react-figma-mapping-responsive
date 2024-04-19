@@ -79,10 +79,11 @@ export const CarName = styled.p`
     }
 `
 
+
+/* home */
 export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
     img {
         height: 100vh;
     }
@@ -91,4 +92,34 @@ export const HomeContainer = styled.div`
 export const HomeTitles = styled.img`
     max-width: 200px;
     max-height: 39px;
+    margin: 30px auto;
+`
+
+export const CarouselBox = styled.div`
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const CarouselBoxInfoWrapper = styled.div`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+`
+
+export const MultiCarouselContainer = styled.div`
+    min-width: 100px;
+    max-width: 1300px; 
+    margin: auto;
+    @media only screen and (max-width: 1300px) {
+        min-width: 0;
+        max-width: 700px;
+    }
+    @media only screen and (max-width: 660px) {
+        min-width: 0;
+        max-width: 500px;
+    }
 `
