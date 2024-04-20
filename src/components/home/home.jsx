@@ -5,8 +5,8 @@ import Popup from 'reactjs-popup';
 
 // img
 import carousel1 from '../../assets/carousel-img.png'
-import carousel2 from '../../assets/carousel-img2.webp'
-import { HomeContainer, HomeTitles, MultiCarouselContainer } from '../../caravanStyle'
+import carousel2 from '../../assets/header-2.png'
+import { BlogsContainer, BlogsLeft, BlogsLeftP, BlogsRight, HomeContainer, HomeTitles, MultiCarouselContainer, VideosContainer } from '../../caravanStyle'
 import MultiCarouselComponent from './multiCarousel';
 
 import homeBox1 from '../../assets/home-box-1.png'
@@ -19,6 +19,14 @@ import homeBox7 from '../../assets/home-box-7.png'
 import homeBox8 from '../../assets/home-box-8.png'
 import videosImg from '../../assets/videos.png'
 import recommendImg from '../../assets/recommend.png'
+import blogsImg from '../../assets/blogs.png'
+
+import blogsImg1 from '../../assets/blogs-img-1.png'
+import blogsImg2 from '../../assets/blogs-img-2.png'
+import blogsImg3 from '../../assets/blogs-img-3.png'
+import blogsImg4 from '../../assets/blogs-img-4.png'
+import blogsImg5 from '../../assets/blogs-img-5.png'
+import blogsImg6 from '../../assets/blogs-img-6.png'
 
 function Home() {
   return (
@@ -38,9 +46,9 @@ function Home() {
         </MultiCarouselContainer>
         
         
-        <HomeTitles src={videosImg} style={{margin: '30px 0'}}/>
-        <div style={{display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px"}}>
-          <Popup trigger={<button className="button"> <img src={homeBox1} alt="" style={{width: "200px", height: '200px', cursor: "pointer", borderRadius: "20px"}}/></button>} modal nested>
+        <HomeTitles src={videosImg}/>
+        <VideosContainer>
+          <Popup trigger={<img src={homeBox1} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -48,13 +56,14 @@ function Home() {
                 </button>
                 <div className="header">Name of this video</div>
                 <div className="content" style={{display: "flex", justifyContent: "center"}}>
-                  <iframe style={{borderRadius: "20px"}} width="560" height="315" src="https://www.youtube.com/embed/gc5xyn6e_pE?si=3EXnqjj-ClECDAjZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe style={{borderRadius: "20px"}} width="90%" height="315" src="https://www.youtube.com/embed/gc5xyn6e_pE?si=3EXnqjj-ClECDAjZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
               </div>
             )}
           </Popup>
+          
 
-          <Popup trigger={<button className="button"> <img src={homeBox2} alt="" style={{width: "200px", height: '200px', cursor: "pointer", borderRadius: "20px"}}/></button>} modal nested>
+          <Popup trigger={<img src={homeBox2} alt="" style={{width: "300px", height: '300px', cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -68,7 +77,7 @@ function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<button className="button"> <img src={homeBox3} alt="" style={{width: "200px", height: '200px', cursor: "pointer", borderRadius: "20px"}}/></button>} modal nested>
+          <Popup trigger={<img src={homeBox3} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -81,7 +90,7 @@ function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<button className="button"> <img src={homeBox4} alt="" style={{width: "200px", height: '200px', cursor: "pointer", borderRadius: "20px"}}/></button>} modal nested>
+          <Popup trigger={<img src={homeBox4} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -95,7 +104,7 @@ function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<button className="button"> <img src={homeBox5} alt="" style={{width: "200px", height: '200px', cursor: "pointer", borderRadius: "20px"}}/></button>} modal nested>
+          <Popup trigger={<img src={homeBox5} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -108,7 +117,7 @@ function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<button className="button"> <img src={homeBox6} alt="" style={{width: "200px", height: '200px', cursor: "pointer", borderRadius: "20px"}}/></button>} modal nested>
+          <Popup trigger={<img src={homeBox6} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -122,7 +131,7 @@ function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<button className="button"> <img src={homeBox7} alt="" style={{width: "200px", height: '200px', cursor: "pointer", borderRadius: "20px"}}/></button>} modal nested>
+          <Popup trigger={<img src={homeBox7} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -136,7 +145,7 @@ function Home() {
             )}
           </Popup>
           
-          <Popup trigger={<button className="button"> <img src={homeBox8} alt="" style={{width: "200px", height: '200px', cursor: "pointer", borderRadius: "20px"}}/></button>} modal nested>
+          <Popup trigger={<img src={homeBox8} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -149,8 +158,24 @@ function Home() {
               </div>
             )}
           </Popup>
-        </div>
-        
+        </VideosContainer>
+
+        <HomeTitles src={blogsImg}/>
+        <BlogsContainer>
+          <BlogsLeft>
+            <h2 style={{marginBottom: "30px"}}>Camper</h2>
+            <p style={{color: "orange", marginBottom: "10px"}}>@camper_1</p>
+            <BlogsLeftP>Camping truly is for everyone, from your oldest family member to little campers just trekking out for the first time. Whether your plan is to relax, explore or reconnect, CAMPER campgrounds are a great place to create memories with those you love.</BlogsLeftP>
+          </BlogsLeft>
+          <BlogsRight>
+            <img src={blogsImg1} alt="" />
+            <img src={blogsImg2} alt="" />
+            <img src={blogsImg3} alt="" />
+            <img src={blogsImg4} alt="" />
+            <img src={blogsImg5} alt="" />
+            <img src={blogsImg6} alt="" />
+          </BlogsRight>
+        </BlogsContainer>
     </HomeContainer>
   )
 }

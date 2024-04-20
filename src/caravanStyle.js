@@ -8,7 +8,8 @@ export const CaravanContainer = styled.div`
 `
 
 export const CaravanCard = styled.div`
-    width: 100%;
+    /* width: 100%; */
+    width: 1100px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
     border-radius: 20px;
     padding: 10px 20px;
@@ -35,7 +36,8 @@ export const CaravanCardRight = styled.div`
 
 export const AllWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: ${(props) => props.$gap ? "space-evenly" : "space-between"};
     gap: ${(props) => props.$gap ? "20px": "0"};
 `
 
@@ -84,9 +86,6 @@ export const CarName = styled.p`
 export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
-    img {
-        height: 100vh;
-    }
 `
 
 export const HomeTitles = styled.img`
@@ -120,6 +119,61 @@ export const MultiCarouselContainer = styled.div`
     }
     @media only screen and (max-width: 660px) {
         min-width: 0;
-        max-width: 500px;
+        max-width: 300px;
     }
+`
+
+export const VideosContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: auto;
+    @media only screen and (max-width: 1300px) {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+    @media only screen and (max-width: 660px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+`
+
+export const BlogsContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    @media only screen and (max-width: 1300px) {
+        flex-direction: column;
+        align-items: center;
+    } 
+`
+
+export const BlogsLeft = styled.div`
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: 1300px) {
+        flex-direction: column;
+        align-items: center;
+    } 
+    @media only screen and (max-width: 660px) {
+        align-items: start;
+    } 
+`
+
+export const BlogsLeftP = styled.p`
+    width: 400px;
+    @media only screen and (max-width: 1300px) {
+        width: 80vw;
+    } 
+`
+
+export const BlogsRight = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    @media only screen and (max-width: 1300px) {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+    @media only screen and (max-width: 660px) {
+        grid-template-columns: repeat(1, 1fr);
+    } 
 `
