@@ -329,17 +329,24 @@ export const RightButton = styled.button`
 `
 
 export const Menu = styled.div`
-    width: 100vw;
     height: 60px;
     background: #006DAB33;
     margin-top: 60px;
     display: flex;
     justify-content: center;
     @media only screen and (max-width: 1300px) {
-        width: 100%;
         display: flex;
         justify-content: center;
-        padding-left: 650px;
+        .tabs-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 100%;
+        }
+        .tablist {
+            margin: auto;
+            width: 100%;
+        }
     }
 `
 
@@ -348,6 +355,11 @@ export const QaContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 50px;
+    @media only screen and (max-width: 750px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
 `
 
 export const QaLeft = styled.div`
@@ -355,6 +367,11 @@ export const QaLeft = styled.div`
     flex-direction: column;
     width: 38vw;
     gap: 20px;
+    @media only screen and (max-width: 750px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
 `
 
 export const QaLeftBox = styled.div`

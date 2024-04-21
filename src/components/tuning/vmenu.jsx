@@ -4,6 +4,7 @@ import { tuning } from '../mock/tuning';
 import { Price } from '../../style';
 
 import star from '../../assets/star.svg'
+import { Link } from 'react-router-dom';
 
 function Vmenu() {
   const data = tuning.maindata
@@ -13,9 +14,12 @@ function Vmenu() {
             const tuningData = value.tuning;
             return (
                 <CaravanCard key={key}>
-                <CaravanImgWrapper>
-                    <img src={tuningData.image}/>
-                </CaravanImgWrapper>
+                    <Link to={`${value.id}`}>
+                        <CaravanImgWrapper>
+                            <img src={tuningData.image}/>
+                        </CaravanImgWrapper>
+                    </Link>
+                
                 <CaravanCardRight>
                     <AllWrapper>
                         <CarName>{tuningData.name}</CarName>

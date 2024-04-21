@@ -5,6 +5,7 @@ import { usedCar } from '../mock/usedCar'
 
 // img //
 import star from '../../assets/star.svg'
+import { Link } from 'react-router-dom'
 
 function GridMenu() {
   const data = usedCar.maindata
@@ -15,9 +16,12 @@ function GridMenu() {
             const Data = value.used
             return (
                 <Card key={key}>
-                    <CardImg>
-                        <img src={Data.image} alt="Photo of car not entered" width={"100%"}/>
-                    </CardImg>
+                    <Link to={`${value.id}`}>
+                        <CardImg>
+                            <img src={Data.image} alt="Photo of car not entered" width={"100%"}/>
+                        </CardImg>
+                    </Link>
+                    
                     <CardBottom>
                         <CardBottomCarName>{Data.name}</CardBottomCarName>
                         <CardBottomMiddle>

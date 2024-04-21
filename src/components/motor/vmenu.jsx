@@ -4,6 +4,7 @@ import { campcar } from '../mock/mockdata';
 import { Price } from '../../style';
 
 import star from '../../assets/star.svg'
+import { Link } from 'react-router-dom';
 
 function Vmenu() {
   const data = campcar.maindata
@@ -13,9 +14,11 @@ function Vmenu() {
             const car = value.car;
             return (
                 <CaravanCard key={key}>
-                    <CaravanImgWrapper>
-                        <img src={car.photo}/>
-                    </CaravanImgWrapper>
+                    <Link to={`${value.id}`}>
+                        <CaravanImgWrapper>
+                            <img src={car.photo}/>
+                        </CaravanImgWrapper>
+                    </Link>
                     <CaravanCardRight>
                         <AllWrapper>
                             <CarName>{car.name}</CarName>

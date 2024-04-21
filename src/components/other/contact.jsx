@@ -8,7 +8,7 @@ function Contact() {
   return (
     <QaContainer>
       <div style={{display: 'flex', flexDirection: 'column', gap: "20px"}}>
-        <img src={map} alt="" />
+        <img src={map} alt="" width={"100%"}/>
         <div style={{display:'flex', gap: "30px"}}>
           <div style={{padding: "20px", boxShadow: "0px 10px 40px -20px", width: "50%", borderRadius: "10px"}}>
             <p style={{fontSize: "13px"}}>Phone number:</p>

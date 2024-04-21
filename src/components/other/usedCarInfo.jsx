@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useParams } from 'react-router-dom'
-import { campcar } from '../mock/mockdata';
+import { usedCar } from '../mock/usedCar';
 import { CarInfoContainer, CarInfoHeader, CarInfoHeaderButton, CarInfoHeaderButtonWrapper, InfoWrapper, InfoWrapperBottom, InfoWrapperLine, InfoWrapperLine1, InfoWrapperLine2, LineWrappers, Lines, LinesImgWrapper, LinesTextWrapper, Menu, RightButton } from '../../caravanStyle';
 
 import carInfoimg1 from '../../assets/carInfo-1.png'
@@ -10,7 +10,6 @@ import carInfoimg4 from '../../assets/carInfo-4.png'
 import carInfoimg5 from '../../assets/carInfo-5.png'
 
 import Box from '@mui/joy/Box';
-import Chip from '@mui/joy/Chip';
 import Tabs from '@mui/joy/Tabs';
 import TabList from '@mui/joy/TabList';
 import Tab, { tabClasses } from '@mui/joy/Tab';
@@ -24,15 +23,15 @@ import Contact from './contact';
 
 
 
-function CarInfo() {
+function UsedCarInfo() {
   const [index, setIndex] = React.useState(0);
   const { id } = useParams();
-  const resultData = campcar.maindata.find((value) => value.id === parseInt(id));
+  const resultData = usedCar.maindata.find((value) => value.id === parseInt(id));
   console.log("id:", resultData)
   return (
     <CarInfoContainer>
       <CarInfoHeader>
-        <h1>{resultData.car.name}</h1>
+        <h1>{resultData.used.name}</h1>
         <CarInfoHeaderButtonWrapper>
             <CarInfoHeaderButton $primary>add to cart</CarInfoHeaderButton>
             <CarInfoHeaderButton>compare</CarInfoHeaderButton>
@@ -40,25 +39,25 @@ function CarInfo() {
       </CarInfoHeader>
       <LineWrappers>
         <div>
-            <img src={resultData.car.photo} alt="" width={"500px"}/>
+            <img src={resultData.used.image} alt="" width={"500px"}/>
         </div>
         <InfoWrapper>
             <InfoWrapperLine1>
                 <div>
-                    <h3>{resultData.car.name}</h3>
+                    <h3>{resultData.used.name}</h3>
                     <small>aid</small>
                 </div>
-                <p style={{fontSize: "30px", fontWeight: "600", color: "#006DAB"}}>{resultData.car.cost}Won</p>
+                <p style={{fontSize: "30px", fontWeight: "600", color: "#006DAB"}}>{resultData.used.price}Won</p>
             </InfoWrapperLine1>
             <InfoWrapperLine/>
             <InfoWrapperLine2>
                 <InfoWrapperBottom>
                     <p>Company</p>
-                    <p style={{fontSize: "12px", opacity: "0.5"}}>{resultData.car.company}</p>
+                    <p style={{fontSize: "12px", opacity: "0.5"}}>{resultData.used.company}</p>
                 </InfoWrapperBottom>
                 <InfoWrapperBottom>
                     <p>People</p>
-                    <p style={{fontSize: "12px", opacity: "0.5"}}>{resultData.car.people}</p>
+                    <p style={{fontSize: "12px", opacity: "0.5"}}>{resultData.used.people}</p>
                 </InfoWrapperBottom>
                 <InfoWrapperBottom>
                     <p>License type</p>
@@ -231,4 +230,4 @@ function CarInfo() {
   )
 }
 
-export default CarInfo
+export default UsedCarInfo

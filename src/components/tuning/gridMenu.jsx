@@ -5,6 +5,7 @@ import { tuning } from '../mock/tuning'
 
 // img //
 import star from '../../assets/star.svg'
+import { Link } from 'react-router-dom'
 
 function GridMenu() {
   const data = tuning.maindata
@@ -14,9 +15,12 @@ function GridMenu() {
             const tuningData = value.tuning;
             return (
                 <Card key={key}>
-                    <CardImg>
-                        <img src={tuningData.image} alt="Photo of car not entered" width={"100%"}/>
-                    </CardImg>
+                    <Link  to={`${value.id}`}>
+                        <CardImg>
+                            <img src={tuningData.image} alt="Photo of car not entered" width={"100%"}/>
+                        </CardImg>
+                    </Link>
+                    
                     <CardBottom>
                         <CardBottomCarName>{tuningData.name}</CardBottomCarName>
                         <CardBottomMiddle>

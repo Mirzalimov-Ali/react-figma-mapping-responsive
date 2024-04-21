@@ -9,6 +9,9 @@ import Home from './components/home/home'
 import Tuning from './components/tuning/tuning'
 import UsedCar from './components/usedCar/usedCar'
 import CarInfo from './components/other/carInfo'
+import CaravanInfo from './components/other/caravanInfo'
+import TuningInfo from './components/other/tuningInfo'
+import UsedCarInfo from './components/other/usedCarInfo'
 
 function RouterComponent() {
   const location = useLocation();
@@ -23,6 +26,9 @@ function RouterComponent() {
         <Route path='/tuning' element={<Tuning/>}/>
         <Route path='/used-car' element={<UsedCar/>}/>
         <Route path='/motor/:id' element={<CarInfo/>}/>
+        <Route path='/caravan/:id' element={<CaravanInfo/>}/>
+        <Route path='/tuning/:id' element={<TuningInfo/>}/>
+        <Route path='/used-car/:id' element={<UsedCarInfo/>}/>
       </Routes>
       <Footer/>
     </div>

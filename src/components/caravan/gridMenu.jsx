@@ -5,6 +5,7 @@ import { caravan } from '../mock/caravan'
 
 // img //
 import star from '../../assets/star.svg'
+import { Link } from 'react-router-dom'
 
 function GridMenu() {
   const data = caravan.maindata
@@ -14,9 +15,12 @@ function GridMenu() {
             const caravanData = value.caravan;
             return (
                 <Card key={key}>
-                    <CardImg>
-                        <img src={caravanData.image} alt="Photo of car not entered" width={"100%"}/>
-                    </CardImg>
+                    <Link to={`${value.id}`}>
+                        <CardImg>
+                            <img src={caravanData.image} alt="Photo of car not entered" width={"100%"}/>
+                        </CardImg>
+                    </Link>
+                    
                     <CardBottom>
                         <CardBottomCarName>{caravanData.name}</CardBottomCarName>
                         <CardBottomMiddle>

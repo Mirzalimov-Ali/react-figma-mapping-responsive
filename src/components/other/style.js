@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const ItemReviewsContainer = styled.div`
-    /* display: flex; */
-    /* flex-direction: column; */
     width: 100%;
-    /* align-items: ; */
     padding: 0 100px;
     @media only screen and (max-width: 1300px) {
         width: 100%;
         display: flex;
+        flex-direction: column;
     }
 `
 
@@ -55,11 +53,15 @@ export const ItemReviewDataWrapper = styled.div`
 `
 
 export const ItemReviewData = styled.div`
-    display: flex;
+    display: ${(props) => props.$none ? "none" : "flex"};
     width: 100%;
     justify-content: space-between;
     padding: 20px;
     border-bottom: 1px solid gray;
+    @media only screen and (max-width: 660px) {
+        display: ${(props) => props.$none ? "flex" : "none"};
+        flex-direction: column;
+    }
 `
 
 export const ItemReviewDataLeft = styled.div`
@@ -83,4 +85,8 @@ export const FaqBox = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: 750px) {
+        display: flex;
+        width: 90vw;
+    }
 `
