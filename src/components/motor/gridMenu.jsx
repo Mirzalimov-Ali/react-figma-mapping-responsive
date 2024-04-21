@@ -5,6 +5,7 @@ import { campcar } from '../mock/mockdata'
 
 // img //
 import star from '../../assets/star.svg'
+import { Link } from 'react-router-dom'
 
 function GridMenu() {
   const data = campcar.maindata
@@ -13,9 +14,11 @@ function GridMenu() {
         {data.map((value, key)=> {
             return (
                 <Card key={key}>
-                    <CardImg>
-                        <img src={value.car.photo} alt="Photo of car not entered" width={"100%"}/>
-                    </CardImg>
+                    <Link  to={`${value.id}`}>
+                        <CardImg>
+                            <img src={value.car.photo} alt="Photo of car not entered" width={"100%"}/>
+                        </CardImg>
+                    </Link>
                     <CardBottom>
                         <CardBottomCarName>{value.car.name}</CardBottomCarName>
                         <CardBottomMiddle>

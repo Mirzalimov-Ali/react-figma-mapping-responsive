@@ -8,6 +8,7 @@ import Caravan from './components/caravan/caravan'
 import Home from './components/home/home'
 import Tuning from './components/tuning/tuning'
 import UsedCar from './components/usedCar/usedCar'
+import CarInfo from './components/other/carInfo'
 
 function RouterComponent() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function RouterComponent() {
         <Route path='/caravan' element={<Caravan/>}/>
         <Route path='/tuning' element={<Tuning/>}/>
         <Route path='/used-car' element={<UsedCar/>}/>
+        <Route path='/motor/:id' element={<CarInfo/>}/>
       </Routes>
       <Footer/>
     </div>

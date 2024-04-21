@@ -54,7 +54,7 @@ function Motor() {
       <List>
         <HomeLeftContainer $mobileFlexMenu>
             <div style={{position: "fixed", left: "300px"}}>
-                <CloseIcon/>
+                <CloseIcon onClick={() => toggleDrawer(false)}/>
             </div>
             <div>
                 <HomeLeftParagraph>Cost of car</HomeLeftParagraph>

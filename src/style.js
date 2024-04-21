@@ -304,6 +304,8 @@ export const CardImg = styled.div`
     align-items: center;
     img {
         max-width: 600px;
+        /* min-height: 100px;
+        max-height: 100px; */
     }
 `
 
@@ -417,7 +419,10 @@ export const FooterContainer = styled.div`
        .footer-none {
             display: none;
        }
-       gap: 100px;
+       gap: 0;
+       display: flex;
+       justify-content: space-between;
+       padding: 40px 80px;
     }
     @media only screen and (max-width: 660px) {
        .footer-none {
@@ -426,7 +431,7 @@ export const FooterContainer = styled.div`
        display: flex;
        justify-content: space-between;
        align-items: start;
-       padding: 40px 30px;
+       padding: 40px 20px;
        gap: 0;
     }
 `
