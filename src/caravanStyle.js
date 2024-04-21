@@ -188,6 +188,7 @@ export const CarInfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: 6100px;
+    width: 100vw;
 `
 
 export const CarInfoHeader = styled.div`
@@ -233,6 +234,10 @@ export const LineWrappers = styled.div`
     justify-content: center;
     gap: 20px;
     margin-bottom: 50px;
+    @media only screen and (max-width: 1300px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 export const InfoWrapper = styled.div`
@@ -271,10 +276,16 @@ export const InfoWrapperBottom = styled.div`
 `
 
 export const Lines = styled.div`
-    display: flex;
+    display: ${(props) => props.$none ? "flex" : "none"};
     justify-content: center;
     align-items: center;
     gap: 67px;
+    @media only screen and (max-width: 1300px) {
+        flex-direction: column;
+        align-items: center;
+        display: ${(props) => props.$none ? "none" : "flex"};
+        gap: 0;
+    }
 `
 
 export const LinesTextWrapper = styled.div`
@@ -286,6 +297,12 @@ export const LinesTextWrapper = styled.div`
     }
     p {
         width: 533px;
+    }
+    @media only screen and (max-width: 1300px) {
+        display: flex;
+        align-items: start;
+        width: 600px;
+        margin: 20px 0 50px 0;
     }
 `
 
@@ -318,6 +335,12 @@ export const Menu = styled.div`
     margin-top: 60px;
     display: flex;
     justify-content: center;
+    @media only screen and (max-width: 1300px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 650px;
+    }
 `
 
 /* Q&A */

@@ -3,9 +3,13 @@ import styled from "styled-components";
 export const ItemReviewsContainer = styled.div`
     /* display: flex; */
     /* flex-direction: column; */
-    width: 200%;
+    width: 100%;
     /* align-items: ; */
-    margin-left: -17px;
+    padding: 0 100px;
+    @media only screen and (max-width: 1300px) {
+        width: 100%;
+        display: flex;
+    }
 `
 
 export const ItemReviewHeader = styled.div`
