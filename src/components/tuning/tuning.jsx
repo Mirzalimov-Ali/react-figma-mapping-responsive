@@ -14,6 +14,14 @@ import GridMenu from './gridMenu'
 import Vmenu from './vmenu'
 import TuningHeader from '../header/tuningHeader'
 
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
+
+
 function Tuning() {
   const [active, setActive] = useState(true)
   
@@ -24,6 +32,163 @@ function Tuning() {
   function handleVClicked() {
     setActive(true)
   }
+
+    // mui
+    const [open, setOpen] = React.useState(false);
+
+    const toggleDrawer = (newOpen) => () => {
+      setOpen(newOpen);
+    };
+  
+    const DrawerList = (
+      <Box sx={{ width: 350 }} role="presentation">
+        <List>
+          <HomeLeftContainer $mobileFlexMenu>
+              <div style={{position: "fixed", left: "300px"}}>
+                  <CloseIcon onClick={toggleDrawer(false)}/>
+              </div>
+              <div>
+                  <HomeLeftParagraph>Cost of car</HomeLeftParagraph>
+                  <Line/>
+                  <CostBox>
+                      <div>
+                          <label htmlFor="from">from</label> <br />
+                          <CostBoxInput type="text" id='from'/>
+                      </div>
+                      <div>
+                          <label htmlFor="to">to</label> <br />
+                          <CostBoxInput type="text" id='to'/>
+                      </div>
+                  </CostBox>
+  
+                  <Boxes>
+                      <BoxesTitleWrapper>
+                          <h3>Brand</h3>
+                          <BoxesDownArrow src={downArrow} />
+                      </BoxesTitleWrapper>
+  
+                      <Line/>
+  
+                      <BoxesDataWrapper>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" id="aidal"/>
+                              <label htmlFor="aidal">Aidal</label>
+                          </BoxesData>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" id="knal"/>
+                              <label htmlFor="knal">Knal</label>
+                          </BoxesData>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" id="escape"/>
+                              <label htmlFor="escape">escape</label>
+                          </BoxesData>
+                      </BoxesDataWrapper>
+                  </Boxes>
+  
+                  <Boxes>
+                      <BoxesTitleWrapper>
+                          <h3>Company</h3>
+                          <BoxesDownArrow src={downArrow} alt="" />
+                      </BoxesTitleWrapper>
+  
+                      <Line/>
+  
+                      <BoxesDataWrapper>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" id="escape2"/>
+                              <label htmlFor="escape2">escape</label>
+                          </BoxesData>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" id="aidal2"/>
+                              <label htmlFor="aidal2">Aidal</label>
+                          </BoxesData>
+                      </BoxesDataWrapper>
+                  </Boxes>
+  
+                  <Boxes>
+                      <BoxesTitleWrapper>
+                          <h3>License type</h3>
+                          <BoxesDownArrow src={downArrow} alt=""/>
+                      </BoxesTitleWrapper>
+  
+                      <Line/>
+  
+                      <BoxesDataWrapper>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" name="" id="1year"/>
+                              <label htmlFor="1year">1 year</label>
+                          </BoxesData>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" name="" id="2year"/>
+                              <label htmlFor="2year">2 year</label>
+                          </BoxesData>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" name="" id="15year"/>
+                              <label htmlFor="15year">1.5year</label>
+                          </BoxesData>
+                      </BoxesDataWrapper>
+                  </Boxes>
+  
+                  <Boxes>
+                      <BoxesTitleWrapper>
+                          <h3>Number of travelers</h3>
+                          <BoxesDownArrow src={downArrow} alt=""/>
+                      </BoxesTitleWrapper>
+                      <Line/>
+                      <BoxesDataWrapper>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" name="" id="two"/>
+                              <label htmlFor="two">2</label>
+                          </BoxesData>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" name="" id="three-minus-four"/>
+                              <label htmlFor="three-minus-four">3-4</label>
+                          </BoxesData>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" name="" id="five-plus"/>
+                              <label htmlFor="five-plus">5+</label>
+                          </BoxesData>
+                      </BoxesDataWrapper>
+                  </Boxes>
+                  <Boxes>
+                      <BoxesTitleWrapper>
+                          <h3>Location</h3>
+                          <BoxesDownArrow src={downArrow} alt=""/>
+                      </BoxesTitleWrapper>
+                      <Line/>
+                      <BoxesDataWrapper>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" name="" id="seoul"/>
+                              <label htmlFor="seoul">Seoul</label>
+                          </BoxesData>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" name="" id="Korea"/>
+                              <label htmlFor="Korea">Korea</label>
+                          </BoxesData>
+                          <BoxesData>
+                              <BoxesDataInput type="checkbox" name="" id="Pusan"/>
+                              <label htmlFor="Pusan">Pusan</label>
+                          </BoxesData>
+                      </BoxesDataWrapper>
+                  </Boxes>
+                  <HomeButtonContainer>
+                      <HomeButton>Cancel</HomeButton>
+                      <HomeButton $search>Search</HomeButton>
+                  </HomeButtonContainer>
+  
+                  <HomeLeftCarWrapper>
+                      <p>Compare</p>
+                      <div>
+                          <img src={img1} alt="" />
+                          <img src={img2} alt="" />
+                          <img src={img3} alt="" />
+                      </div>
+                  </HomeLeftCarWrapper>
+              </div>
+          </HomeLeftContainer>
+        </List>
+      </Box>
+    );
   
   const data = caravan.maindata
   return (
@@ -174,8 +339,13 @@ function Tuning() {
         <HomeRightContainer>
             <HomeRightTop>
                 <HomeRightTopLeft>
-                    <div>
+                    <div style={{display: "flex", alignItems: 'center'}}>
                         <p style={{fontWeight: "600"}}>Item<span style={{marginLeft: "10px", color: "#006DAB"}}>{data.length}</span></p>
+
+                        <Button onClick={toggleDrawer(true)} className='mobile-none-button'><MenuIcon/></Button>
+                        <Drawer open={open} onClose={toggleDrawer(false)}>
+                            {DrawerList}
+                        </Drawer>
                     </div>
                     <HomeRightTopLeftRight $displayNone>
                         <HomeRightTopButton onClick={handleVClicked}><img src={fourDots} alt=""/></HomeRightTopButton>

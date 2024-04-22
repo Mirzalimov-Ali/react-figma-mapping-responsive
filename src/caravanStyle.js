@@ -98,10 +98,10 @@ export const HomeTitles = styled.img`
 `
 
 export const CarouselBox = styled.div`
-    max-width: 300px;
+    /* max-width: 300px; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 `
 
 export const CarouselBoxInfoWrapper = styled.div`
