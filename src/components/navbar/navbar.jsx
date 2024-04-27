@@ -34,6 +34,7 @@ function Navbar() {
         <Link style={{textDecoration: "none", color: "black"}} to={"/caravan"}><p>Caravan</p></Link>
         <Link style={{textDecoration: "none", color: "black"}} to={"/tuning"}><p>Tuning</p></Link>
         <Link style={{textDecoration: "none", color: "black"}} to={"/used-car"}><p>Used car</p></Link>
+        <Link style={{textDecoration: "none", color: "black"}} to={"/camping-place"}><p>Camping place</p></Link>
       </List>
     </Box>
   );

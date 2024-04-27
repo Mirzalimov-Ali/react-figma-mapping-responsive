@@ -39,7 +39,7 @@ function CarInfo() {
         </CarInfoHeaderButtonWrapper>
       </CarInfoHeader>
       <LineWrappers>
-        <div style={{width: "100%"}}>
+        <div>
             <CarImg src={resultData.car.photo} alt=""/>
         </div>
         <InfoWrapper>
