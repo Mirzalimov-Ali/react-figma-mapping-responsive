@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import headerImg from './assets/header-img.png'
-import caravanImg from './assets/caravan-header.webp'
-import tuningImg from './assets/tuning-header.jpg'
+import caravanImg from './assets/caravan-header-6.webp'
+import tuningImg from './assets/tuning-header-5.jpg'
 import usedImg from './assets/used-header.jpg'
 
 export const NavbarContainer = styled.div`
@@ -69,6 +69,7 @@ export const HeaderContainer = styled.div`
     background-repeat: no-repeat;
     margin-top: 100px;
     height: 500px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,6 +108,7 @@ export const HomeLeftContainer = styled.div`
     flex-direction: column;
     gap: 50px;
     flex: 1;
+    margin-top: -20px;
     @media only screen and (max-width: 1407px) {
         display: ${(props) => props.$mobileFlexMenu ? "flex" : "none"};
         padding: 10px 30px;
@@ -287,9 +289,16 @@ export const Card = styled.div`
     padding: 10px 30px;
     border-radius: 20px;
     width: 100%;
+    transition: 0.3s;
     @media only screen and (max-width: 420px) {
         width: 80%;
         margin: auto;
+    }
+    &:hover {
+        background-color: #F0F0F0;
+        transform: scale(1.05);
+        transition: 0.5s ease;
+        cursor: pointer;
     }
    
 `
@@ -306,6 +315,7 @@ export const CardImg = styled.div`
         max-width: 600px;
         /* min-height: 100px;
         max-height: 100px; */
+        height: 120px;
     }
 `
 

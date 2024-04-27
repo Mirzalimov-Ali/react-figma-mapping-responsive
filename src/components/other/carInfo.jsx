@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useParams } from 'react-router-dom'
 import { campcar } from '../mock/mockdata';
-import { CarInfoContainer, CarInfoHeader, CarInfoHeaderButton, CarInfoHeaderButtonWrapper, InfoWrapper, InfoWrapperBottom, InfoWrapperLine, InfoWrapperLine1, InfoWrapperLine2, LineWrappers, Lines, LinesImgWrapper, LinesTextWrapper, Menu, RightButton } from '../../caravanStyle';
+import { CarImg, CarInfoContainer, CarInfoHeader, CarInfoHeaderButton, CarInfoHeaderButtonWrapper, InfoWrapper, InfoWrapperBottom, InfoWrapperLine, InfoWrapperLine1, InfoWrapperLine2, LineWrappers, Lines, LinesImgWrapper, LinesTextWrapper, Menu, RightButton } from '../../caravanStyle';
 
 import carInfoimg1 from '../../assets/carInfo-1.png'
 import carInfoimg2 from '../../assets/carInfo-2.png'
@@ -39,8 +39,8 @@ function CarInfo() {
         </CarInfoHeaderButtonWrapper>
       </CarInfoHeader>
       <LineWrappers>
-        <div>
-            <img src={resultData.car.photo} alt="" width={"500px"}/>
+        <div style={{width: "100%"}}>
+            <CarImg src={resultData.car.photo} alt=""/>
         </div>
         <InfoWrapper>
             <InfoWrapperLine1>
@@ -161,6 +161,7 @@ function CarInfo() {
         sx={{
           flexGrow: 1,
           m: -2,
+          width: "100%"
         }}
         className="tabs-wrapper"
       >

@@ -51,7 +51,7 @@ function Navbar() {
             <Link style={{textDecoration: "none"}} to={"/caravan"}><p>Caravan <img src={downArrow} alt="" /></p></Link>
             <Link style={{textDecoration: "none"}} to={"/tuning"}><p>Tuning  <img src={downArrow} alt="" /></p></Link>
             <Link style={{textDecoration: "none"}} to={"/used-car"}><p>Used Car <img src={downArrow} alt="" /></p></Link>
-            <Link style={{textDecoration: "none"}} to={"/"}><p>Camping Place</p></Link>
+            <Link style={{textDecoration: "none"}} to={"/camping-place"}><p>Camping Place</p></Link>
         </NavbarNavigationContianer>
         <div style={{display: "flex", gap: "20px", alignItems: "center"}}>
             <img src={cart} alt="" style={{cursor: "pointer"}}/>

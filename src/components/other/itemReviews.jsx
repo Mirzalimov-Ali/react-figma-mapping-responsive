@@ -1,5 +1,5 @@
 import React from 'react'
-import { ItemReviewData, ItemReviewDataLeft, ItemReviewDataRight, ItemReviewDataWrapper, ItemReviewHeader, ItemReviewHeaderButton, ItemReviewHeaderInput, ItemReviewHeaderLeft, ItemReviewHeaderRight, ItemReviewsContainer } from './style'
+import { ItemReviewData, ItemReviewDataLeft, ItemReviewDataRight, ItemReviewDataWrapper, ItemReviewHeader, ItemReviewHeaderButton, ItemReviewHeaderInput, ItemReviewHeaderLeft, ItemReviewHeaderRight, ItemReviewsContainer, Line } from './style'
 import { campcar } from '../mock/mockdata'
 
 import downArrow from '../../assets/down-arrow.svg'
@@ -47,7 +47,7 @@ function ItemReviews() {
                   </div>
                 </ItemReviewDataRight>
               </ItemReviewData>
-
+              <Line/>
               <ItemReviewData key={key} $none>
                 <img src={value.car.photo} alt="" width={"100%"}/>
                 <ItemReviewDataLeft>
@@ -76,7 +76,7 @@ function ItemReviews() {
             </div>
             
           )
-        })}
+        }).slice(0, 6)}
       </ItemReviewDataWrapper>
     </ItemReviewsContainer>
   )

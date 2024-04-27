@@ -12,7 +12,14 @@ export const ItemReviewsContainer = styled.div`
 
 export const ItemReviewHeader = styled.div`
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
+    gap: 950px;
+    @media only screen and (max-width: 1306px) {
+        justify-content: space-between;
+        gap: 0;
+        width: 100%;
+    }
 `
 
 export const ItemReviewHeaderLeft = styled.div`
@@ -28,11 +35,11 @@ export const ItemReviewHeaderRight = styled.div`
 export const ItemReviewHeaderInput = styled.input`
     height: 30px;
     border-radius: 5px 0 0 5px;
-    border: 1px solid gray;
     color: blue;
     padding-left: 10px;
     width: 130px;
     border-right: none;
+    border: 1px solid gray;
     &:focus {
         outline: none;
     }
@@ -55,12 +62,27 @@ export const ItemReviewDataWrapper = styled.div`
 export const ItemReviewData = styled.div`
     display: ${(props) => props.$none ? "none" : "flex"};
     width: 100%;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
+    gap: 600px;
     padding: 20px;
-    border-bottom: 1px solid gray;
-    @media only screen and (max-width: 660px) {
+    @media only screen and (max-width: 1306px) {
+        justify-content: space-between;
+        gap: 50px;
+        width: 100%;
+    }
+    @media only screen and (max-width: 700px) {
         display: ${(props) => props.$none ? "flex" : "none"};
         flex-direction: column;
+    }
+`
+
+export const Line = styled.div`
+    width: 1300px;
+    border: 1px solid gray;
+    margin: auto;
+    @media only screen and (max-width: 1306px) {
+        width: 100%;
     }
 `
 

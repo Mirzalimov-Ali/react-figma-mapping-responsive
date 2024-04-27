@@ -4,26 +4,91 @@ import { FaqBox } from './style'
 
 import bottomArrow from '../../assets/bottom-arrow.png'
 
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 function Faq() {
   return (
     <QaContainer>
       <QaLeft>
-        <FaqBox>
-          <h4>Frequently asked questions </h4>
-          <img src={bottomArrow} alt="" />
-        </FaqBox>
-        <FaqBox>
-          <h4>Frequently asked questions </h4>
-          <img src={bottomArrow} alt="" />
-        </FaqBox>
-        <FaqBox>
-          <h4>Frequently asked questions </h4>
-          <img src={bottomArrow} alt="" />
-        </FaqBox>
-        <FaqBox>
-          <h4>Frequently asked questions </h4>
-          <img src={bottomArrow} alt="" />
-        </FaqBox>
+      <Accordion sx={{maxWidth: "800px"}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <Typography sx={{fontWeight: "600"}}>Frequently asked questions </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+        <Accordion sx={{maxWidth: "800px"}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <Typography sx={{fontWeight: "600"}}>Frequently asked questions </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion sx={{maxWidth: "800px"}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <Typography sx={{fontWeight: "600"}}>Frequently asked questions </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion sx={{maxWidth: "800px"}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <Typography sx={{fontWeight: "600"}}>Frequently asked questions </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion sx={{maxWidth: "800px"}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <Typography sx={{fontWeight: "600"}}>Frequently asked questions </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
       </QaLeft>
 
       <QaRight>

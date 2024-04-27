@@ -15,11 +15,18 @@ export const CaravanCard = styled.div`
     padding: 10px 20px;
     gap: 30px;
     display: flex;
+    transition: 0.3s ease;
     img {
         width: 200px;
     }
     @media only screen and (max-width: 1300px) {
         width: 100%;
+    }
+    &:hover {
+        background-color: #F0F0F0;
+        transform: scale(1.01);
+        transition: 0.5s ease;
+        cursor: pointer;
     }
 `
 
@@ -113,7 +120,7 @@ export const CarouselBoxInfoWrapper = styled.div`
 `
 
 export const MultiCarouselContainer = styled.div`
-    min-width: 100px;
+    min-width: 1300px;
     max-width: 1300px; 
     margin: auto;
     @media only screen and (max-width: 1300px) {
@@ -187,7 +194,6 @@ export const CarInfoContainer = styled.div`
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 6100px;
     width: 100vw;
 `
 
@@ -209,6 +215,9 @@ export const CarInfoHeaderButtonWrapper = styled.div`
     align-items: center;
     gap: 20px;
     margin-top: 30px;
+    @media only screen and (max-width: 600px) {
+        margin: auto;
+    }
 `
 
 export const CarInfoHeaderButton = styled.button`
@@ -240,6 +249,13 @@ export const LineWrappers = styled.div`
     }
 `
 
+export const CarImg = styled.img`
+    width: 500px;
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
+`
+
 export const InfoWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -249,6 +265,9 @@ export const InfoWrapper = styled.div`
     height: 300px;
     width: 500px;
     padding: 30px;
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
 `
 
 export const InfoWrapperLine1 = styled.div`
@@ -304,11 +323,20 @@ export const LinesTextWrapper = styled.div`
         width: 600px;
         margin: 20px 0 50px 0;
     }
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        p {
+            width: 100%;
+        }
+    }
 `
 
 export const LinesImgWrapper = styled.img`
     width: 600px;
     height: 400px;
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
 `
 
 export const RightButton = styled.button`
@@ -329,13 +357,15 @@ export const RightButton = styled.button`
 `
 
 export const Menu = styled.div`
-    height: 60px;
+    /* height: 60px; */
     background: #006DAB33;
     margin-top: 60px;
     display: flex;
     justify-content: center;
+    width: 100%;
     @media only screen and (max-width: 1300px) {
         display: flex;
+        overflow: hidden;
         justify-content: center;
         .tabs-wrapper {
             display: flex;
@@ -346,6 +376,14 @@ export const Menu = styled.div`
         .tablist {
             margin: auto;
             width: 100%;
+        }
+    }
+    @media only screen and (max-width: 650px) {
+        .tablist {
+            width: 100%;
+            height: 40px;
+            overflow: hidden;
+            font-size: 14px;
         }
     }
 `
