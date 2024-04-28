@@ -56,7 +56,7 @@ function Navbar() {
         </NavbarNavigationContianer>
         <div style={{display: "flex", gap: "20px", alignItems: "center"}}>
             <img src={cart} alt="" style={{cursor: "pointer"}}/>
-            <img src={user} alt="" style={{cursor: "pointer"}} className='navbar-none'/>
+            <Link to={"/login"}><img src={user} alt="" style={{cursor: "pointer"}} className='navbar-none'/></Link>
             <p className='navbar-none'>En <img src={downArrow} alt="" className='navbar-none'/></p>
             <img src={menu} alt="" className='mobile-menu' onClick={toggleDrawer(true)}/>
             <Drawer open={open} onClose={toggleDrawer(false)}> {DrawerList} </Drawer>

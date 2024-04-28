@@ -459,3 +459,116 @@ export const BigWrapper = styled.div`
     display: flex;
     flex-direction: column;
 `
+
+// login & signup
+export const LoginContainer = styled.div`
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+`
+
+export const LoginBox = styled.div`
+    /* height: 600px; */
+    height: ${(props) => props.$short ? "470px" : "600px"};
+    width: 500px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 5px 0; */
+    box-shadow: 0 0 3px -1px;
+    background: white;
+    padding: 30px;
+    h2 {
+        font-weight: 700;
+        font-size: 27px;
+        margin-bottom: 20px;
+    }
+`
+
+export const LoginInput = styled.input`
+    width: 100%;
+    height: 40px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #3737371A;
+    margin: 10px 0;
+    &:focus {
+        outline: none;
+    }
+`
+
+export const SpaceBetweenWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 0 10px;
+    div {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        label {
+            font-size: 14px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+`
+
+export const CheckBox = styled.input`
+    height: 20px;
+    width: 20px;
+    background: #3737371A;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+`
+
+export const CheckBox2 = styled.input`
+    height: 20px;
+    width: 20px;
+    background: #3737371A;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+`
+
+export const SignInButton = styled.button`
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #006DAB;
+    border-radius: 10px;
+    margin: 15px 0;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+`
+
+export const LoginLines = styled.div`
+    border: 1px solid #37373726;
+    width: 100px;
+`
+
+export const CreateAccountButton = styled.button`
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: none;
+    border: 2px solid #006DAB;
+    border-radius: 10px;
+    margin: 15px 0;
+    color: #006DAB;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+        background: #006DAB;
+        color: white;
+    }
+`
