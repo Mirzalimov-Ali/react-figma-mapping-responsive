@@ -220,7 +220,6 @@ function Motor() {
                                         <CostBoxInput type="number" id='to'/>
                                     </div>
                                 </div>
-                            
                             </AccordionDetails>
                         </Accordion>
                     </CostBox>
