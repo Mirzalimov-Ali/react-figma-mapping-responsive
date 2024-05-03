@@ -194,7 +194,8 @@ export const CarInfoContainer = styled.div`
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 99vw;
+    overflow: hidden;
 `
 
 export const CarInfoHeader = styled.div`
