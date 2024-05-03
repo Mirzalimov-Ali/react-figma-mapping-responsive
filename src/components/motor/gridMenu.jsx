@@ -16,7 +16,7 @@ function GridMenu() {
                 <Card key={key}>
                     <Link  to={`${value.id}`}>
                         <CardImg>
-                            <img src={value.car.photo} alt="Photo of car not entered" width={"100%"}/>
+                            <img src={value.car.photo} alt="Photo of car not entered" width={"100%"} style={{borderRadius: "20px"}}/>
                         </CardImg>
                     </Link>
                     <CardBottom>

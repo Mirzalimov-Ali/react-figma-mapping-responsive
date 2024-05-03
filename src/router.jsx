@@ -16,6 +16,7 @@ import CampingPlace from './components/campingPlace/campingPlace'
 import CampingInfo from './components/campingPlace/campingInfo'
 import Signin from './components/auth/signin'
 import Registrate from './components/auth/registrate'
+import CarInfoPurchase from './components/other/carInfoPurchas'
 
 function RouterComponent() {
   const location = useLocation();
@@ -30,13 +31,13 @@ function RouterComponent() {
         <Route path='/tuning' element={<Tuning/>}/>
         <Route path='/used-car' element={<UsedCar/>}/>
         <Route path='/motor/:id' element={<CarInfo/>}/>
+        <Route path='/motor/:id/purchase' element={<CarInfoPurchase/>}/>
         <Route path='/caravan/:id' element={<CaravanInfo/>}/>
         <Route path='/tuning/:id' element={<TuningInfo/>}/>
         <Route path='/used-car/:id' element={<UsedCarInfo/>}/>
         <Route path='/camping-place' element={<CampingPlace/>}/>
         <Route path='/camping-place/:id' element={<CampingInfo/>}/>
-
-        <Route path='/login' element={<Signin/>}/>
+        
         <Route path='/signup' element={<Registrate/>}/>
       </Routes>
       {hideComponent && <Footer/>}

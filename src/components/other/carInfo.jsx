@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { campcar } from '../mock/mockdata';
 import { CarImg, CarInfoContainer, CarInfoHeader, CarInfoHeaderButton, CarInfoHeaderButtonWrapper, InfoWrapper, InfoWrapperBottom, InfoWrapperLine, InfoWrapperLine1, InfoWrapperLine2, LineWrappers, Lines, LinesImgWrapper, LinesTextWrapper, Menu, RightButton } from '../../caravanStyle';
 
@@ -34,8 +34,8 @@ function CarInfo() {
       <CarInfoHeader>
         <h1>{resultData.car.name}</h1>
         <CarInfoHeaderButtonWrapper>
-            <CarInfoHeaderButton $primary>add to cart</CarInfoHeaderButton>
-            <CarInfoHeaderButton>compare</CarInfoHeaderButton>
+            <Link to={`purchase`}><CarInfoHeaderButton $primary>add to cart</CarInfoHeaderButton></Link>
+            <Link to={`purchase`}><CarInfoHeaderButton>compare</CarInfoHeaderButton></Link>
         </CarInfoHeaderButtonWrapper>
       </CarInfoHeader>
       <LineWrappers>
@@ -105,8 +105,8 @@ function CarInfo() {
             <h1>Heating when driving</h1>
             <p>Fuel heating is now very popular in the industry, but this was not always the case; Camper (once again) led the way in this area over 15 years ago.One of the advantages it offers is that it can heat up your vehicle while you drive, for a more comfortable arrival.</p>
             <CarInfoHeaderButtonWrapper>
-                <CarInfoHeaderButton $primary>add to cart</CarInfoHeaderButton>
-                <RightButton>compare</RightButton>
+                <Link to={`purchase`}><CarInfoHeaderButton $primary>add to cart</CarInfoHeaderButton></Link>
+                <Link to={`purchase`}><RightButton>compare</RightButton></Link>
             </CarInfoHeaderButtonWrapper>
         </LinesTextWrapper>
         <LinesImgWrapper src={carInfoimg5}/>
@@ -150,8 +150,8 @@ function CarInfo() {
             <h1>Heating when driving</h1>
             <p>Fuel heating is now very popular in the industry, but this was not always the case; Camper (once again) led the way in this area over 15 years ago.One of the advantages it offers is that it can heat up your vehicle while you drive, for a more comfortable arrival.</p>
             <CarInfoHeaderButtonWrapper>
-                <CarInfoHeaderButton $primary>add to cart</CarInfoHeaderButton>
-                <RightButton>compare</RightButton>
+                <Link to={`purchase`}><CarInfoHeaderButton $primary>add to cart</CarInfoHeaderButton></Link>
+                <Link to={`purchase`}><RightButton>compare</RightButton></Link>
             </CarInfoHeaderButtonWrapper>
         </LinesTextWrapper>
       </Lines>

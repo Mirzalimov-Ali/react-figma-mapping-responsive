@@ -69,3 +69,20 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+
+.map {
+  float: 1;
+  height: 400px;
+  width: 650px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 80px;
+}
+
+@media only screen and (max-width: 660px) {
+  .map {
+    width: 100%;
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ItemReviewData, ItemReviewDataLeft, ItemReviewDataRight, ItemReviewDataWrapper, ItemReviewHeader, ItemReviewHeaderButton, ItemReviewHeaderInput, ItemReviewHeaderLeft, ItemReviewHeaderRight, ItemReviewsContainer, Line } from './style'
+import { ItemReviewData, ItemReviewDataLeft, ItemReviewDataRight, ItemReviewDataWrapper, ItemReviewHeader, ItemReviewHeaderButton, ItemReviewHeaderInput, ItemReviewHeaderLeft, ItemReviewHeaderRight, ItemReviewsContainer, Line } from './otherStyle'
 import { campcar } from '../mock/mockdata'
 
 import downArrow from '../../assets/down-arrow.svg'

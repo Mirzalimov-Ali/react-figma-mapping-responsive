@@ -1,6 +1,6 @@
 import React from 'react'
 import { QaContainer, QaLeft, QaLeftBox, QaRight, QaRightButton, QaRightInput } from '../../caravanStyle'
-import { FaqBox } from './style'
+import { FaqBox } from './otherStyle'
 
 import bottomArrow from '../../assets/bottom-arrow.png'
 

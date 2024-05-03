@@ -1,6 +1,5 @@
 import React from 'react'
 import { CheckBox2, CreateAccountButton, LoginBox, LoginContainer, LoginInput, LoginLines, SignInButton, SpaceBetweenWrapper } from '../../style'
-import { CheckBox } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 import closeImg from '../../assets/close-icon.png'
 
@@ -10,7 +9,7 @@ function Registrate() {
       <LoginBox $short>
         <div style={{display: "flex", alignItems: "center", justifyContent: 'space-between', marginBottom: "20px"}}>
           <h2 style={{margin: "0"}}>Registrate</h2>
-          <Link to={"/login"}><img src={closeImg} alt="" /></Link>
+          <Link to={"/"}><img src={closeImg} alt="" /></Link>
         </div>
         <label htmlFor="email">Email</label>
         <LoginInput type='email' id='email' placeholder='Your email'/>

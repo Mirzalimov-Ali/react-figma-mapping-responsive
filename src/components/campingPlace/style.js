@@ -57,6 +57,11 @@ export const Card = styled.div`
     flex-direction: column;
     max-width: 300px;
     gap: 6px;
+    transition: 0.2s;
+    &:hover {
+        transform: scale(1.08);
+        transition: 0.5s;
+    }
 `
 
 export const CampingInfoContainer = styled.div`

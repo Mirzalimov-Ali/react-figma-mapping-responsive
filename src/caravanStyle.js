@@ -441,7 +441,7 @@ export const QaRightInput = styled.input`
     height: 40px;
     border-radius: 6px;
     border: none;
-    background: #3737374D;
+    background: #37373726;
     padding: 0 20px;
     margin-bottom: 10px;
 `

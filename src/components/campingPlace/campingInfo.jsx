@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { campingPlace } from '../mock/campingPlace';
 import { useParams } from 'react-router-dom';
 import { CampingInfoContainer, CampingInfoImages, CampingInfoImgWrapper, CampingInfoLineItem, CampingInfoLineOne, CampingInfoLocationWrapper, CampingInfoMap, CampingInfoNameWrapper } from './style';
@@ -26,6 +26,7 @@ function CampingInfo() {
   const [open, setOpen] = React.useState(false);
   const [variant, setVariant] = React.useState('outlined');
 
+  // copy
   const handleCopy = () => {
     const mapData = data.campingPlace.location;
     navigator.clipboard.writeText(mapData)
@@ -34,9 +35,56 @@ function CampingInfo() {
         setVariant('plain');
       })
       .catch((error) => {
-        alert("something went wrong")
+        alert("something went wrong");
       });
   };
+
+  const new_script = (src) => {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.addEventListener("load", () => {
+        resolve();
+      });
+      script.addEventListener("error", (e) => {
+        reject(e);
+      });
+      document.head.appendChild(script);
+    });
+  };
+
+  const ltd = data.campingPlace.map.latitude;
+  const lng = data.campingPlace.map.longitude
+
+  // kakao map
+  useEffect(() => {
+    const my_script = new_script(
+      "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=0da75fa5139aaadb4ac44031067aee4b"
+    );
+    my_script.then(() => {
+      console.log("script loaded!!!");
+      const kakao = window["kakao"];
+      kakao.maps.load(() => {
+        const mapContainer = document.getElementById("map");
+        const options = {
+          // center: new kakao.maps.LatLng(35.88419, 128.88419),
+          center: new kakao.maps.LatLng(ltd, lng),
+          level: 3,
+        };
+        const map = new kakao.maps.Map(mapContainer, options);
+
+        // const markerPositions = [new kakao.maps.LatLng(35.88419, 128.88419)];
+        const markerPositions = [new kakao.maps.LatLng(ltd, lng)];
+
+        markerPositions.forEach((position) => {
+          const marker = new kakao.maps.Marker({
+            position: position,
+          });
+          marker.setMap(map);
+        });
+      });
+    });
+  }, []);
 
   return ( 
     <CampingInfoContainer>
@@ -68,7 +116,7 @@ function CampingInfo() {
                 <p style={{marginBottom: "10px", color: "blue"}}>Description</p>
                 <p style={{fontSize: "14px"}}>{data.campingPlace.description}</p>
             </div>
-            <CampingInfoMap src={map} alt="" style={{marginTop: "30px"}}/>
+            <div id="map" className="map" />
         </div>
 
         <Snackbar autoHideDuration={1000} color='success' open={open} variant={variant}onClose={(event, reason) => {if (reason === 'clickaway') {return;}setOpen(false);}}>Copied!</Snackbar>
