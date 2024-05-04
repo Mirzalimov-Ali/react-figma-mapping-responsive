@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavbarContainer, NavbarNavigationContianer } from '../../style'
+import { NavbarContainer, NavbarMenu, NavbarNavigationContianer } from '../../style'
 import logo from '../../assets/logo.png'
 import downArrow from '../../assets/down-arrow.svg'
 import cart from '../../assets/cart.png'
@@ -12,22 +12,84 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 
 import Modal from '@mui/joy/Modal';
-import ModalClose from '@mui/joy/ModalClose';
-import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
-import Signin from '../auth/signin'
 
 import { CheckBox, CreateAccountButton, LoginBox, LoginContainer, LoginInput, LoginLines, SignInButton, SpaceBetweenWrapper } from '../../style'
 import socialImgs from '../../assets/login-social.png'
+import arrow from '../../assets/right-arrow.png'
 
 function Navbar() {
   const [modalOpen, setModalOpen] = React.useState(false);
-
   const [open, setOpen] = React.useState(false);
 
-  const toggleDrawer = (newOpen) => () => {
-    setOpen(newOpen);
+  // const toggleDrawer = (newOpen) => () => {
+  //   setOpen(newOpen);
+  // };
+
+  // menu
+  const [state, setState] = React.useState({
+    left: false,
+    right: false,
+  });
+
+  const toggleDrawer = (drawerside, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [drawerside]: open });
   };
+
+  const list = (drawerside) => (
+    <Box
+    sx={{ width: drawerside === 'top' || drawerside === 'bottom' ? 'auto' : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(drawerside, false)}
+      onKeyDown={toggleDrawer(drawerside, false)}
+    >
+      <NavbarMenu>
+        <Link to={"/motor"} style={{textDecoration: "none", color: "#373737"}}>
+          <div>
+            <p>Motor</p>
+            <img src={arrow} alt="" />
+          </div>
+        </Link>
+        
+        <Link to={"/caravan"} style={{textDecoration: "none", color: "#373737"}}>
+          <div>
+            <p>Caravan</p>
+            <img src={arrow} alt="" />
+          </div>
+        </Link>
+        
+        <Link to={"/tuning"} style={{textDecoration: "none", color: "#373737"}}>
+          <div>
+            <p>Tuning</p>
+            <img src={arrow} alt="" />
+          </div>
+        </Link>
+        
+        <Link to={"/used-car"} style={{textDecoration: "none", color: "#373737"}}>
+          <div>
+            <p>Used car</p>
+            <img src={arrow} alt="" />
+          </div>
+        </Link>
+        
+        <Link to={"/camping-place"} style={{textDecoration: "none", color: "#373737"}}>
+          <p>Camping place</p>
+        </Link>
+        <p onClick={() => setModalOpen(true)}>Sign in</p>
+        <p>My orders</p>
+        <p>Log out</p>
+        <p>Settings</p>
+        <div style={{justifyContent: "start", gap: "10px"}}>
+          <p>En</p>
+          <img src={downArrow} alt="" />
+        </div>
+      </NavbarMenu>
+    </Box>
+  );
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
@@ -42,12 +104,22 @@ function Navbar() {
     </Box>
   );
 
-
   return (
     <NavbarContainer>
         <div style={{display: "flex", alignItems: "center", gap: "10px"}}>
-            <img src={menu} alt="" className='hamburger' onClick={toggleDrawer(true)}/>
-            <Drawer open={open} onClose={toggleDrawer(false)}> {DrawerList} </Drawer>
+
+    {['left'].map((drawerside) => (
+        <React.Fragment key={drawerside}>
+            <img src={menu} alt="" onClick={toggleDrawer(drawerside, true)} className='hamburger'/>
+          <Drawer
+            anchor={drawerside}
+            open={state[drawerside]}
+            onClose={toggleDrawer(drawerside, false)}
+          >
+            {list(drawerside)}
+          </Drawer>
+        </React.Fragment>
+      ))}
             <Link to={"/"}><img src={logo} alt="" /></Link>
         </div>
         <NavbarNavigationContianer>
@@ -61,8 +133,20 @@ function Navbar() {
             <img src={cart} alt="" style={{cursor: "pointer"}}/>
             <img onClick={() => setModalOpen(true)} src={user} alt="" style={{cursor: "pointer"}} className='navbar-none'/>
             <p className='navbar-none'>En <img src={downArrow} alt="" className='navbar-none'/></p>
-            <img src={menu} alt="" className='mobile-menu' onClick={toggleDrawer(true)}/>
-            <Drawer open={open} onClose={toggleDrawer(false)}> {DrawerList} </Drawer>
+            {/* <img src={menu} alt="" className='mobile-menu' onClick={toggleDrawer(true)}/>
+            <Drawer open={open} onClose={toggleDrawer(false)}> {DrawerList} </Drawer> */}
+            {['right'].map((drawerside) => (
+        <React.Fragment key={drawerside}>
+            <img src={menu} alt="" onClick={toggleDrawer(drawerside, true)} className='mobile-menu'/>
+          <Drawer
+            anchor={drawerside}
+            open={state[drawerside]}
+            onClose={toggleDrawer(drawerside, false)}
+          >
+            {list(drawerside)}
+          </Drawer>
+        </React.Fragment>
+      ))}
         </div>
 
         <Modal
@@ -82,7 +166,7 @@ function Navbar() {
           }}
         >
             <h2>Sign in</h2>
-            <label htmlFor="email" style={{marginTop: "30px"}}>Email</label>
+            <label htmlFor="email" style={{marginTop: "30px "}}>Email</label>
             <LoginInput type='email' id='email' placeholder='Your email'/>
 
             <label htmlFor="pwd">Password</label>

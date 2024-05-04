@@ -139,7 +139,7 @@ export const PurchaseLeftWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    background: white;
     @media only screen and (max-width: 1300px) {
         position: relative;
     }
@@ -159,7 +159,7 @@ export const PurchaseLeftWrapperPriceBox = styled.div`
     position: absolute;
     z-index: 1000;
     border-radius: 10px;
-    top: 425px;
+    top: 620px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,10 +173,11 @@ export const PurchaseRightWrapper = styled.div`
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    margin-left: 850px;
     label {
         margin-top: 20px;
     }
+    height: 600px;
+    overflow-y: scroll;
     @media only screen and (max-width: 1300px) {
         margin-left: 0;
     }
@@ -214,7 +215,7 @@ export const PurchaseButton = styled.button`
     width: 311px;
     border: none;
     border-radius: 10px;
-    height: 45px;
+    min-height: 45px;
     font-size: 20px;
     font-weight: 700;
     margin-top: 160px;
@@ -226,7 +227,7 @@ export const PurchaseButton = styled.button`
 
 export const PurchaseInputs = styled.input`
     width: 311px;
-    height: 50px;
+    min-height: 50px;
     border-radius: 10px;
     background: #3737371A;
     padding: 0 20px;
@@ -242,7 +243,7 @@ export const PurchaseInputs = styled.input`
 
 export const PurchaseSelect = styled.select`
     width: 311px;
-    height: 50px;
+    min-height: 50px;
     border-radius: 10px;
     background: #3737371A;
     padding: 0 20px;
@@ -262,7 +263,7 @@ export const PlaceOrderButton = styled.div`
     width: 311px;
     border: none;
     border-radius: 10px;
-    height: 45px;
+    min-height: 45px;
     font-size: 20px;
     font-weight: 700;
     margin-top: 50px;
@@ -273,4 +274,12 @@ export const PlaceOrderButton = styled.div`
     @media only screen and (max-width: 1300px) {
         width: 100%;
     }
+`
+
+export const Titles = styled.p`
+    font-size: 35px;
+    font-weight: 600;
+    color: #373737;
+    text-decoration: underline;
+    text-decoration-color: #FF7A00;
 `

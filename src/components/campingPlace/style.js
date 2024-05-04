@@ -78,24 +78,15 @@ export const CampingInfoImgWrapper = styled.div`
     display: flex;
     justify-content: center;
     gap: 10px;
-    img {
-        width: 200px;
-        border-radius: 10px;
-    }
-    @media only screen and (max-width: 420px) {
-        width: 100%;
+    @media only screen and (max-width: 1250px) {
+        width: 100vw;
         overflow: scroll;
     }
 `
 
 export const CampingInfoImages = styled.img`
-    width: 100px;
-    @media only screen and (max-width: 1300px) {
-        display: ${(props) => props.$tabletNone ? "none" : "flex"};
-    }
-    @media only screen and (max-width: 660px) {
-        display: ${(props) => props.$mobileNone ? "none" : ""};
-    }
+    border-radius: 10px;
+    width: 200px;
 `
 
 export const CampingInfoMap = styled.img`
@@ -119,6 +110,10 @@ export const CampingInfoLocationWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
+    button:active {
+        transform: scale(1.1);
+        transition: 0.1s;
+    }
 `
 
 export const CampingInfoLineOne = styled.div`

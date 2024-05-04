@@ -6,7 +6,7 @@ import Popup from 'reactjs-popup';
 // img
 import carousel1 from '../../assets/carousel-img.png'
 import carousel2 from '../../assets/header-2.png'
-import { BlogsContainer, BlogsLeft, BlogsLeftP, BlogsRight, HomeContainer, HomeTitles, MultiCarouselContainer, VideosContainer } from '../../caravanStyle'
+import { BlogsContainer, BlogsLeft, BlogsLeftP, BlogsRight, CarouselImg, HomeContainer, HomeTitles, MultiCarouselContainer, VideosContainer } from '../../caravanStyle'
 import MultiCarouselComponent from './multiCarousel';
 
 import homeBox1 from '../../assets/home-box-1.png'
@@ -27,26 +27,27 @@ import blogsImg3 from '../../assets/blogs-img-3.png'
 import blogsImg4 from '../../assets/blogs-img-4.png'
 import blogsImg5 from '../../assets/blogs-img-5.png'
 import blogsImg6 from '../../assets/blogs-img-6.png'
+import { Titles } from '../other/otherStyle';
 
 function Home() {
   return (
     <HomeContainer>
         <Carousel autoPlay showArrows={true} centerMode={false} showStatus={false} showThumbs={false} >
             <div>
-                <img src={carousel1}/>
+                <CarouselImg src={carousel1}/>
             </div>
             <div>
-                <img src={carousel2} />
+                <CarouselImg src={carousel2} />
             </div>
         </Carousel>
 
-        <HomeTitles src={recommendImg}/>
+        <Titles style={{fontSize: "30px", margin: '20px auto'}}>Recommend</Titles>
         <MultiCarouselContainer>
           <MultiCarouselComponent/>
         </MultiCarouselContainer>
         
         
-        <HomeTitles src={videosImg}/>
+        <Titles style={{fontSize: "30px", margin: '30px auto'}}>Videos</Titles>
         <VideosContainer>
           <Popup trigger={<img src={homeBox1} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
             {close => (
@@ -160,7 +161,8 @@ function Home() {
           </Popup>
         </VideosContainer>
 
-        <HomeTitles src={blogsImg}/>
+        {/* <HomeTitles src={blogsImg}/> */}
+        <Titles style={{fontSize: "30px", margin: "30px auto"}}>Blogs</Titles>
         <BlogsContainer>
           <BlogsLeft>
             <h2 style={{marginBottom: "30px"}}>Camper</h2>

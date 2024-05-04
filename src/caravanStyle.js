@@ -111,6 +111,18 @@ export const CarouselBox = styled.div`
     /* align-items: center; */
 `
 
+export const CarouselImg = styled.img`
+    @media only screen and (max-width: 1000px) {
+        height: 400px;
+    }
+    @media only screen and (max-width: 600px) {
+        height: 300px;
+    }
+    @media only screen and (max-width: 370px) {
+        height: 250px;
+    }
+`
+
 export const CarouselBoxInfoWrapper = styled.div`
     flex: 1;
     display: flex;
@@ -124,11 +136,11 @@ export const MultiCarouselContainer = styled.div`
     max-width: 1300px; 
     margin: auto;
     @media only screen and (max-width: 1300px) {
-        min-width: 0;
+        min-width: 700px;
         max-width: 700px;
     }
     @media only screen and (max-width: 660px) {
-        min-width: 0;
+        min-width: 300px;
         max-width: 300px;
     }
 `

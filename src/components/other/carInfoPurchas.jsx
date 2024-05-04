@@ -1,5 +1,5 @@
 import React from 'react'
-import { Description, PlaceOrderButton, PurchaseButton, PurchaseCarWrapper, PurchaseContainer, PurchaseInputs, PurchaseLeftWrapper, PurchaseLeftWrapperImg, PurchaseLeftWrapperPriceBox, PurchaseRightWrapper, PurchaseSelect, SpaceBetween } from './otherStyle'
+import { Description, PlaceOrderButton, PurchaseButton, PurchaseCarWrapper, PurchaseContainer, PurchaseInputs, PurchaseLeftWrapper, PurchaseLeftWrapperImg, PurchaseLeftWrapperPriceBox, PurchaseRightWrapper, PurchaseSelect, SpaceBetween, Titles } from './otherStyle'
 import cart from '../../assets/cart-text.png'
 import { campcar } from '../mock/mockdata';
 import { useParams } from 'react-router-dom';
@@ -9,7 +9,7 @@ function CarInfoPurchase() {
   const data = campcar.maindata.find((value) => value.id === parseInt(id));
   return (
     <PurchaseContainer>
-        <img src={cart} alt="" />
+        <Titles>Cart</Titles>
         <PurchaseCarWrapper>
             <PurchaseLeftWrapper>
                 <PurchaseLeftWrapperImg src={data.car.photo} alt="" />

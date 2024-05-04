@@ -62,6 +62,19 @@ export const NavbarNavigationContianer = styled.div`
     }
 `
 
+export const NavbarMenu = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 40px;
+    font-weight: 600;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+`
+
 export const HeaderContainer = styled.div`
     background-image: url(${(props) => props.$header ? headerImg : caravanImg});
     background-position: center;

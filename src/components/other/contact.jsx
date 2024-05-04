@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { QaContainer, QaLeft, QaLeftBox, QaRight, QaRightButton, QaRightInput } from '../../caravanStyle'
 import emailjs from '@emailjs/browser';
 
@@ -31,12 +31,54 @@ function Contact() {
       );
   };
 
+  const new_script = (src) => {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.addEventListener("load", () => {
+        resolve();
+      });
+      script.addEventListener("error", (e) => {
+        reject(e);
+      });
+      document.head.appendChild(script);
+    });
+  };
+
+  useEffect(() => {
+    const my_script = new_script(
+      "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=0da75fa5139aaadb4ac44031067aee4b"
+    );
+    my_script.then(() => {
+      console.log("script loaded!!!");
+      const kakao = window["kakao"];
+      kakao.maps.load(() => {
+        const mapContainer = document.getElementById("map");
+        const options = {
+          center: new kakao.maps.LatLng(35.88419, 128.88419),
+          level: 3,
+        };
+        const map = new kakao.maps.Map(mapContainer, options);
+
+        const markerPositions = [new kakao.maps.LatLng(35.88419, 128.88419)];
+
+        markerPositions.forEach((position) => {
+          const marker = new kakao.maps.Marker({
+            position: position,
+          });
+          marker.setMap(map);
+        });
+      });
+    });
+  }, []);
+
   const [open, setOpen] = React.useState(false);
 
   return (
     <QaContainer>
       <div style={{display: 'flex', flexDirection: 'column', gap: "20px"}}>
-        <img src={map} alt="" width={"100%"}/>
+        {/* <img src={map} alt="" width={"100%"}/> */}
+        <div id="map" className="map" style={{height: "350px", marginTop: "0px"}}/>
         <div style={{display:'flex', gap: "30px"}}>
           <div style={{padding: "20px", boxShadow: "0px 10px 40px -20px", width: "50%", borderRadius: "10px"}}>
             <p style={{fontSize: "13px"}}>Phone number:</p>

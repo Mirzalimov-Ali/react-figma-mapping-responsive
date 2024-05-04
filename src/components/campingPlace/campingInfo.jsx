@@ -92,10 +92,10 @@ function CampingInfo() {
             <CampingInfoImgWrapper>
                 <CampingInfoImages src={campingImg1}/>
                 <CampingInfoImages src={campingImg2}/>
-                <CampingInfoImages src={campingImg3} $mobileNone/>
-                <CampingInfoImages src={campingImg4} $tabletNone/>
-                <CampingInfoImages src={campingImg5} $tabletNone/>
-                <CampingInfoImages src={campingImg6} $tabletNone/>
+                <CampingInfoImages src={campingImg3}/>
+                <CampingInfoImages src={campingImg4}/>
+                <CampingInfoImages src={campingImg5}/>
+                <CampingInfoImages src={campingImg6}/>
             </CampingInfoImgWrapper>
             <CampingInfoNameWrapper>
                 <h2>{data.campingPlace.name}</h2>
