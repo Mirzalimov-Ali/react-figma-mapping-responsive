@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Navbar from './components/navbar/navbar'
-import Header from './components/header/header'
 import Motor from './components/motor/motor'
 import Footer from './components/footer/footer'
 import Caravan from './components/caravan/caravan'
@@ -14,12 +13,12 @@ import TuningInfo from './components/other/tuningInfo'
 import UsedCarInfo from './components/other/usedCarInfo'
 import CampingPlace from './components/campingPlace/campingPlace'
 import CampingInfo from './components/campingPlace/campingInfo'
-import Signin from './components/auth/signin'
 import Registrate from './components/auth/registrate'
 import CarInfoPurchase from './components/other/carInfoPurchas'
 import CaravanInfoPurchase from './components/other/caravanInfoPurchase'
 import TuningInfoPurchase from './components/other/tuningInfoPurchase'
 import UsedCarInfoPurchase from './components/other/usedCarInfoPurchase'
+import NotFoundPage from './components/404/notFoundPage'
 
 function RouterComponent() {
   const location = useLocation();
@@ -46,6 +45,8 @@ function RouterComponent() {
         <Route path='/camping-place/:id' element={<CampingInfo/>}/>
         
         <Route path='/signup' element={<Registrate/>}/>
+
+        <Route path="*" element={<NotFoundPage/>} />
       </Routes>
       {hideComponent && <Footer/>}
     </div>

@@ -161,7 +161,6 @@ function Home() {
           </Popup>
         </VideosContainer>
 
-        {/* <HomeTitles src={blogsImg}/> */}
         <Titles style={{fontSize: "30px", margin: "30px auto"}}>Blogs</Titles>
         <BlogsContainer>
           <BlogsLeft>
