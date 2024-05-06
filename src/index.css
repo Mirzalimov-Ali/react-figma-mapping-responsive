@@ -49,9 +49,14 @@ body {
 .popup-content {
   margin: auto;
   background: rgb(255, 255, 255);
-  /* width: 50%; */
   width: 35%;
   padding: 5px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .popup-content {
+    width: 80%;
+  }
 }
 .popup-arrow {
   color: rgb(255, 255, 255);
@@ -91,4 +96,10 @@ input::-webkit-inner-spin-button {
   .map {
     width: 100%;
   }
+}
+
+
+html {
+  scroll-behavior: smooth;
+  cursor: url(./assets/cursor.png), auto;
 }

@@ -28,8 +28,8 @@ export const campingPlace = {
                 home_page: "google.com",
                 description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, illo?",
                 map: {
-                    latitude: "35.848199",
-                    longitude: "128.589667"
+                    latitude: "33.346138",
+                    longitude: "126.505750"
                 }
             }
         },
@@ -48,8 +48,8 @@ export const campingPlace = {
                 home_page: "naver.com",
                 description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, illo?",
                 map: {
-                    latitude: "35.848480",
-                    longitude: "128.584674"
+                    latitude: "37.629574",
+                    longitude: "128.090537"
                 }
             }
         },
@@ -108,8 +108,8 @@ export const campingPlace = {
                 home_page: "instagram.com",
                 description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, illo?",
                 map: {
-                    latitude: "35.874137",
-                    longitude: "128.577865"
+                    latitude: "37.529650",
+                    longitude: "127.328527"
                 }
             }
         },
@@ -188,8 +188,8 @@ export const campingPlace = {
                 home_page: "zivo.com",
                 description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, illo?",
                 map: {
-                    latitude: "35.895872",
-                    longitude: "128.664919"
+                    latitude: "37.518659",
+                    longitude: "127.281706"
                 }
             }
         },
@@ -208,8 +208,8 @@ export const campingPlace = {
                 home_page: "example.com",
                 description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, illo?",
                 map: {
-                    latitude: "51.507351",
-                    longitude: "-0.127758"
+                    latitude: "37.500036",
+                    longitude: "130.856345"
                 }
             }
         },
@@ -228,8 +228,8 @@ export const campingPlace = {
                 home_page: "dongchon.com",
                 description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, illo?",
                 map: {
-                    latitude: "51.527715",
-                    longitude: "-0.182388"
+                    latitude: "34.683152",
+                    longitude: "128.579732"
                 }
             }
         },
@@ -237,7 +237,7 @@ export const campingPlace = {
             id: 12,
             campingPlace: {
                 name: "Camping place 12",
-                location: "Пермь",
+                location: "perm",
                 city: "Russia",
                 photo: `${campingPlace12}`,
                 phone_number: "010-5783-9384",
@@ -248,8 +248,8 @@ export const campingPlace = {
                 home_page: "russia.com",
                 description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, illo?",
                 map: {
-                    latitude: "60.465935",
-                    longitude: "75.968278"
+                    latitude: "34.625207",
+                    longitude: "128.549285"
                 }
             }
         }

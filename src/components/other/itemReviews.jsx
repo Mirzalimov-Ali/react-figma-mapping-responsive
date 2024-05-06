@@ -11,7 +11,7 @@ function ItemReviews() {
       <ItemReviewHeader>
         <ItemReviewHeaderLeft>
           <p style={{fontWeight: "700"}}>Premium Review</p>
-          <p style={{color: 'blue', fontWeight: "600"}}>{data.length}</p>
+          <span style={{color: 'blue', fontWeight: "600"}}>{data.length}</span>
         </ItemReviewHeaderLeft>
         <ItemReviewHeaderRight>
           <ItemReviewHeaderInput type='text' placeholder='best'/>
@@ -47,7 +47,9 @@ function ItemReviews() {
                   </div>
                 </ItemReviewDataRight>
               </ItemReviewData>
+
               <Line/>
+
               <ItemReviewData key={key} $none>
                 <img src={value.car.photo} alt="" width={"100%"}/>
                 <ItemReviewDataLeft>

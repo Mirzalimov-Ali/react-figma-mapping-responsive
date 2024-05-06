@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { tuning } from '../mock/tuning';
-import { CarInfoContainer, CarInfoHeader, CarInfoHeaderButton, CarInfoHeaderButtonWrapper, InfoWrapper, InfoWrapperBottom, InfoWrapperLine, InfoWrapperLine1, InfoWrapperLine2, LineWrappers, Lines, LinesImgWrapper, LinesTextWrapper, Menu, RightButton } from '../../caravanStyle';
+import { CarImg, CarInfoContainer, CarInfoHeader, CarInfoHeaderButton, CarInfoHeaderButtonWrapper, InfoWrapper, InfoWrapperBottom, InfoWrapperLine, InfoWrapperLine1, InfoWrapperLine2, LineWrappers, Lines, LinesImgWrapper, LinesTextWrapper, Menu, RightButton } from '../../caravanStyle';
 
 import carInfoimg1 from '../../assets/carInfo-1.png'
 import carInfoimg2 from '../../assets/carInfo-2.png'
@@ -39,7 +39,7 @@ function TuningInfo() {
       </CarInfoHeader>
       <LineWrappers>
         <div>
-            <img src={resultData.tuning.image} alt="" width={"500px"}/>
+            <CarImg src={resultData.tuning.image} alt="" width={"500px"}/>
         </div>
         <InfoWrapper>
             <InfoWrapperLine1>
@@ -176,7 +176,7 @@ function TuningInfo() {
               marginLeft: "-700px",
               bgcolor: "#006DAB33",
               [`&& .${tabClasses.root}`]: {
-                padding: "0 50px",
+                padding: "0 20px",
                 flex: 'initial',
                 bgcolor: 'transparent',
                 '&:hover': {

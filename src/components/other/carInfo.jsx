@@ -48,7 +48,7 @@ function CarInfo() {
                     <h3>{resultData.car.name}</h3>
                     <small>aid</small>
                 </div>
-                <p style={{fontSize: "30px", fontWeight: "600", color: "#006DAB"}}>{resultData.car.cost}Won</p>
+                <p>{resultData.car.cost}Won</p>
             </InfoWrapperLine1>
             <InfoWrapperLine/>
             <InfoWrapperLine2>
@@ -149,7 +149,7 @@ function CarInfo() {
         <LinesTextWrapper>
             <h1>Heating when driving</h1>
             <p>Fuel heating is now very popular in the industry, but this was not always the case; Camper (once again) led the way in this area over 15 years ago.One of the advantages it offers is that it can heat up your vehicle while you drive, for a more comfortable arrival.</p>
-            <CarInfoHeaderButtonWrapper>
+            <CarInfoHeaderButtonWrapper $bottomButtons>
                 <Link to={`purchase`}><CarInfoHeaderButton $primary>add to cart</CarInfoHeaderButton></Link>
                 <Link to={`purchase`}><RightButton>compare</RightButton></Link>
             </CarInfoHeaderButtonWrapper>
@@ -175,10 +175,10 @@ function CarInfo() {
             sx={{
               pt: 1,
               justifyContent: 'center',
-              marginLeft: "-700px",
+              marginLeft: "-900px",
               bgcolor: "#006DAB33",
               [`&& .${tabClasses.root}`]: {
-                padding: "0 50px",
+                padding: "0 20px",
                 flex: 'initial',
                 bgcolor: 'transparent',
                 '&:hover': {

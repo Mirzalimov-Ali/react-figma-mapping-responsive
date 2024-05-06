@@ -5,7 +5,11 @@ export const CaravanContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 60px
+    margin-top: 60px;
+    @media only screen and (max-width: 660px) {
+        max-width: 100vw;
+        overflow: hidden;
+    }
 `
 
 export const CaravanCard = styled.div`
@@ -22,6 +26,11 @@ export const CaravanCard = styled.div`
     @media only screen and (max-width: 1300px) {
         width: 100%;
     }
+    @media only screen and (max-width: 660px) {
+        /* max-width: 10px; */
+        max-width: 100%;
+    }
+
     &:hover {
         background-color: #F0F0F0;
         transform: scale(1.01);
@@ -35,6 +44,9 @@ export const CaravanImgWrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex: 1;
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+    }
 `
 
 export const CaravanCardRight = styled.div`
@@ -42,11 +54,14 @@ export const CaravanCardRight = styled.div`
     flex-direction: column;
     flex: 8;
     justify-content: center;
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+    }
 `
 
 export const AllWrapper = styled.div`
+    width: 100%;
     display: flex;
-    /* justify-content: space-between; */
     justify-content: ${(props) => props.$gap ? "space-evenly" : "space-between"};
     gap: ${(props) => props.$gap ? "20px": "0"};
 `
@@ -55,6 +70,10 @@ export const RatingWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 5px;
+    @media only screen and (max-width: 660px) {
+        font-size: 10px;
+        margin-right: 20px;
+    }
 `
 
 export const Button = styled.div`
@@ -82,6 +101,10 @@ export const Button = styled.div`
     @media only screen and (max-width: 694px) {
         width: 100px;
         gap: 20px;
+    }
+    @media only screen and (max-width: 500px) {
+        width: 40%;
+        font-size: 10px;
     }
 `
 
@@ -117,9 +140,6 @@ export const CarouselImg = styled.img`
     }
     @media only screen and (max-width: 600px) {
         height: 300px;
-    }
-    @media only screen and (max-width: 370px) {
-        height: 250px;
     }
 `
 
@@ -206,7 +226,6 @@ export const CarInfoContainer = styled.div`
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-    width: 99vw;
     overflow: hidden;
 `
 
@@ -228,9 +247,6 @@ export const CarInfoHeaderButtonWrapper = styled.div`
     align-items: center;
     gap: 20px;
     margin-top: 30px;
-    @media only screen and (max-width: 600px) {
-        margin: auto;
-    }
 `
 
 export const CarInfoHeaderButton = styled.button`
@@ -249,6 +265,10 @@ export const CarInfoHeaderButton = styled.button`
         border: ${(props) => props.$primary ? "2px solid black" : "none"};
         color: ${(props) => props.$primary ? "black" : "none"};
     }
+    @media only screen and (max-width: 400px) {
+        max-width: 40vw;
+        font-size: 14px;
+    }
 `
 
 export const LineWrappers = styled.div`
@@ -264,8 +284,8 @@ export const LineWrappers = styled.div`
 
 export const CarImg = styled.img`
     width: 500px;
-    @media only screen and (max-width: 600px) {
-        width: 100%;
+    @media only screen and (max-width: 450px) {
+        width: 100vw;
     }
 `
 
@@ -288,6 +308,20 @@ export const InfoWrapperLine1 = styled.div`
     justify-content: space-between;
     align-items: center;
     padding-right: 20px;
+    p {
+        font-size: 30px;
+        font-weight: 600;
+        color: #006DAB;
+        @media only screen and (max-width: 400px) {
+            font-size: 15px;
+        }
+    }
+    @media only screen and (max-width: 400px) {
+        align-items: start;
+        h3 {
+            font-size: 15px;
+        }
+    }
 `
 
 export const InfoWrapperLine = styled.div`
@@ -338,6 +372,7 @@ export const LinesTextWrapper = styled.div`
     }
     @media only screen and (max-width: 600px) {
         width: 100%;
+        padding: 0 20px;
         p {
             width: 100%;
         }
@@ -348,7 +383,8 @@ export const LinesImgWrapper = styled.img`
     width: 600px;
     height: 400px;
     @media only screen and (max-width: 600px) {
-        width: 100%;
+        width: 90%;
+        height: 30%;
     }
 `
 
@@ -365,7 +401,10 @@ export const RightButton = styled.button`
     font-weight: 600;
     &:hover {
         background-color: #006DAB;
-        color: white    ;
+        color: white;
+    }
+    @media only screen and (max-width: 400px) {
+        width: 40vw;
     }
 `
 
@@ -405,6 +444,8 @@ export const Menu = styled.div`
 export const QaContainer = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
+    align-items: ${(props) => props.$faq ? "center" : "start"};
     gap: 50px;
     @media only screen and (max-width: 750px) {
         flex-direction: column;

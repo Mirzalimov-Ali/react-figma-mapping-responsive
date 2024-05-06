@@ -107,20 +107,19 @@ function Navbar() {
   return (
     <NavbarContainer>
         <div style={{display: "flex", alignItems: "center", gap: "10px"}}>
+          {['left'].map((drawerside) => (
+              <React.Fragment key={drawerside}>
+                  <img src={menu} alt="" onClick={toggleDrawer(drawerside, true)} className='hamburger'/>
+                <Drawer
+                  anchor={drawerside}
+                  open={state[drawerside]}
+                  onClose={toggleDrawer(drawerside, false)}
+                >
+                  {list(drawerside)}
+                </Drawer>
+          </React.Fragment>))}
 
-    {['left'].map((drawerside) => (
-        <React.Fragment key={drawerside}>
-            <img src={menu} alt="" onClick={toggleDrawer(drawerside, true)} className='hamburger'/>
-          <Drawer
-            anchor={drawerside}
-            open={state[drawerside]}
-            onClose={toggleDrawer(drawerside, false)}
-          >
-            {list(drawerside)}
-          </Drawer>
-        </React.Fragment>
-      ))}
-            <Link to={"/"}><img src={logo} alt="" /></Link>
+          <Link to={"/"}><img src={logo} alt="" /></Link>
         </div>
         <NavbarNavigationContianer>
             <Link style={{textDecoration: "none"}} to={"/motor"}><p>Motor <img src={downArrow} alt="" /></p></Link>

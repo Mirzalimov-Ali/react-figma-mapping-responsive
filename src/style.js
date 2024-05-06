@@ -12,9 +12,10 @@ export const NavbarContainer = styled.div`
     padding: 0 70px;
     position: fixed;
     top: 0;
-    width: 100%;
+    min-width: 100vw;
+    max-width: 100vw;
     background-color: #fff;
-    z-index: 5;
+    z-index: 1001;
     .hamburger {
         display: none;
     }
@@ -56,6 +57,9 @@ export const NavbarNavigationContianer = styled.div`
         font-weight: 600;
         line-height: normal;
         cursor: pointer;
+        &:hover {
+            color: blue;
+        }
     }
     @media only screen and (max-width: 1300px) {
         display: none;
@@ -105,6 +109,21 @@ export const HeaderContainer2 = styled.div`
     gap: 20px;
     color: white;
 `
+export const HeaderSmallText = styled.p`
+    font-size: 27px;
+    font-weight: 700;
+    @media only screen and (max-width: 300px) {
+        font-size: 23px;
+    }
+`
+
+export const HeaderBigText = styled.p`
+    font-size: 80px;
+    font-weight: 700;
+    @media only screen and (max-width: 350px) {
+        font-size: 60px;
+    }
+`
 
 // home //
 
@@ -121,7 +140,8 @@ export const HomeLeftContainer = styled.div`
     flex-direction: column;
     gap: 50px;
     flex: 1;
-    margin-top: -20px;
+    /* margin-top: -20px; */
+    margin-top: ${(props) => props.$mobileFlexMenu ? "0" : "-20px"};
     @media only screen and (max-width: 1407px) {
         display: ${(props) => props.$mobileFlexMenu ? "flex" : "none"};
         padding: 10px 30px;
@@ -231,9 +251,17 @@ export const HomeRightTop = styled.div`
     @media only screen and (max-width: 660px) {
         flex-direction: column;
         gap: 20px;
+        max-width: 440px;
+        margin: auto;
         .none {
             display: none;
         }
+    }
+    @media only screen and (max-width: 451px) {
+        max-width: 400px;
+    }
+    @media only screen and (max-width: 404px) {
+        max-width: 270px;
     }
 `
 
@@ -283,6 +311,10 @@ export const HomeRightTopRight = styled.div`
     @media only screen and (max-width: 451px) {
         gap: 0;
     }
+    @media only screen and (max-width: 404px) {
+        max-width: 100%;
+        gap: 0;
+    }
 `
 
 export const SortInput = styled.input`
@@ -292,6 +324,9 @@ export const SortInput = styled.input`
     padding: 0 10px;
     margin-left: 10px;
     width: ${(props) => props.$short ? "60px" : ""};
+    @media only screen and (max-width: 404px) {
+        width: ${(props) => props.$short ? "30px" : "80px"};
+    }
 `
 
 export const Card = styled.div`
@@ -380,7 +415,7 @@ export const LongLine = styled.div`
         margin: 10px auto;
     }
     @media only screen and (max-width: 660px) {
-        width: 100%;
+        width: 100vw;
     }
 `
 

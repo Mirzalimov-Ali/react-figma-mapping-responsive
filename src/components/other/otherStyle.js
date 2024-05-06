@@ -12,12 +12,11 @@ export const ItemReviewsContainer = styled.div`
 
 export const ItemReviewHeader = styled.div`
     display: flex;
-    /* justify-content: space-between; */
     justify-content: center;
     gap: 950px;
     @media only screen and (max-width: 1306px) {
         justify-content: space-between;
-        gap: 0;
+        gap: 10px;
         width: 100%;
     }
 `
@@ -25,6 +24,15 @@ export const ItemReviewHeader = styled.div`
 export const ItemReviewHeaderLeft = styled.div`
     display: flex;
     gap: 20px;
+    @media only screen and (max-width: 400px) {
+        display: flex;
+        align-items: center;
+        width: 140px;
+        gap: 5px;
+        p {
+            font-size: 11px;
+        }
+    }
 `  
 
 export const ItemReviewHeaderRight = styled.div`
@@ -42,6 +50,9 @@ export const ItemReviewHeaderInput = styled.input`
     border: 1px solid gray;
     &:focus {
         outline: none;
+    }
+    @media only screen and (max-width: 400px) {
+        width: 80px;
     }
 `
 
@@ -157,7 +168,7 @@ export const PurchaseLeftWrapperPriceBox = styled.div`
     height: 50px;
     width: 350px;
     position: absolute;
-    z-index: 1000;
+    z-index: 10;
     border-radius: 10px;
     top: 620px;
     display: flex;
@@ -166,6 +177,9 @@ export const PurchaseLeftWrapperPriceBox = styled.div`
     gap: 20px;
     @media only screen and (max-width: 660px) {
         width: 100%;
+    }
+    @media only screen and (max-width: 1300px) {
+        top: 430px;
     }
 `
 
@@ -280,6 +294,5 @@ export const Titles = styled.p`
     font-size: 35px;
     font-weight: 600;
     color: #373737;
-    text-decoration: underline;
-    text-decoration-color: #FF7A00;
+    border-bottom: 2px solid #FF7A00;
 `

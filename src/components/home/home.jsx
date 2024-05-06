@@ -17,9 +17,7 @@ import homeBox5 from '../../assets/home-box-5.png'
 import homeBox6 from '../../assets/home-box-6.png'
 import homeBox7 from '../../assets/home-box-7.png'
 import homeBox8 from '../../assets/home-box-8.png'
-import videosImg from '../../assets/videos.png'
-import recommendImg from '../../assets/recommend.png'
-import blogsImg from '../../assets/blogs.png'
+import playButton from '../../assets/play-button.png'
 
 import blogsImg1 from '../../assets/blogs-img-1.png'
 import blogsImg2 from '../../assets/blogs-img-2.png'
@@ -44,12 +42,19 @@ function Home() {
         <Titles style={{fontSize: "30px", margin: '20px auto'}}>Recommend</Titles>
         <MultiCarouselContainer>
           <MultiCarouselComponent/>
-        </MultiCarouselContainer>
+        </MultiCarouselContainer>     
         
         
         <Titles style={{fontSize: "30px", margin: '30px auto'}}>Videos</Titles>
         <VideosContainer>
-          <Popup trigger={<img src={homeBox1} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
+          <Popup trigger={
+          <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+            <img src={playButton} alt="" style={{position: "absolute", zIndex: "1", cursor: "pointer"}}/>
+            <div style={{position: "relative", display: "flex", justifyContent: 'center', alignItems: "center"}}>
+              <img src={homeBox1} alt="" style={{width: "300px", height: '300px', cursor: "pointer", borderRadius: "20px"}}/>
+            </div>
+        </div>
+          } modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -64,7 +69,14 @@ function Home() {
           </Popup>
           
 
-          <Popup trigger={<img src={homeBox2} alt="" style={{width: "300px", height: '300px', cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
+          <Popup trigger={
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <img src={playButton} alt="" style={{position: "absolute", zIndex: "1", cursor: "pointer"}}/>
+              <div style={{position: "relative", display: "flex", justifyContent: 'center', alignItems: "center"}}>
+                <img src={homeBox2} alt="" style={{width: "300px", height: '300px', cursor: "pointer", borderRadius: "20px"}}/>
+              </div>
+            </div>
+          } modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -78,7 +90,14 @@ function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<img src={homeBox3} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
+          <Popup trigger={
+          <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+            <img src={playButton} alt="" style={{position: "absolute", zIndex: "1", cursor: "pointer"}}/>
+            <div style={{position: "relative", display: "flex", justifyContent: 'center', alignItems: "center"}}>
+              <img src={homeBox3} alt="" style={{width: "300px", height: '300px', cursor: "pointer", borderRadius: "20px"}}/>
+            </div>
+        </div>
+          } modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -91,7 +110,14 @@ function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<img src={homeBox4} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
+          <Popup trigger={
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <img src={playButton} alt="" style={{position: "absolute", zIndex: "1", cursor: "pointer"}}/>
+              <div style={{position: "relative", display: "flex", justifyContent: 'center', alignItems: "center"}}>
+                <img src={homeBox4} alt="" style={{width: "300px", height: '300px', cursor: "pointer", borderRadius: "20px"}}/>
+              </div>
+            </div>
+          } modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -105,7 +131,14 @@ function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<img src={homeBox5} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
+          <Popup trigger={
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <img src={playButton} alt="" style={{position: "absolute", zIndex: "1", cursor: "pointer"}}/>
+              <div style={{position: "relative", display: "flex", justifyContent: 'center', alignItems: "center"}}>
+                <img src={homeBox5} alt="" style={{width: "300px", height: '300px', cursor: "pointer", borderRadius: "20px"}}/>
+              </div>
+            </div>
+          } modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -118,7 +151,14 @@ function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<img src={homeBox6} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
+          <Popup trigger={
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <img src={playButton} alt="" style={{position: "absolute", zIndex: "1", cursor: "pointer"}}/>
+              <div style={{position: "relative", display: "flex", justifyContent: 'center', alignItems: "center"}}>
+                <img src={homeBox6} alt="" style={{width: "300px", height: '300px', cursor: "pointer", borderRadius: "20px"}}/>
+              </div>
+            </div>
+          } modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -132,7 +172,14 @@ function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<img src={homeBox7} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
+          <Popup trigger={
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <img src={playButton} alt="" style={{position: "absolute", zIndex: "1", cursor: "pointer"}}/>
+              <div style={{position: "relative", display: "flex", justifyContent: 'center', alignItems: "center"}}>
+                <img src={homeBox7} alt="" style={{width: "300px", height: '300px', cursor: "pointer", borderRadius: "20px"}}/>
+              </div>
+            </div>
+          } modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>
@@ -146,7 +193,14 @@ function Home() {
             )}
           </Popup>
           
-          <Popup trigger={<img src={homeBox8} alt="" style={{width: "300px", height: "300px", cursor: "pointer", borderRadius: "20px"}}/>} modal nested>
+          <Popup trigger={
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <img src={playButton} alt="" style={{position: "absolute", zIndex: "1", cursor: "pointer"}}/>
+              <div style={{position: "relative", display: "flex", justifyContent: 'center', alignItems: "center"}}>
+                <img src={homeBox8} alt="" style={{width: "300px", height: '300px', cursor: "pointer", borderRadius: "20px"}}/>
+              </div>
+            </div>
+          } modal nested>
             {close => (
               <div className="modal">
                 <button className="close" onClick={close}>

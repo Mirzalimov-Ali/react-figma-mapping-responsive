@@ -81,6 +81,8 @@ export const CampingInfoImgWrapper = styled.div`
     @media only screen and (max-width: 1250px) {
         width: 100vw;
         overflow: scroll;
+        justify-content: start;
+        padding: 0 10px;
     }
 `
 

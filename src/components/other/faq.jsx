@@ -12,7 +12,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function Faq() {
   return (
-    <QaContainer>
+    <QaContainer $faq>
       <QaLeft>
       <Accordion sx={{maxWidth: "800px"}}>
         <AccordionSummary

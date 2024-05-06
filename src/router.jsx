@@ -19,6 +19,7 @@ import CaravanInfoPurchase from './components/other/caravanInfoPurchase'
 import TuningInfoPurchase from './components/other/tuningInfoPurchase'
 import UsedCarInfoPurchase from './components/other/usedCarInfoPurchase'
 import NotFoundPage from './components/404/notFoundPage'
+import ScrollToTop from './scrollToTop'
 
 function RouterComponent() {
   const location = useLocation();
@@ -26,6 +27,7 @@ function RouterComponent() {
   return (
     <div>
       {hideComponent && <Navbar/>}
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path='/motor' element={<Motor/>}/>
