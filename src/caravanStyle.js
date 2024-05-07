@@ -444,8 +444,7 @@ export const Menu = styled.div`
 export const QaContainer = styled.div`
     display: flex;
     justify-content: center;
-    align-items: center;
-    align-items: ${(props) => props.$faq ? "center" : "start"};
+    align-items: start;
     gap: 50px;
     @media only screen and (max-width: 750px) {
         flex-direction: column;
@@ -463,6 +462,15 @@ export const QaLeft = styled.div`
         flex-direction: column;
         align-items: center;
         width: 100vw;
+    }
+    .accor {
+        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10);
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+    .accor::before {
+        position: unset;
     }
 `
 

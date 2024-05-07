@@ -14,7 +14,7 @@ function Faq() {
   return (
     <QaContainer $faq>
       <QaLeft>
-      <Accordion sx={{maxWidth: "800px"}}>
+      <Accordion sx={{maxWidth: "800px"}} className='accor'>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
@@ -29,7 +29,7 @@ function Faq() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-        <Accordion sx={{maxWidth: "800px"}}>
+        <Accordion sx={{maxWidth: "800px"}} className='accor'>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
@@ -44,7 +44,7 @@ function Faq() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion sx={{maxWidth: "800px"}}>
+      <Accordion sx={{maxWidth: "800px"}} className='accor'>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
@@ -59,7 +59,7 @@ function Faq() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion sx={{maxWidth: "800px"}}>
+      <Accordion sx={{maxWidth: "800px"}} className='accor'>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
@@ -74,7 +74,7 @@ function Faq() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion sx={{maxWidth: "800px"}}>
+      <Accordion sx={{maxWidth: "800px"}} className='accor'>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
