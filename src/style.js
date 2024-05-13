@@ -189,6 +189,7 @@ export const BoxesData = styled.div`
 export const BoxesDataInput = styled.input`
     width: 22px;
     height: 22px;
+    cursor: pointer;
 `
 export const HomeLeftCarWrapper = styled.div`
     margin-top: 50px;

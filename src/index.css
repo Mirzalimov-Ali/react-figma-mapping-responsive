@@ -97,9 +97,3 @@ input::-webkit-inner-spin-button {
     width: 100%;
   }
 }
-
-
-html {
-  scroll-behavior: smooth;
-  cursor: url(./assets/cursor.png), auto;
-}

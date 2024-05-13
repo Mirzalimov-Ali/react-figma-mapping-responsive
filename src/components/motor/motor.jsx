@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { CardButtonWrapper, Price, Boxes, BoxesData, BoxesDataInput, BoxesDataWrapper, BoxesDownArrow, BoxesTitleWrapper, CarContainer, Card, CardBottom, CardBottomCarName, CardBottomMiddle, CostBox, CostBoxInput, HomeButton, HomeButtonContainer, HomeContainer, HomeLeftCarWrapper, HomeLeftContainer, HomeLeftParagraph, HomeRightContainer, HomeRightTop, HomeRightTopButton, HomeRightTopLeft, HomeRightTopLeftRight, HomeRightTopRight, Line, LongLine, MappingButton, SortInput, Div, CardImg, HeaderContainer, BigWrapper } from '../../style'
 
 import { campcar } from '../mock/mockdata'
@@ -26,8 +26,8 @@ import Header from '../header/header'
 import Accordion from '@mui/joy/Accordion';
 import AccordionDetails from '@mui/joy/AccordionDetails';
 import AccordionSummary from '@mui/joy/AccordionSummary';
-
-
+import FilterSidebar from '../filterSidebar/filterSidebar'
+import MobileFilterSidebar from '../filterSidebar/mobileFilterSidebar'
 
 function Motor() {
   const [active, setActive] = useState(true)
@@ -46,154 +46,166 @@ function Motor() {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
+    
 
+  const [showFilteredComp, setShowFilteredComp] =  useState(false);
+  const filteredData = showFilteredComp ? campcar.maindata.filter((item) => item.car.company === "다온티앤티") : campcar.maindata
+  const filteredData2 = showFilteredComp ? campcar.maindata.filter((item) => item.car.company === "제일모빌") : campcar.maindata
+
+//   console.log(filteredData)
+
+//   console.log(filteredData)
   const DrawerList = (
-    <Box sx={{ width: 350 }} role="presentation">
-      <List>
-        <HomeLeftContainer $mobileFlexMenu>
-            <div style={{position: "fixed", left: "300px"}}>
-                <CloseIcon onClick={toggleDrawer(false)}/>
-            </div>
-            <div>
-                <HomeLeftParagraph>Cost of car</HomeLeftParagraph>
-                <Line/>
-                <CostBox>
-                    <div>
-                        <label htmlFor="from">from</label> <br />
-                        <CostBoxInput type="text" id='from'/>
-                    </div>
-                    <div>
-                        <label htmlFor="to">to</label> <br />
-                        <CostBoxInput type="text" id='to'/>
-                    </div>
-                </CostBox>
+    // <Box sx={{ width: 350 }} role="presentation">
+    //   <List>
+    //     <HomeLeftContainer $mobileFlexMenu>
+    //         <div style={{position: "fixed", left: "300px"}}>
+    //             <CloseIcon onClick={toggleDrawer(false)}/>
+    //         </div>
+    //         <div>
+    //             <HomeLeftParagraph>Cost of car</HomeLeftParagraph>
+    //             <Line/>
+    //             <CostBox>
+    //                 <div>
+    //                     <label htmlFor="from">from</label> <br />
+    //                     <CostBoxInput type="text" id='from'/>
+    //                 </div>
+    //                 <div>
+    //                     <label htmlFor="to">to</label> <br />
+    //                     <CostBoxInput type="text" id='to'/>
+    //                 </div>
+    //             </CostBox>
 
-                <Boxes>
-                    <BoxesTitleWrapper>
-                        <h3>Brand</h3>
-                        <BoxesDownArrow src={downArrow} />
-                    </BoxesTitleWrapper>
+    //             <Boxes>
+    //                 <BoxesTitleWrapper>
+    //                     <h3>Brand</h3>
+    //                     <BoxesDownArrow src={downArrow} />
+    //                 </BoxesTitleWrapper>
 
-                    <Line/>
+    //                 <Line/>
 
-                    <BoxesDataWrapper>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" id="aidal"/>
-                            <label htmlFor="aidal">Aidal</label>
-                        </BoxesData>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" id="knal"/>
-                            <label htmlFor="knal">Knal</label>
-                        </BoxesData>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" id="escape"/>
-                            <label htmlFor="escape">escape</label>
-                        </BoxesData>
-                    </BoxesDataWrapper>
-                </Boxes>
+    //                 <BoxesDataWrapper>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" id="aidal"/>
+    //                         <label htmlFor="aidal">Aidal</label>
+    //                     </BoxesData>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" id="knal"/>
+    //                         <label htmlFor="knal">Knal</label>
+    //                     </BoxesData>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" id="escape"/>
+    //                         <label htmlFor="escape">escape</label>
+    //                     </BoxesData>
+    //                 </BoxesDataWrapper>
+    //             </Boxes>
 
-                <Boxes>
-                    <BoxesTitleWrapper>
-                        <h3>Company</h3>
-                        <BoxesDownArrow src={downArrow} alt="" />
-                    </BoxesTitleWrapper>
+    //             <Boxes>
+    //                 <BoxesTitleWrapper>
+    //                     <h3>Company</h3>
+    //                     <BoxesDownArrow src={downArrow} alt="" />
+    //                 </BoxesTitleWrapper>
 
-                    <Line/>
+    //                 <Line/>
 
-                    <BoxesDataWrapper>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" id="escape2"/>
-                            <label htmlFor="escape2">escape</label>
-                        </BoxesData>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" id="aidal2"/>
-                            <label htmlFor="aidal2">Aidal</label>
-                        </BoxesData>
-                    </BoxesDataWrapper>
-                </Boxes>
+    //                 <BoxesDataWrapper>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" id="escape2"/>
+    //                         <label htmlFor="escape2">escape</label>
+    //                     </BoxesData>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" id="aidal2"/>
+    //                         <label htmlFor="aidal2">Aidal</label>
+    //                     </BoxesData>
+    //                 </BoxesDataWrapper>
+    //             </Boxes>
 
-                <Boxes>
-                    <BoxesTitleWrapper>
-                        <h3>License type</h3>
-                        <BoxesDownArrow src={downArrow} alt=""/>
-                    </BoxesTitleWrapper>
+    //             <Boxes>
+    //                 <BoxesTitleWrapper>
+    //                     <h3>License type</h3>
+    //                     <BoxesDownArrow src={downArrow} alt=""/>
+    //                 </BoxesTitleWrapper>
 
-                    <Line/>
+    //                 <Line/>
 
-                    <BoxesDataWrapper>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" name="" id="1year"/>
-                            <label htmlFor="1year">1 year</label>
-                        </BoxesData>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" name="" id="2year"/>
-                            <label htmlFor="2year">2 year</label>
-                        </BoxesData>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" name="" id="15year"/>
-                            <label htmlFor="15year">1.5year</label>
-                        </BoxesData>
-                    </BoxesDataWrapper>
-                </Boxes>
+    //                 <BoxesDataWrapper>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" name="" id="1year"/>
+    //                         <label htmlFor="1year">1 year</label>
+    //                     </BoxesData>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" name="" id="2year"/>
+    //                         <label htmlFor="2year">2 year</label>
+    //                     </BoxesData>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" name="" id="15year"/>
+    //                         <label htmlFor="15year">1.5year</label>
+    //                     </BoxesData>
+    //                 </BoxesDataWrapper>
+    //             </Boxes>
 
-                <Boxes>
-                    <BoxesTitleWrapper>
-                        <h3>Number of travelers</h3>
-                        <BoxesDownArrow src={downArrow} alt=""/>
-                    </BoxesTitleWrapper>
-                    <Line/>
-                    <BoxesDataWrapper>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" name="" id="two"/>
-                            <label htmlFor="two">2</label>
-                        </BoxesData>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" name="" id="three-minus-four"/>
-                            <label htmlFor="three-minus-four">3-4</label>
-                        </BoxesData>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" name="" id="five-plus"/>
-                            <label htmlFor="five-plus">5+</label>
-                        </BoxesData>
-                    </BoxesDataWrapper>
-                </Boxes>
-                <Boxes>
-                    <BoxesTitleWrapper>
-                        <h3>Location</h3>
-                        <BoxesDownArrow src={downArrow} alt=""/>
-                    </BoxesTitleWrapper>
-                    <Line/>
-                    <BoxesDataWrapper>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" name="" id="seoul"/>
-                            <label htmlFor="seoul">Seoul</label>
-                        </BoxesData>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" name="" id="Korea"/>
-                            <label htmlFor="Korea">Korea</label>
-                        </BoxesData>
-                        <BoxesData>
-                            <BoxesDataInput type="checkbox" name="" id="Pusan"/>
-                            <label htmlFor="Pusan">Pusan</label>
-                        </BoxesData>
-                    </BoxesDataWrapper>
-                </Boxes>
-                <HomeButtonContainer>
-                    <HomeButton>Cancel</HomeButton>
-                    <HomeButton $search>Search</HomeButton>
-                </HomeButtonContainer>
+    //             <Boxes>
+    //                 <BoxesTitleWrapper>
+    //                     <h3>Number of travelers</h3>
+    //                     <BoxesDownArrow src={downArrow} alt=""/>
+    //                 </BoxesTitleWrapper>
+    //                 <Line/>
+    //                 <BoxesDataWrapper>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" name="" id="two"/>
+    //                         <label htmlFor="two">2</label>
+    //                     </BoxesData>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" name="" id="three-minus-four"/>
+    //                         <label htmlFor="three-minus-four">3-4</label>
+    //                     </BoxesData>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" name="" id="five-plus"/>
+    //                         <label htmlFor="five-plus">5+</label>
+    //                     </BoxesData>
+    //                 </BoxesDataWrapper>
+    //             </Boxes>
+    //             <Boxes>
+    //                 <BoxesTitleWrapper>
+    //                     <h3>Location</h3>
+    //                     <BoxesDownArrow src={downArrow} alt=""/>
+    //                 </BoxesTitleWrapper>
+    //                 <Line/>
+    //                 <BoxesDataWrapper>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" name="" id="seoul"/>
+    //                         <label htmlFor="seoul">Seoul</label>
+    //                     </BoxesData>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" name="" id="Korea"/>
+    //                         <label htmlFor="Korea">Korea</label>
+    //                     </BoxesData>
+    //                     <BoxesData>
+    //                         <BoxesDataInput type="checkbox" name="" id="Pusan"/>
+    //                         <label htmlFor="Pusan">Pusan</label>
+    //                     </BoxesData>
+    //                 </BoxesDataWrapper>
+    //             </Boxes>
+    //             <HomeButtonContainer>
+    //                 <HomeButton>Cancel</HomeButton>
+    //                 <HomeButton $search>Search</HomeButton>
+    //             </HomeButtonContainer>
 
-                <HomeLeftCarWrapper>
-                    <p>Compare</p>
-                    <div>
-                        <img src={img1} alt="" />
-                        <img src={img2} alt="" />
-                        <img src={img3} alt="" />
-                    </div>
-                </HomeLeftCarWrapper>
-            </div>
-        </HomeLeftContainer>
-      </List>
+    //             <HomeLeftCarWrapper>
+    //                 <p>Compare</p>
+    //                 <div>
+    //                     <img src={img1} alt="" />
+    //                     <img src={img2} alt="" />
+    //                     <img src={img3} alt="" />
+    //                 </div>
+    //             </HomeLeftCarWrapper>
+    //         </div>
+    //     </HomeLeftContainer>
+    //   </List>
+    // </Box>
+
+     <Box sx={{ width: 350 }} role="presentation">
+        <MobileFilterSidebar/>
     </Box>
   );
   
@@ -232,7 +244,7 @@ function Motor() {
                         <AccordionDetails>
                         <BoxesDataWrapper>
                             <BoxesData>
-                                <BoxesDataInput type="checkbox" id="aidal"/>
+                                <BoxesDataInput type="checkbox" id="aidal" onChange={(e) => setShowFilteredComp(e.target.checked)}/>
                                 <label htmlFor="aidal">Aidal</label>
                             </BoxesData>
                             <BoxesData>
@@ -359,6 +371,8 @@ function Motor() {
                 </div>
             </HomeLeftContainer>
 
+            {/* <FilterSidebar/> */}
+
             <HomeRightContainer>
                 <HomeRightTop>
                     <HomeRightTopLeft>
@@ -394,7 +408,7 @@ function Motor() {
                 </HomeRightTop>
                 <LongLine/>
 
-                {active ? <GridMenu/> : <Vmenu/>}
+                {active ? <GridMenu filteredData={filteredData} filterData2={filteredData2}/> : <Vmenu/>}
                 
             </HomeRightContainer>
         </HomeContainer>
