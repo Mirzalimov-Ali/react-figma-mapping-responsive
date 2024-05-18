@@ -279,6 +279,7 @@ export const LineWrappers = styled.div`
     justify-content: center;
     gap: 20px;
     margin-bottom: 50px;
+    margin-top: 30px;
     @media only screen and (max-width: 1300px) {
         flex-direction: column;
         align-items: center;

@@ -46,113 +46,11 @@ function Motor() {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-    
-
-//   const [showFilteredComp, setShowFilteredComp] =  useState({
-//     다온티앤티: true,
-//     영남캠핑카: true,
-//     제일모빌: true,
-//     스타모빌: true,
-//     한울캠핑카: true,
-//     훼미리캠핑카: true,
-//     에이스캠퍼: true,
-//     월든모빌: true,
-//     위드원모터스: true,
-//     미스터캠퍼: true,
-//     드림캠핑카: true,
-//     모터홈코리아: true,
-
-//     일종보통: true,
-//     이종보통: true,
-
-//     삼인: true,
-//     사인: true,
-//     오인: true,
-//     육인: true,
-
-//     수도권: true,
-//     경상권: true,
-//     충청권: true,
-
-//     from: 0,
-//     to: 1000000000,
-//   });
-
-//   const filteredData  = data.filter((item) => {
-//     if (showFilteredComp.from && item.car.cost < showFilteredComp.from) {
-//         return false;
-//     }
-//     if (showFilteredComp.to && item.car.cost > showFilteredComp.to) {
-//         return false;
-//     }
 
 
-//     if(showFilteredComp.다온티앤티 && item.car.company === "다온티앤티") {
-//         return false;
-//     }
-//     if(showFilteredComp.영남캠핑카 && item.car.company === "영남캠핑카") {
-//         return true;
-//     }
-//     if(showFilteredComp.제일모빌 && item.car.company === "제일모빌") {
-//         return true;
-//     }
-//     if(showFilteredComp.스타모빌 && item.car.company === "스타모빌") {
-//         return true;
-//     }
-//     if(showFilteredComp.한울캠핑카 && item.car.company === "한울캠핑카") {
-//         return true;
-//     }
-//     if(showFilteredComp.훼미리캠핑카 && item.car.company === "훼미리캠핑카") {
-//         return true;
-//     }
-//     if(showFilteredComp.에이스캠퍼 && item.car.company === "에이스캠퍼") {
-//         return true;
-//     }
-//     if(showFilteredComp.월든모빌 && item.car.company === "월든모빌") {
-//         return true;
-//     }
-//     if(showFilteredComp.위드원모터스 && item.car.company === "위드원모터스") {
-//         return true;
-//     }
-//     if(showFilteredComp.미스터캠퍼 && item.car.company === "미스터캠퍼") {
-//         return true;
-//     }
-//     if(showFilteredComp.드림캠핑카 && item.car.company === "드림캠핑카") {
-//         return true;
-//     }
-//     if(showFilteredComp.모터홈코리아 && item.car.company === "모터홈코리아") {
-//         return true;
-//     }
-
-
-//     if(showFilteredComp.일종보통 && item.car.license === "1종 보통") {
-//         return true;
-//     }
-//     if(showFilteredComp.이종보통 && item.car.license === "2종 보통") {
-//         return true;
-//     }
-
-//     if(showFilteredComp.삼인 && item.car.people === "3인") {
-//         return true;
-//     }
-//     if(showFilteredComp.사인 && item.car.people === "4인") {
-//         return true;
-//     }
-//     if(showFilteredComp.오인 && item.car.people === "5인") {
-//         return true;
-//     }
-//     if(showFilteredComp.육인 && item.car.people === "6인") {
-//         return true;
-//     }
-
-//     if(showFilteredComp.수도권 && item.car.location === "수도권") {
-//         return true;
-//     }
-//     return false;
-//   })
-
-
+  // filter
   const [selectedCompanies, setSelectedCompanies] = useState([]);
+  const [priceRange, setPriceRange] = useState({from: 0, to: Infinity});
 
   const handleCompanyChange = (filterItem) => {
     const isSelected = selectedCompanies.includes(filterItem);
@@ -163,7 +61,6 @@ function Motor() {
     );
   };
 
-
   const filteredData = data.filter(
     (item) =>
         selectedCompanies.length === 0 ||
@@ -173,14 +70,21 @@ function Motor() {
         selectedCompanies.includes(item.car.location)
   );
 
-
-//   const handleCheckBoxChange = (company) => {
-//     setShowFilteredComp({
-//         ...showFilteredComp,
-//         [company]: !showFilteredComp[company]
-//     })
-//   }
-
+  const handlePriceFrom = (e) => {
+    const newFrom = Number(e.target.value);
+    setPriceRange(prevPriceRange => ({
+      ...prevPriceRange,
+      from: newFrom
+    }));
+  };
+  
+  const handlePriceTo = (e) => {
+    const newTo = Number(e.target.value);
+    setPriceRange(prevPriceRange => ({
+      ...prevPriceRange,
+      to: newTo
+    }));
+  };
 
 
   const DrawerList = (
@@ -371,11 +275,11 @@ function Motor() {
                                 <div style={{display: "flex", gap: '30px'}}>
                                     <div>
                                         <label htmlFor="from">from</label> <br />
-                                        <CostBoxInput type="number" id='from'/>
+                                        <CostBoxInput type="number" id='from' onChange={handlePriceFrom}/>
                                     </div>
                                     <div>
                                         <label htmlFor="to">to</label> <br />
-                                        <CostBoxInput type="number" id='to'/>
+                                        <CostBoxInput type="number" id='to' onChange={handlePriceTo}/>
                                     </div>
                                 </div>
                             </AccordionDetails>

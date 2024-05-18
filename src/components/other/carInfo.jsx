@@ -38,6 +38,7 @@ function CarInfo() {
             <Link to={`purchase`}><CarInfoHeaderButton>compare</CarInfoHeaderButton></Link>
         </CarInfoHeaderButtonWrapper>
       </CarInfoHeader>
+      
       <LineWrappers>
         <div>
             <CarImg src={resultData.car.photo} alt=""/>
