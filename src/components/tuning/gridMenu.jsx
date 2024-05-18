@@ -7,11 +7,11 @@ import { tuning } from '../mock/tuning'
 import star from '../../assets/star.svg'
 import { Link } from 'react-router-dom'
 
-function GridMenu() {
+function GridMenu({filteredData}) {
   const data = tuning.maindata
   return (
     <CarContainer>
-        {data.map((value, key)=> {
+        {filteredData.map((value, key)=> {
             const tuningData = value.tuning;
             return (
                 <Card key={key}>

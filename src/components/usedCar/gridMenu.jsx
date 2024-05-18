@@ -7,12 +7,12 @@ import { usedCar } from '../mock/usedCar'
 import star from '../../assets/star.svg'
 import { Link } from 'react-router-dom'
 
-function GridMenu() {
+function GridMenu({filteredData}) {
   const data = usedCar.maindata
   console.log(data)
   return (
     <CarContainer>
-        {data.map((value, key)=> {
+        {filteredData.map((value, key)=> {
             const Data = value.used
             return (
                 <Card key={key}>

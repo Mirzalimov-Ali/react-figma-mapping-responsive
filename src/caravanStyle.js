@@ -17,6 +17,8 @@ export const CaravanCard = styled.div`
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
     border-radius: 20px;
     padding: 10px 20px;
+    max-height: 180px;
+    min-height: 180px;
     gap: 30px;
     display: flex;
     transition: 0.3s ease;
@@ -42,6 +44,7 @@ export const CaravanCard = styled.div`
 export const CaravanImgWrapper = styled.div`
     display: flex;
     align-items: center;
+    height: 100%;
     justify-content: center;
     flex: 1;
     @media only screen and (max-width: 500px) {

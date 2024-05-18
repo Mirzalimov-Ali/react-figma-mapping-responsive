@@ -163,6 +163,7 @@ export const CostBoxInput = styled.input`
     height: 36px; 
     width: 90px; 
     border-radius: 10px;
+    padding: 0 10px;
 `
 
 export const BoxesTitleWrapper = styled.div`
@@ -212,7 +213,7 @@ export const Boxes = styled.div`
 `
 
 export const HomeButtonContainer = styled.div`
-    display: flex;
+    display: none;
     margin-top: 50px;
     gap: 10px;
 `
@@ -234,6 +235,7 @@ export const HomeRightContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex: 8;
+    /* min-width: 1100px; */
     @media only screen and (max-width: 1300px) {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -338,6 +340,7 @@ export const Card = styled.div`
     padding: 10px 30px;
     border-radius: 20px;
     width: 100%;
+    height: 285px;
     transition: 0.3s;
     @media only screen and (max-width: 420px) {
         width: 80%;

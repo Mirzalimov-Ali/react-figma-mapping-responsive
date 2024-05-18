@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { CardButtonWrapper, Price, Boxes, BoxesData, BoxesDataInput, BoxesDataWrapper, BoxesDownArrow, BoxesTitleWrapper, CarContainer, Card, CardBottom, CardBottomCarName, CardBottomMiddle, CostBox, CostBoxInput, HomeButton, HomeButtonContainer, HomeContainer, HomeLeftCarWrapper, HomeLeftContainer, HomeLeftParagraph, HomeRightContainer, HomeRightTop, HomeRightTopButton, HomeRightTopLeft, HomeRightTopLeftRight, HomeRightTopRight, Line, LongLine, MappingButton, SortInput, Div, CardImg, HeaderContainer, BigWrapper } from '../../style'
 
-import {caravan} from '../mock/caravan'
 
 // img //
 import downArrow from '../../assets/big-down-arrow.svg'
@@ -24,9 +23,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Accordion from '@mui/joy/Accordion';
 import AccordionDetails from '@mui/joy/AccordionDetails';
 import AccordionSummary from '@mui/joy/AccordionSummary';
+import { tuning } from '../mock/tuning'
 
 
 function Tuning() {
+  const data = tuning.maindata
+
   const [active, setActive] = useState(true)
   
   function handleGridClicked() {
@@ -37,364 +39,352 @@ function Tuning() {
     setActive(true)
   }
 
-    // mui
-    const [open, setOpen] = React.useState(false);
+  // mui
+  const [open, setOpen] = React.useState(false);
 
-    const toggleDrawer = (newOpen) => () => {
-      setOpen(newOpen);
-    };
-  
-    const DrawerList = (
-      <Box sx={{ width: 350 }} role="presentation">
-        <List>
-          <HomeLeftContainer $mobileFlexMenu>
-              <div style={{position: "fixed", left: "300px"}}>
-                  <CloseIcon onClick={toggleDrawer(false)}/>
-              </div>
-              <div>
-                  <HomeLeftParagraph>Cost of car</HomeLeftParagraph>
-                  <Line/>
-                  <CostBox>
-                      <div>
-                          <label htmlFor="from">from</label> <br />
-                          <CostBoxInput type="text" id='from'/>
-                      </div>
-                      <div>
-                          <label htmlFor="to">to</label> <br />
-                          <CostBoxInput type="text" id='to'/>
-                      </div>
-                  </CostBox>
-  
-                  <Boxes>
-                      <BoxesTitleWrapper>
-                          <h3>Brand</h3>
-                          <BoxesDownArrow src={downArrow} />
-                      </BoxesTitleWrapper>
-  
-                      <Line/>
-  
-                      <BoxesDataWrapper>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" id="aidal"/>
-                              <label htmlFor="aidal">Aidal</label>
-                          </BoxesData>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" id="knal"/>
-                              <label htmlFor="knal">Knal</label>
-                          </BoxesData>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" id="escape"/>
-                              <label htmlFor="escape">escape</label>
-                          </BoxesData>
-                      </BoxesDataWrapper>
-                  </Boxes>
-  
-                  <Boxes>
-                      <BoxesTitleWrapper>
-                          <h3>Company</h3>
-                          <BoxesDownArrow src={downArrow} alt="" />
-                      </BoxesTitleWrapper>
-  
-                      <Line/>
-  
-                      <BoxesDataWrapper>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" id="escape2"/>
-                              <label htmlFor="escape2">escape</label>
-                          </BoxesData>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" id="aidal2"/>
-                              <label htmlFor="aidal2">Aidal</label>
-                          </BoxesData>
-                      </BoxesDataWrapper>
-                  </Boxes>
-  
-                  <Boxes>
-                      <BoxesTitleWrapper>
-                          <h3>License type</h3>
-                          <BoxesDownArrow src={downArrow} alt=""/>
-                      </BoxesTitleWrapper>
-  
-                      <Line/>
-  
-                      <BoxesDataWrapper>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" name="" id="1year"/>
-                              <label htmlFor="1year">1 year</label>
-                          </BoxesData>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" name="" id="2year"/>
-                              <label htmlFor="2year">2 year</label>
-                          </BoxesData>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" name="" id="15year"/>
-                              <label htmlFor="15year">1.5year</label>
-                          </BoxesData>
-                      </BoxesDataWrapper>
-                  </Boxes>
-  
-                  <Boxes>
-                      <BoxesTitleWrapper>
-                          <h3>Number of travelers</h3>
-                          <BoxesDownArrow src={downArrow} alt=""/>
-                      </BoxesTitleWrapper>
-                      <Line/>
-                      <BoxesDataWrapper>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" name="" id="two"/>
-                              <label htmlFor="two">2</label>
-                          </BoxesData>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" name="" id="three-minus-four"/>
-                              <label htmlFor="three-minus-four">3-4</label>
-                          </BoxesData>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" name="" id="five-plus"/>
-                              <label htmlFor="five-plus">5+</label>
-                          </BoxesData>
-                      </BoxesDataWrapper>
-                  </Boxes>
-                  <Boxes>
-                      <BoxesTitleWrapper>
-                          <h3>Location</h3>
-                          <BoxesDownArrow src={downArrow} alt=""/>
-                      </BoxesTitleWrapper>
-                      <Line/>
-                      <BoxesDataWrapper>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" name="" id="seoul"/>
-                              <label htmlFor="seoul">Seoul</label>
-                          </BoxesData>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" name="" id="Korea"/>
-                              <label htmlFor="Korea">Korea</label>
-                          </BoxesData>
-                          <BoxesData>
-                              <BoxesDataInput type="checkbox" name="" id="Pusan"/>
-                              <label htmlFor="Pusan">Pusan</label>
-                          </BoxesData>
-                      </BoxesDataWrapper>
-                  </Boxes>
-                  <HomeButtonContainer>
-                      <HomeButton>Cancel</HomeButton>
-                      <HomeButton $search>Search</HomeButton>
-                  </HomeButtonContainer>
-  
-                  <HomeLeftCarWrapper>
-                      <p>Compare</p>
-                      <div>
-                          <img src={img1} alt="" />
-                          <img src={img2} alt="" />
-                          <img src={img3} alt="" />
-                      </div>
-                  </HomeLeftCarWrapper>
-              </div>
-          </HomeLeftContainer>
-        </List>
-      </Box>
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+
+
+
+  const [selectedCompanies, setSelectedCompanies] = useState([]);
+
+  const handleCompanyChange = (companyName) => {
+    const isSelected = selectedCompanies.includes(companyName);
+    setSelectedCompanies(
+      isSelected
+        ? ""
+        : [...selectedCompanies, companyName]
     );
-  
-  const data = caravan.maindata
-  return (
-    <div>
-        <TuningHeader/>
-        <HomeContainer>
-        <HomeLeftContainer>
-                <div>
-                    <CostBox>
-                        <Accordion sx={{minWidth: "240px"}} defaultExpanded>
-                            <AccordionSummary sx={{fontSize: "20px", fontWeight: "600"}}>Cost of car</AccordionSummary>
-                            <Line style={{marginBottom: "30px"}}/>
-                            
-                            <AccordionDetails>
-                                <div style={{display: "flex", gap: '30px'}}>
-                                    <div>
-                                        <label htmlFor="from">from</label> <br />
-                                        <CostBoxInput type="number" id='from'/>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="to">to</label> <br />
-                                        <CostBoxInput type="number" id='to'/>
-                                    </div>
+  };
+
+  const filteredData = data.filter(
+    (item) =>
+        selectedCompanies.length === 0 ||
+        selectedCompanies.includes(item.tuning.company) ||
+        selectedCompanies.includes(item.tuning.license) ||
+        selectedCompanies.includes(item.tuning.people) ||
+        selectedCompanies.includes(item.tuning.location)
+  );
+
+  const DrawerList = (
+    <Box sx={{ width: 350 }} role="presentation">
+    <List>
+        <HomeLeftContainer $mobileFlexMenu>
+            <div>
+                <CostBox>
+                    <Accordion sx={{minWidth: "240px"}} defaultExpanded>
+                        <AccordionSummary sx={{fontSize: "20px", fontWeight: "600"}}>Cost of car</AccordionSummary>
+                        <Line style={{marginBottom: "30px"}}/>
+                        
+                        <AccordionDetails>
+                            <div style={{display: "flex", gap: '30px'}}>
+                                <div>
+                                    <label htmlFor="from">from</label> <br />
+                                    <CostBoxInput type="number" id='from'/>
                                 </div>
-                            
-                            </AccordionDetails>
-                        </Accordion>
-                    </CostBox>
+                                <div>
+                                    <label htmlFor="to">to</label> <br />
+                                    <CostBoxInput type="number" id='to'/>
+                                </div>
+                            </div>
+                        
+                        </AccordionDetails>
+                    </Accordion>
+                </CostBox>
 
-                    <Boxes>
-                    <Accordion sx={{maxWidth: "240px"}} defaultExpanded>
-                        <AccordionSummary sx={{fontSize: "20px", fontWeight: "600"}}>Brand</AccordionSummary>
+                <Boxes>
+                    <Accordion defaultExpanded sx={{maxWidth:"240px"}}>
+                        <AccordionSummary sx={{fontSize: '20px', fontWeight: "600"}}>Company</AccordionSummary>
                         <Line/>
-
                         <AccordionDetails>
                         <BoxesDataWrapper>
                             <BoxesData>
-                                <BoxesDataInput type="checkbox" id="aidal"/>
-                                <label htmlFor="aidal">Aidal</label>
+                                <BoxesDataInput type="checkbox" id="escape2" onChange={() => handleCompanyChange("다온티앤티")}/>
+                                <label htmlFor="escape2">다온티앤티</label>
                             </BoxesData>
                             <BoxesData>
-                                <BoxesDataInput type="checkbox" id="knal"/>
-                                <label htmlFor="knal">Knal</label>
+                                <BoxesDataInput type="checkbox" id="aidal2" onChange={() => handleCompanyChange("영남캠핑카")}/>
+                                <label htmlFor="aidal2">영남캠핑카</label>
                             </BoxesData>
                             <BoxesData>
-                                <BoxesDataInput type="checkbox" id="escape"/>
-                                <label htmlFor="escape">escape</label>
+                                <BoxesDataInput type="checkbox" id="aidal2" onChange={() => handleCompanyChange("제일모빌")}/>
+                                <label htmlFor="aidal2">제일모빌</label>
+                            </BoxesData>
+                        </BoxesDataWrapper>
+                        </AccordionDetails>
+                    </Accordion>
+                </Boxes>
+
+                <Boxes>
+                    <Accordion defaultExpanded sx={{maxWidth:"240px"}}>
+                        <AccordionSummary sx={{fontSize: "20px", fontWeight: "600"}}>License type</AccordionSummary>
+                        <Line/>
+
+                        <AccordionDetails>
+                            <BoxesDataWrapper>
+                            <BoxesData>
+                                <BoxesDataInput type="checkbox" name="" id="1year" onChange={() => handleCompanyChange("1종 보통")}/>
+                                <label htmlFor="1year">1종 보통</label>
+                            </BoxesData>
+                            <BoxesData>
+                                <BoxesDataInput type="checkbox" name="" id="2year" onChange={() => handleCompanyChange("2종 보통")}/>
+                                <label htmlFor="2year">2종 보통</label>
                             </BoxesData>
                         </BoxesDataWrapper>
                         </AccordionDetails>
                     </Accordion>
 
 
-                        
-                    </Boxes>
-
-                    <Boxes>
-                        <Accordion defaultExpanded sx={{maxWidth:"240px"}}>
-                            <AccordionSummary sx={{fontSize: '20px', fontWeight: "600"}}>Company</AccordionSummary>
-                            <Line/>
-                            <AccordionDetails>
-                            <BoxesDataWrapper>
-                                <BoxesData>
-                                    <BoxesDataInput type="checkbox" id="escape2"/>
-                                    <label htmlFor="escape2">escape</label>
-                                </BoxesData>
-                                <BoxesData>
-                                    <BoxesDataInput type="checkbox" id="aidal2"/>
-                                    <label htmlFor="aidal2">Aidal</label>
-                                </BoxesData>
-                            </BoxesDataWrapper>
-                            </AccordionDetails>
-                        </Accordion>
-                    </Boxes>
-
-                    <Boxes>
-                        <Accordion defaultExpanded sx={{maxWidth:"240px"}}>
-                            <AccordionSummary sx={{fontSize: "20px", fontWeight: "600"}}>License type</AccordionSummary>
-                            <Line/>
-
-                            <AccordionDetails>
-                                <BoxesDataWrapper>
-                                <BoxesData>
-                                    <BoxesDataInput type="checkbox" name="" id="1year"/>
-                                    <label htmlFor="1year">1 year</label>
-                                </BoxesData>
-                                <BoxesData>
-                                    <BoxesDataInput type="checkbox" name="" id="2year"/>
-                                    <label htmlFor="2year">2 year</label>
-                                </BoxesData>
-                                <BoxesData>
-                                    <BoxesDataInput type="checkbox" name="" id="15year"/>
-                                    <label htmlFor="15year">1.5year</label>
-                                </BoxesData>
-                            </BoxesDataWrapper>
-                            </AccordionDetails>
-                        </Accordion>
-
-
-                        
-                    </Boxes>
-
-                    <Boxes>
-                        <Accordion defaultExpanded sx={{maxWidth: "240px"}}>
-                            <AccordionSummary sx={{fontSize: "19.1px", fontWeight: "600"}}>Number of travelers</AccordionSummary>
-                            <Line/>
-                            <AccordionDetails>
-                            <BoxesDataWrapper>
-                                <BoxesData>
-                                    <BoxesDataInput type="checkbox" name="" id="two"/>
-                                    <label htmlFor="two">2</label>
-                                </BoxesData>
-                                <BoxesData>
-                                    <BoxesDataInput type="checkbox" name="" id="three-minus-four"/>
-                                    <label htmlFor="three-minus-four">3-4</label>
-                                </BoxesData>
-                                <BoxesData>
-                                    <BoxesDataInput type="checkbox" name="" id="five-plus"/>
-                                    <label htmlFor="five-plus">5+</label>
-                                </BoxesData>
-                            </BoxesDataWrapper>
-                            </AccordionDetails>
-                        </Accordion>
-                    </Boxes>
-
-                    <Boxes>
-                        <Accordion sx={{maxWidth: "240px"}} defaultExpanded>
-                            <AccordionSummary sx={{fontSize: "20px", fontWeight: "600"}}>Location</AccordionSummary>
-                            <Line/>
-                            <AccordionDetails>
-                            <BoxesDataWrapper>
-                                <BoxesData>
-                                    <BoxesDataInput type="checkbox" name="" id="seoul"/>
-                                    <label htmlFor="seoul">Seoul</label>
-                                </BoxesData>
-                                <BoxesData>
-                                    <BoxesDataInput type="checkbox" name="" id="Korea"/>
-                                    <label htmlFor="Korea">Korea</label>
-                                </BoxesData>
-                                <BoxesData>
-                                    <BoxesDataInput type="checkbox" name="" id="Pusan"/>
-                                    <label htmlFor="Pusan">Pusan</label>
-                                </BoxesData>
-                            </BoxesDataWrapper>
-                            </AccordionDetails>
-                        </Accordion>
-                    </Boxes>
                     
-                    <HomeButtonContainer>
-                        <HomeButton>Cancel</HomeButton>
-                        <HomeButton $search>Search</HomeButton>
-                    </HomeButtonContainer>
+                </Boxes>
 
-                    <HomeLeftCarWrapper>
-                        <p>Compare</p>
-                        <div style={{display:"flex"}}>
-                            <img src={img1} alt="" />
-                            <img src={img2} alt="" />
-                            <img src={img3} alt="" />
-                        </div>
-                    </HomeLeftCarWrapper>
-                </div>
-        </HomeLeftContainer>
+                <Boxes>
+                    <Accordion defaultExpanded sx={{maxWidth: "240px"}}>
+                        <AccordionSummary sx={{fontSize: "19.1px", fontWeight: "600"}}>Number of travelers</AccordionSummary>
+                        <Line/>
+                        <AccordionDetails>
+                        <BoxesDataWrapper>
+                            <BoxesData>
+                                <BoxesDataInput type="checkbox" name="" id="two" onChange={() => handleCompanyChange("3인")}/>
+                                <label htmlFor="two">3인</label>
+                            </BoxesData>
+                            <BoxesData>
+                                <BoxesDataInput type="checkbox" name="" id="three-minus-four" onChange={() => handleCompanyChange("4인")}/>
+                                <label htmlFor="three-minus-four">4인</label>
+                            </BoxesData>
+                            <BoxesData>
+                                <BoxesDataInput type="checkbox" name="" id="five-plus" onChange={() => handleCompanyChange("5인")}/>
+                                <label htmlFor="five-plus">5인</label>
+                            </BoxesData>
+                            <BoxesData>
+                                <BoxesDataInput type="checkbox" name="" id="five-plus" onChange={() => handleCompanyChange("6인")}/>
+                                <label htmlFor="five-plus">6인</label>
+                            </BoxesData>
+                        </BoxesDataWrapper>
+                        </AccordionDetails>
+                    </Accordion>
+                </Boxes>
 
-        <HomeRightContainer>
-            <HomeRightTop>
-                <HomeRightTopLeft>
-                    <div style={{display: "flex", alignItems: 'center'}}>
-                        <p style={{fontWeight: "600"}}>Item<span style={{marginLeft: "10px", color: "#006DAB"}}>{data.length}</span></p>
-
-                        <Button onClick={toggleDrawer(true)} className='mobile-none-button'><MenuIcon/></Button>
-                        <Drawer open={open} onClose={toggleDrawer(false)}>
-                            {DrawerList}
-                        </Drawer>
-                    </div>
-                    <HomeRightTopLeftRight $displayNone>
-                        <HomeRightTopButton onClick={handleVClicked}><img src={fourDots} alt=""/></HomeRightTopButton>
-                        <HomeRightTopButton $rightButton onClick={handleGridClicked}><img src={menu} alt=""/></HomeRightTopButton>
-                    </HomeRightTopLeftRight>
-                </HomeRightTopLeft>
+                <Boxes>
+                    <Accordion sx={{maxWidth: "240px"}} defaultExpanded>
+                        <AccordionSummary sx={{fontSize: "20px", fontWeight: "600"}}>Location</AccordionSummary>
+                        <Line/>
+                        <AccordionDetails>
+                        <BoxesDataWrapper>
+                            <BoxesData>
+                                <BoxesDataInput type="checkbox" name="" id="seoul" onChange={() => handleCompanyChange("Seoul")}/>
+                                <label htmlFor="seoul">서울</label>
+                            </BoxesData>
+                            <BoxesData>
+                                <BoxesDataInput type="checkbox" name="" id="Korea" onChange={() => handleCompanyChange("Busan")}/>
+                                <label htmlFor="Korea">부산</label>
+                            </BoxesData>
+                            <BoxesData>
+                                <BoxesDataInput type="checkbox" name="" id="Pusan" onChange={() => handleCompanyChange("Daegu")}/>
+                                <label htmlFor="Pusan">대구</label>
+                            </BoxesData>
+                        </BoxesDataWrapper>
+                        </AccordionDetails>
+                    </Accordion>
+                </Boxes>
                 
-                <HomeRightTopRight>
-                    <p>Sort<span style={{marginLeft: '5px'}}>by</span></p>
-                    <div>
-                        <SortInput type="text" placeholder='Select'/>
-                        <HomeRightTopButton $rightButton><img src={downArrow} alt=""/></HomeRightTopButton>
-                    </div>
-                    <div>
-                        <SortInput type="text" placeholder='60' $short/>
-                        <HomeRightTopButton $rightButton><img src={downArrow} alt=""/></HomeRightTopButton>
-                    </div>
-                    <div className='none'>
-                        <HomeRightTopButton onClick={handleVClicked}><img src={fourDots} alt=""/></HomeRightTopButton>
-                        <HomeRightTopButton $rightButton onClick={handleGridClicked}><img src={menu} alt=""/></HomeRightTopButton>
-                    </div>
-                </HomeRightTopRight>
-            </HomeRightTop>
-            <LongLine/>
+                <HomeButtonContainer>
+                    <HomeButton>Cancel</HomeButton>
+                    <HomeButton $search>Search</HomeButton>
+                </HomeButtonContainer>
 
-            {active ? <GridMenu/> : <Vmenu/>}
-            
-        </HomeRightContainer>
+                <HomeLeftCarWrapper>
+                    <p>Compare</p>
+                    <div style={{display:"flex"}}>
+                        <img src={img1} alt="" />
+                        <img src={img2} alt="" />
+                        <img src={img3} alt="" />
+                    </div>
+                </HomeLeftCarWrapper>
+            </div>
+        </HomeLeftContainer>
+    </List>
+    </Box>
+  );
+  return (
+    <div>
+        <TuningHeader/>
+        <HomeContainer>
+            <HomeLeftContainer>
+                    <div>
+                        <CostBox>
+                            <Accordion sx={{minWidth: "240px"}} defaultExpanded>
+                                <AccordionSummary sx={{fontSize: "20px", fontWeight: "600"}}>Cost of car</AccordionSummary>
+                                <Line style={{marginBottom: "30px"}}/>
+                                
+                                <AccordionDetails>
+                                    <div style={{display: "flex", gap: '30px'}}>
+                                        <div>
+                                            <label htmlFor="from">from</label> <br />
+                                            <CostBoxInput type="number" id='from'/>
+                                        </div>
+                                        <div>
+                                            <label htmlFor="to">to</label> <br />
+                                            <CostBoxInput type="number" id='to'/>
+                                        </div>
+                                    </div>
+                                
+                                </AccordionDetails>
+                            </Accordion>
+                        </CostBox>
+
+                        <Boxes>
+                            <Accordion defaultExpanded sx={{maxWidth:"240px"}}>
+                                <AccordionSummary sx={{fontSize: '20px', fontWeight: "600"}}>Company</AccordionSummary>
+                                <Line/>
+                                <AccordionDetails>
+                                <BoxesDataWrapper>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" id="escape2" onChange={() => handleCompanyChange("다온티앤티")}/>
+                                        <label htmlFor="escape2">다온티앤티</label>
+                                    </BoxesData>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" id="aidal2" onChange={() => handleCompanyChange("영남캠핑카")}/>
+                                        <label htmlFor="aidal2">영남캠핑카</label>
+                                    </BoxesData>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" id="aidal2" onChange={() => handleCompanyChange("제일모빌")}/>
+                                        <label htmlFor="aidal2">제일모빌</label>
+                                    </BoxesData>
+                                </BoxesDataWrapper>
+                                </AccordionDetails>
+                            </Accordion>
+                        </Boxes>
+
+                        <Boxes>
+                            <Accordion defaultExpanded sx={{maxWidth:"240px"}}>
+                                <AccordionSummary sx={{fontSize: "20px", fontWeight: "600"}}>License type</AccordionSummary>
+                                <Line/>
+
+                                <AccordionDetails>
+                                    <BoxesDataWrapper>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" name="" id="1year" onChange={() => handleCompanyChange("1종 보통")}/>
+                                        <label htmlFor="1year">1종 보통</label>
+                                    </BoxesData>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" name="" id="2year" onChange={() => handleCompanyChange("2종 보통")}/>
+                                        <label htmlFor="2year">2종 보통</label>
+                                    </BoxesData>
+                                </BoxesDataWrapper>
+                                </AccordionDetails>
+                            </Accordion>
+
+
+                            
+                        </Boxes>
+
+                        <Boxes>
+                            <Accordion defaultExpanded sx={{maxWidth: "240px"}}>
+                                <AccordionSummary sx={{fontSize: "19.1px", fontWeight: "600"}}>Number of travelers</AccordionSummary>
+                                <Line/>
+                                <AccordionDetails>
+                                <BoxesDataWrapper>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" name="" id="two" onChange={() => handleCompanyChange("3인")}/>
+                                        <label htmlFor="two">3인</label>
+                                    </BoxesData>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" name="" id="three-minus-four" onChange={() => handleCompanyChange("4인")}/>
+                                        <label htmlFor="three-minus-four">4인</label>
+                                    </BoxesData>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" name="" id="five-plus" onChange={() => handleCompanyChange("5인")}/>
+                                        <label htmlFor="five-plus">5인</label>
+                                    </BoxesData>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" name="" id="five-plus" onChange={() => handleCompanyChange("6인")}/>
+                                        <label htmlFor="five-plus">6인</label>
+                                    </BoxesData>
+                                </BoxesDataWrapper>
+                                </AccordionDetails>
+                            </Accordion>
+                        </Boxes>
+
+                        <Boxes>
+                            <Accordion sx={{maxWidth: "240px"}} defaultExpanded>
+                                <AccordionSummary sx={{fontSize: "20px", fontWeight: "600"}}>Location</AccordionSummary>
+                                <Line/>
+                                <AccordionDetails>
+                                <BoxesDataWrapper>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" name="" id="seoul" onChange={() => handleCompanyChange("Seoul")}/>
+                                        <label htmlFor="seoul">서울</label>
+                                    </BoxesData>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" name="" id="Korea" onChange={() => handleCompanyChange("Busan")}/>
+                                        <label htmlFor="Korea">부산</label>
+                                    </BoxesData>
+                                    <BoxesData>
+                                        <BoxesDataInput type="checkbox" name="" id="Pusan" onChange={() => handleCompanyChange("Daegu")}/>
+                                        <label htmlFor="Pusan">대구</label>
+                                    </BoxesData>
+                                </BoxesDataWrapper>
+                                </AccordionDetails>
+                            </Accordion>
+                        </Boxes>
+                        
+                        <HomeButtonContainer>
+                            <HomeButton>Cancel</HomeButton>
+                            <HomeButton $search>Search</HomeButton>
+                        </HomeButtonContainer>
+
+                        <HomeLeftCarWrapper>
+                            <p>Compare</p>
+                            <div style={{display:"flex"}}>
+                                <img src={img1} alt="" />
+                                <img src={img2} alt="" />
+                                <img src={img3} alt="" />
+                            </div>
+                        </HomeLeftCarWrapper>
+                    </div>
+            </HomeLeftContainer>
+
+            <HomeRightContainer>
+                <HomeRightTop>
+                    <HomeRightTopLeft>
+                        <div style={{display: "flex", alignItems: 'center'}}>
+                            <p style={{fontWeight: "600"}}>Item<span style={{marginLeft: "10px", color: "#006DAB"}}>{filteredData.length}</span></p>
+
+                            <Button onClick={toggleDrawer(true)} className='mobile-none-button'><MenuIcon/></Button>
+                            <Drawer open={open} onClose={toggleDrawer(false)}>
+                                {DrawerList}
+                            </Drawer>
+                        </div>
+                        <HomeRightTopLeftRight $displayNone>
+                            <HomeRightTopButton onClick={handleVClicked}><img src={fourDots} alt=""/></HomeRightTopButton>
+                            <HomeRightTopButton $rightButton onClick={handleGridClicked}><img src={menu} alt=""/></HomeRightTopButton>
+                        </HomeRightTopLeftRight>
+                    </HomeRightTopLeft>
+                    
+                    <HomeRightTopRight>
+                        <p>Sort<span style={{marginLeft: '5px'}}>by</span></p>
+                        <div>
+                            <SortInput type="text" placeholder='Select'/>
+                            <HomeRightTopButton $rightButton><img src={downArrow} alt=""/></HomeRightTopButton>
+                        </div>
+                        <div>
+                            <SortInput type="text" placeholder='60' $short/>
+                            <HomeRightTopButton $rightButton><img src={downArrow} alt=""/></HomeRightTopButton>
+                        </div>
+                        <div className='none'>
+                            <HomeRightTopButton onClick={handleVClicked}><img src={fourDots} alt=""/></HomeRightTopButton>
+                            <HomeRightTopButton $rightButton onClick={handleGridClicked}><img src={menu} alt=""/></HomeRightTopButton>
+                        </div>
+                    </HomeRightTopRight>
+                </HomeRightTop>
+                <LongLine/>
+
+                {active ? <GridMenu filteredData={filteredData}/> : <Vmenu filteredData={filteredData}/>}
+                
+            </HomeRightContainer>
         </HomeContainer>
     </div>
    

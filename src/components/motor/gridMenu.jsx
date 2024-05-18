@@ -7,27 +7,15 @@ import { campcar } from '../mock/mockdata'
 import star from '../../assets/star.svg'
 import { Link } from 'react-router-dom'
 
-function GridMenu({filteredData}, {filterData2}) {
+function GridMenu({filteredData}) {
   const data = campcar.maindata
 
-  const [filter, setFilter] = useState();
-  const [filter2, setFilter2] = useState();
 
 //   console.log(filteredData);
 
-  
-  useEffect(() => {
-    setFilter(filteredData);
-    setFilter2(filterData2)
-  }, [filteredData, filterData2]);
-
-  const Filter = [filterData2, filteredData]
-
-  console.log(filteredData);
-
   return (
     <CarContainer>
-        {Filter.map((value, key)=> {
+        {filteredData.map((value, key)=> {
             return (
                 <Card key={key}>
                     <Link  to={`${value.id}`}>

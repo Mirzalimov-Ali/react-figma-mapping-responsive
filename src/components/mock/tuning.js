@@ -27,8 +27,11 @@ export const tuning = {
                 image: `${img1}`,
                 name: "Tuning 1",
                 price: "230,000",
-                company: "be-coder-Ali",
-                rating: "2.3"
+                company: "다온티앤티",
+                rating: "2.3",
+                location: "Seoul",
+                license: "1종 보통",
+                people: "4인",
             }
         },
         {
@@ -37,8 +40,11 @@ export const tuning = {
                 image: `${img2}`,
                 name: "Tuning 2",
                 price: "560,000",
-                company: "be-coder-Ali", 
-                rating: "5.6"
+                company: "다온티앤티", 
+                rating: "5.6",
+                location: "Daegu",
+                license: "1종 보통",
+                people: "3인",
             }
         },
         {
@@ -47,8 +53,11 @@ export const tuning = {
                 image: `${img3}`,
                 name: "Tuning 3",
                 price: "840,000",
-                company: "be-coder-Ali",
-                rating: "8.4"
+                company: "다온티앤티",
+                rating: "8.4",
+                location: "Seoul",
+                license: "1종 보통",
+                people: "5인",
             }
         },
         {
@@ -57,8 +66,11 @@ export const tuning = {
                 image: `${img4}`,
                 name: "Tuning 4",
                 price: "510,000",
-                company: "be-coder-Ali",
-                rating: "5.1"
+                company: "다온티앤티",
+                rating: "5.1",
+                location: "Seoul",
+                license: "1종 보통",
+                people: "6인",
             }
         },
         {
@@ -67,8 +79,11 @@ export const tuning = {
                 image: `${img5}`,
                 name: "Tuning 5",
                 price: "1,000,000",
-                company: "be-coder-Ali",
-                rating: "10"
+                company: "다온티앤티",
+                rating: "10",
+                location: "Busan",
+                license: "1종 보통",
+                people: "5인",
             }
         },
         {
@@ -77,8 +92,11 @@ export const tuning = {
                 image: `${img6}`,
                 name: "Tuning 6",
                 price: "859,000",
-                company: "be-coder-Ali",
-                rating: "8.5"
+                company: "다온티앤티",
+                rating: "8.5",
+                location: "Busan",
+                license: "1종 보통",
+                people: "3인",
             }
         },
         {
@@ -87,8 +105,11 @@ export const tuning = {
                 image: `${img7}`,
                 name: "Tuning 7",
                 price: "100,500",
-                company: "be-coder-Ali",
-                rating: "1.5"
+                company: "다온티앤티",
+                rating: "1.5",
+                location: "Daegu",
+                license: "1종 보통",
+                people: "4인",
             }
         },
         {
@@ -97,8 +118,11 @@ export const tuning = {
                 image: `${img8}`,
                 name: "Tuning 8",
                 price: "1,500,000",
-                company: "be-coder-Ali",
-                rating: "10"
+                company: "영남캠핑카",
+                rating: "10",
+                location: "Seoul",
+                license: "1종 보통",
+                people: "6인",
             }
         },
         {
@@ -107,8 +131,11 @@ export const tuning = {
                 image: `${img9}`,
                 name: "Tuning 9",
                 price: "593,000",
-                company: "be-coder-Ali",
-                rating: "5.3"
+                company: "영남캠핑카",
+                rating: "5.3",
+                location: "Daegu",
+                license: "1종 보통",
+                people: "3인",
             }
         },
         {
@@ -117,8 +144,11 @@ export const tuning = {
                 image: `${img10}`,
                 name: "Tuning 10",
                 price: "800,500",
-                company: "be-coder-Ali",
-                rating: "8.5"
+                company: "영남캠핑카",
+                rating: "8.5",
+                location: "Busan",
+                license: "2종 보통",
+                people: "5인",
             }
         },
         {
@@ -127,8 +157,11 @@ export const tuning = {
                 image: `${img11}`,
                 name: "Tuning 11",
                 price: "230,100",
-                company: "be-coder-Ali",
-                rating: "2.3"
+                company: "영남캠핑카",
+                rating: "2.3",
+                location: "Seoul",
+                license: "2종 보통",
+                people: "4인",
             }
         },
         {
@@ -137,8 +170,11 @@ export const tuning = {
                 image: `${img12}`,
                 name: "Tuning 12",
                 price: "650,000",
-                company: "be-coder-Ali",
-                rating: "6.5"
+                company: "영남캠핑카",
+                rating: "6.5",
+                location: "Seoul",
+                license: "2종 보통",
+                people: "3인",
             }
         },
         {
@@ -147,8 +183,11 @@ export const tuning = {
                 image: `${img13}`,
                 name: "Tuning 13",
                 price: "240,000",
-                company: "be-coder-Ali",
-                rating: "2.4"
+                company: "영남캠핑카",
+                rating: "2.4",
+                location: "Deagu",
+                license: "2종 보통",
+                people: "6인",
             }
         },
         {
@@ -157,8 +196,11 @@ export const tuning = {
                 image: `${img14}`,
                 name: "Tuning 14",
                 price: "830,000",
-                company: "be-coder-Ali",
-                rating: "8.3"
+                company: "영남캠핑카",
+                rating: "8.3",
+                location: "Daegu",
+                license: "2종 보통",
+                people: "6인",
             }
         },
         {
@@ -167,8 +209,11 @@ export const tuning = {
                 image: `${img15}`,
                 name: "Tuning 15",
                 price: "900,000",
-                company: "be-coder-Ali",
-                rating: "9.0"
+                company: "제일모빌",
+                rating: "9.0",
+                location: "Seoul",
+                license: "2종 보통",
+                people: "5인",
             }
         },
         {
@@ -177,8 +222,11 @@ export const tuning = {
                 image: `${img16}`,
                 name: "Tuning 16",
                 price: "950,000",
-                company: "be-coder-Ali",
-                rating: "9.5"
+                company: "제일모빌",
+                rating: "9.5",
+                location: "Seoul",
+                license: "2종 보통",
+                people: "4인",
             }
         },
         {
@@ -187,8 +235,11 @@ export const tuning = {
                 image: `${img17}`,
                 name: "Tuning 17",
                 price: "458,500",
-                company: "be-coder-Ali",
-                rating: "4.9"
+                company: "제일모빌",
+                rating: "4.9",
+                location: "Daegu",
+                license: "2종 보통",
+                people: "3인",
             }
         },
         {
@@ -197,8 +248,11 @@ export const tuning = {
                 image: `${img18}`,
                 name: "Tuning 18",
                 price: "125,000",
-                company: "be-coder-Ali",
-                rating: "1.5"
+                company: "제일모빌",
+                rating: "1.5",
+                location: "Busan",
+                license: "2종 보통",
+                people: "5인",
             }
         },
         {
@@ -207,8 +261,11 @@ export const tuning = {
                 image: `${img19}`,
                 name: "Tuning 19",
                 price: "320,000",
-                company: "be-coder-Ali",
-                rating: "3.3"
+                company: "제일모빌",
+                rating: "3.3",
+                location: "Busan",
+                license: "2종 보통",
+                people: "6인",
             }
         },
         {
@@ -217,8 +274,11 @@ export const tuning = {
                 image: `${img20}`,
                 name: "Tuning 20",
                 price: "600,500",
-                company: "be-coder-Ali",
-                rating: "9.5"
+                company: "제일모빌",
+                rating: "9.5",
+                location: "Daegu",
+                license: "2종 보통",
+                people: "5인",
             }
         },
     ]

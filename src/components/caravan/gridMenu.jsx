@@ -7,11 +7,11 @@ import { caravan } from '../mock/caravan'
 import star from '../../assets/star.svg'
 import { Link } from 'react-router-dom'
 
-function GridMenu() {
+function GridMenu({filteredData}) {
   const data = caravan.maindata
   return (
     <CarContainer>
-        {data.map((value, key)=> {
+        {filteredData.map((value, key)=> {
             const caravanData = value.caravan;
             return (
                 <Card key={key}>

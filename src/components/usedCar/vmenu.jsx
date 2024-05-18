@@ -6,11 +6,11 @@ import { Price } from '../../style';
 import star from '../../assets/star.svg'
 import { Link } from 'react-router-dom';
 
-function Vmenu() {
+function Vmenu({filteredData}) {
   const data = usedCar.maindata
   return (
     <CaravanContainer>
-        {data.map((value, key) => {
+        {filteredData.map((value, key) => {
             const usedData = value.used;
             return (
                 <CaravanCard key={key}>
