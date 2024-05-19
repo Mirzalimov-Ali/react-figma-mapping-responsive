@@ -50,12 +50,12 @@ function Tuning() {
 
   const [selectedCompanies, setSelectedCompanies] = useState([]);
 
-  const handleCompanyChange = (companyName) => {
-    const isSelected = selectedCompanies.includes(companyName);
+  const handleCompanyChange = (filterItem) => {
+    const isSelected = selectedCompanies.includes(filterItem);
     setSelectedCompanies(
       isSelected
-        ? ""
-        : [...selectedCompanies, companyName]
+        ? selectedCompanies.filter((item) => item !== filterItem)
+        : [...selectedCompanies, filterItem]
     );
   };
 

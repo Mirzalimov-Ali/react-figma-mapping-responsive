@@ -50,42 +50,24 @@ function Motor() {
 
   // filter
   const [selectedCompanies, setSelectedCompanies] = useState([]);
-  const [priceRange, setPriceRange] = useState({from: 0, to: Infinity});
 
   const handleCompanyChange = (filterItem) => {
     const isSelected = selectedCompanies.includes(filterItem);
     setSelectedCompanies(
       isSelected
-        ? []
+        ? selectedCompanies.filter((item) => item !== filterItem)
         : [...selectedCompanies, filterItem]
     );
   };
 
   const filteredData = data.filter(
     (item) =>
-        selectedCompanies.length === 0 ||
-        selectedCompanies.includes(item.car.company) ||
-        selectedCompanies.includes(item.car.license) ||
-        selectedCompanies.includes(item.car.people) ||
-        selectedCompanies.includes(item.car.location)
+      selectedCompanies.length === 0 ||
+      selectedCompanies.includes(item.car.company) ||
+      selectedCompanies.includes(item.car.license) ||
+      selectedCompanies.includes(item.car.people) ||
+      selectedCompanies.includes(item.car.location)
   );
-
-  const handlePriceFrom = (e) => {
-    const newFrom = Number(e.target.value);
-    setPriceRange(prevPriceRange => ({
-      ...prevPriceRange,
-      from: newFrom
-    }));
-  };
-  
-  const handlePriceTo = (e) => {
-    const newTo = Number(e.target.value);
-    setPriceRange(prevPriceRange => ({
-      ...prevPriceRange,
-      to: newTo
-    }));
-  };
-
 
   const DrawerList = (
     <Box sx={{ width: 350 }} role="presentation">
@@ -275,11 +257,11 @@ function Motor() {
                                 <div style={{display: "flex", gap: '30px'}}>
                                     <div>
                                         <label htmlFor="from">from</label> <br />
-                                        <CostBoxInput type="number" id='from' onChange={handlePriceFrom}/>
+                                        <CostBoxInput type="number" id='from'/>
                                     </div>
                                     <div>
                                         <label htmlFor="to">to</label> <br />
-                                        <CostBoxInput type="number" id='to' onChange={handlePriceTo}/>
+                                        <CostBoxInput type="number" id='to'/>
                                     </div>
                                 </div>
                             </AccordionDetails>

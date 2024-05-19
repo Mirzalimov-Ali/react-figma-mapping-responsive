@@ -235,9 +235,12 @@ export const HomeRightContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex: 8;
+    min-width: 1100px;
     /* min-width: 1100px; */
     @media only screen and (max-width: 1300px) {
         grid-template-columns: repeat(2, 1fr);
+        min-width: auto;
+        flex: 1;
     }
 `
 
